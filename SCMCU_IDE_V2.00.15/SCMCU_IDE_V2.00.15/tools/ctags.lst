@@ -1,0 +1,48 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+_XTAL_FREQ	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	12;"	d	file:
+POWER_RATIO	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	16;"	d	file:
+POWER_MIN	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	17;"	d	file:
+POWER_SCOPE	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	18;"	d	file:
+adresult	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^volatile unsigned int adresult;$/;"	v
+test_adc	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^volatile unsigned char test_adc;$/;"	v
+power_ad	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^volatile unsigned int power_ad;$/;"	v
+power_percent	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^volatile unsigned char power_percent;$/;"	v
+ADC_Flag	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^bool ADC_Flag=0;$/;"	v
+ADC_delay	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^unsigned int ADC_delay=0;$/;"	v
+long_press_counter	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^unsigned int long_press_counter = 0; \/\/ 长按计数器$/;"	v
+Time_delay	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^unsigned int Time_delay = 0; \/\/显示延时$/;"	v
+button_sflag	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^bool button_sflag = 0; \/\/ 按键状态标志$/;"	v
+button_lflag	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^bool button_lflag = 0; \/\/ 按键状态标志$/;"	v
+T_flag	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^bool T_flag = 0; \/\/ LED刷新标志$/;"	v
+hundreds	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^unsigned char hundreds = 4;	\/\/百位，0不显示，1仅百分比，2百分比+供电，3-百分比+百位，4全部显示$/;"	v
+tens	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^unsigned char tens = 4; 		\/\/十位，10-F，11-不显示$/;"	v
+unit	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^unsigned char unit = 2;		\/\/个位，10-F，11-不显示      		$/;"	v
+LED_Key_counter	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^unsigned int LED_Key_counter = 0; \/\/ LED计数器$/;"	v
+LED_lflag	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^bool LED_lflag = 0; \/\/ LED按键长状态标志$/;"	v
+LED_sflag	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^bool LED_sflag = 0; \/\/ LED按键短状态标志$/;"	v
+main	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^void main(void)            		\/\/主函数,单片机开机后就是从这个函数开始运行$/;"	f
+Init_System	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^void Init_System()$/;"	f
+ADC_Sample	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^unsigned char ADC_Sample(unsigned char adch, unsigned char adldo) $/;"	f
+ADC_read	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^unsigned char ADC_read(void)$/;"	f
+Isr_Timer	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c	/^void interrupt Isr_Timer() $/;"	f
+Charge_num	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c	/^void Charge_num(void)$/;"	f
+Uncharge_num	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c	/^void Uncharge_num(void)$/;"	f
+Motor_num	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c	/^void Motor_num(void)$/;"	f
+num_hund	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c	/^u8 num_hund[5] = {0x00, 0x01, 0x03,	0x0D, 0x0F};$/;"	v
+nums	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c	/^u8 nums[12] = {0x7E, 0x30, 0x6D, 0x79, 0x33, 0x5B, 0x5F, 0x70, 0x7F, 0x7B, 0x47, 0x00};$/;"	v
+Led_Gpio_Init	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c	/^void Led_Gpio_Init(void)$/;"	f
+Set_AllPin_INPUT	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c	/^void Set_AllPin_INPUT(void)$/;"	f
+Display_Scan1	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c	/^void Display_Scan1(void)$/;"	f
+Display_Scan2	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c	/^void Display_Scan2(void)$/;"	f
+Display_Scan3	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c	/^void Display_Scan3(void)$/;"	f
+Display_Scan4	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c	/^void Display_Scan4(void)$/;"	f
+Display_Scan5	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c	/^void Display_Scan5(void)$/;"	f
+Display	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c	/^void Display(void)$/;"	f
+Button_response	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\KEY.c	/^void Button_response(void) $/;"	f
+PWM_Init	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\PWM.c	/^void PWM_Init(void)$/;"	f
+Set_PWM	C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\PWM.c	/^void Set_PWM(unsigned char channel, unsigned char duty)$/;"	f

@@ -1,0 +1,108 @@
+# Version 1.35
+# Generated 08/07/2015 GMT
+
+# Copyright © 2015, Microchip Technology Inc. and its subsidiaries ("Microchip")
+# All rights reserved.
+# 
+# This software is developed by Microchip Technology Inc. and its subsidiaries ("Microchip").
+# 
+# Redistribution and use in source and binary forms, with or without modification, are
+# permitted provided that the following conditions are met:
+# 
+#     1. Redistributions of source code must retain the above copyright notice, this list of
+#        conditions and the following disclaimer.
+# 
+#     2. Redistributions in binary form must reproduce the above copyright notice, this list
+#        of conditions and the following disclaimer in the documentation and/or other
+#        materials provided with the distribution.
+# 
+#     3. Microchip's name may not be used to endorse or promote products derived from this
+#        software without specific prior written permission.
+# 
+# THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+# INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+# THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# Microchip PIC16F887 Configuration Word Definitions
+
+# File Syntax:
+# Each configuration register is given as:
+# 
+#     CWORD:<address>:<mask>:<default value>[:<name>]
+# 
+# for each CWORD the configuration settings are listed as
+# 
+#     CSETTING:<mask>:<name>:<description>
+# 
+# lastly for each CSETTING all possible values are listed as
+# 
+#     CVALUE:<value>:<name>:<description>
+# 
+# All numerical values are given in unqualified hex.  In terms of
+# #pragma config, note the following correspondence:
+# 
+#    #pragma config CSETTING<name> = CVALUE<name>
+# 
+# Comments are also permitted.  Any line beginning with a '#'
+# character will be treated as a comment.
+
+CWORD:2007:3FFF:FFFF:CONFIG1
+CSETTING:7:FOSC:Oscillator Selection bits
+CVALUE:7:EXTRC_CLKOUT:RC oscillator: CLKOUT function on RA6/OSC2/CLKOUT pin, RC on RA7/OSC1/CLKIN
+CVALUE:6:EXTRC_NOCLKOUT:RCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, RC on RA7/OSC1/CLKIN
+CVALUE:5:INTRC_CLKOUT:INTOSC oscillator: CLKOUT function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN
+CVALUE:4:INTRC_NOCLKOUT:INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN
+CVALUE:3:EC:EC: I/O function on RA6/OSC2/CLKOUT pin, CLKIN on RA7/OSC1/CLKIN
+CVALUE:2:HS:HS oscillator: High-speed crystal/resonator on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN
+CVALUE:1:XT:XT oscillator: Crystal/resonator on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN
+CVALUE:0:LP:LP oscillator: Low-power crystal on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN
+CSETTING:8:WDTE:Watchdog Timer Enable bit
+CVALUE:8:ON:WDT enabled
+CVALUE:0:OFF:WDT disabled and can be enabled by SWDTEN bit of the WDTCON register
+CSETTING:10:PWRTE:Power-up Timer Enable bit
+CVALUE:10:OFF:PWRT disabled
+CVALUE:0:ON:PWRT enabled
+CSETTING:20:MCLRE:RE3/MCLR pin function select bit
+CVALUE:20:ON:RE3/MCLR pin function is MCLR
+CVALUE:0:OFF:RE3/MCLR pin function is digital input, MCLR internally tied to VDD
+CSETTING:40:CP:Code Protection bit
+CVALUE:40:OFF:Program memory code protection is disabled
+CVALUE:0:ON:Program memory code protection is enabled
+CSETTING:80:CPD:Data Code Protection bit
+CVALUE:80:OFF:Data memory code protection is disabled
+CVALUE:0:ON:Data memory code protection is enabled
+CSETTING:300:BOREN:Brown Out Reset Selection bits
+CVALUE:300:ON:BOR enabled
+CVALUE:200:NSLEEP:BOR enabled during operation and disabled in Sleep
+CVALUE:100:SBODEN:BOR controlled by SBOREN bit of the PCON register
+CVALUE:0:OFF:BOR disabled
+CSETTING:400:IESO:Internal External Switchover bit
+CVALUE:400:ON:Internal/External Switchover mode is enabled
+CVALUE:0:OFF:Internal/External Switchover mode is disabled
+CSETTING:800:FCMEN:Fail-Safe Clock Monitor Enabled bit
+CVALUE:800:ON:Fail-Safe Clock Monitor is enabled
+CVALUE:0:OFF:Fail-Safe Clock Monitor is disabled
+CSETTING:1000:LVP:Low Voltage Programming Enable bit
+CVALUE:1000:ON:RB3/PGM pin has PGM function, low voltage programming enabled
+CVALUE:0:OFF:RB3 pin has digital I/O, HV on MCLR must be used for programming
+CSETTING:2000:DEBUG:In-Circuit Debugger Mode bit
+CVALUE:2000:OFF:In-Circuit Debugger disabled, RB6/ICSPCLK and RB7/ICSPDAT are general purpose I/O pins
+CVALUE:0:ON:In_Circuit Debugger enabled, RB6/ICSPCLK and RB7/ICSPDAT are dedicated to the debugger
+CWORD:2008:700:FFFF:CONFIG2
+CSETTING:100:BOR4V:Brown-out Reset Selection bit
+CVALUE:0:BOR21V:Brown-out Reset set to 2.1V
+CVALUE:100:BOR40V:Brown-out Reset set to 4.0V
+CSETTING:600:WRT:Flash Program Memory Self Write Enable bits
+CVALUE:0:HALF:0000h to 0FFFh write protected, 1000h to 1FFFh may be modified by EECON control
+CVALUE:200:1FOURTH:0000h to 07FFh write protected, 0800h to 1FFFh may be modified by EECON control
+CVALUE:400:256:0000h to 00FFh write protected, 0100h to 1FFFh may be modified by EECON control
+CVALUE:600:OFF:Write protection off
+CWORD:2000:7F:3FFF:IDLOC0
+CWORD:2001:7F:3FFF:IDLOC1
+CWORD:2002:7F:3FFF:IDLOC2
+CWORD:2003:7F:3FFF:IDLOC3

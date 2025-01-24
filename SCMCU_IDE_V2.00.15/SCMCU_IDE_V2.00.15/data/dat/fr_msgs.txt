@@ -1,0 +1,1138 @@
+#                       Messages d'erreurs et d'avertissements
+#                                pour tous
+#				  les compilateurs Microchip
+#
+#                                FRANÇAIS
+#
+#
+#	message number:	(must be larger than 0)
+#	message type:	F,f: fatal error
+#				E,e: error
+#			     -9 - 8: warning (value indicates level)
+#				M,m: message
+#	message string
+#
+#	errors must be in numeric order
+#
+1	M	trop d'erreurs (%u)
+2	M	erreur/avertissement (%u) généré(e), mais aucune description n'est disponible
+3	M	information sur l'erreur mal générée à la ligne *, dans le fichier *
+100	E	bloc #if[n][def] non terminé à partir de la ligne %d
+101	E	#%s ne devrait pas se trouver après #else
+102	E	#%s doit se trouver dans un bloc #if
+103	E	#error: %s
+104	E	défaillance dans la directive du pré-processeur #assert
+105	E	pas de #asm avant #endasm
+106	E	imbrication de directives #asm
+107	0	directive # "%s" interdite
+108	E	#if[n][def] sans argument
+109	E	erreur de syntaxe sur #include
+110	E	trop d'arguments pour le fichier; utilisation: cpp [input [output]]
+111	1	redéfinition de la macro "%s" du pré-processeur (%s: %d)
+112	E	erreur de syntaxe sur #define
+113	E	chaîne de caractères non terminée dans le corps de la macro du pré-processeur
+114	E	argument de #undef incorrect
+115	E	définition récursive de la macro de "%s" définie par "%s"
+116	E	fin de fichier dans l'argument de la macro donné au pré-processeur à partir de la ligne %d
+117	E	constante dans le #if mal placée
+118	E	dépassement de capacité de la pile en traitant l'expression #if
+119	E	expression invalide dans la ligne contenant le #if
+120	E	l'opérateur "%s" est dans un context incorrect
+121	E	dépassement de capacité de la pile au niveau de l'opérateur "%s"
+122	E	problème de parenthèses pour l'opérateur "%s"
+123	E	"?" ou ":" mal placé; l'opérateur précédent est "%s"
+124	E	charactère "%c" interdit dans #if
+125	E	charactère (%d decimal) interdit dans #if
+126	E	une chaine de charactère ne peut pas être utilisée dans #if
+127	E	mauvaise syntaxe pour defined() dans #[el]if
+128	E	opérateur incorrect dans #if
+129	E	"\" non attendu dans #if
+130	E	type "%s" inconnu dans #[el]if sizeof()
+131	E	combinaison de type interdit dans #[el]if sizeof()
+132	E	pas de type spécifié dans #[el]if sizeof() 
+133	E	code (0x%x) inconnu dans #[el]if sizeof()
+134	E	erreur de syntaxe dans #[el]if sizeof() 
+135	E	opérateur (%d) inconnu dans #if
+137	0	charactère "%c" étrange après ##
+138	0	charactère (%d) étrange après ##
+139	E	fin de fichier dans le commentaire
+140	E	ne peut pas ouvrir le fichier %s "%s": %m
+141	F	ne peut pas ouvrir le fichier %s "%s": %m
+144	F	trop de blocs #if imbriqués
+146	F	nom du fichier #include trop long
+147	F	trop de répertoires définis par #include
+148	F	trop d'arguments pour la macro du pré-processeur
+149	F	dépassement de capacité de la table interne par la macro
+150	F	macro "__" "%s" du pré-processeur interdite
+151	F	trop d'arguments dans l'extension de la macro du pré-processeur
+152	F	mauvais dp/nargs dans openpar(): c = %X
+153	F	plus de place dans le buffer de l'argument de l'extension de la macro du pré-processeur
+155	F	dépassement de capacité du buffer en concaténant "%s"
+156	F	dépassement de capacité du buffer "%s"
+157	E	ne peut pas allouer %u octets de mémoire
+158	F	désactivation invalide dans la macro "%s" du pré-processeur
+159	F	trop d'appels à la fonction unget()
+161	0	ligne de contrôle à la ligne "%s" dans l'extansion de la macro du pré-processeur
+162	0	#warning: %s
+163	-1	le texte non attendu dans la ligne de contrôle a été ignoré
+164	-1	le nom de fichier #include "%s" a été converti en bas de casse (lower case)
+165	-1	le nom de fichier #include  "%s" ne correspond pas avec son nom actuel (vérifier upper/lower case)
+166	0	pas assez de valeurs spécifiées avec l'option "%s"
+167	0	trop de valeurs spécifiées avec l'option -S; "%s" non utilisé
+168	E	option "%s" inconnue
+169	E	caractère (%d) étrange après ##
+170	0	le symbole "%s" du undef n'a jamais été défini
+171	0	mauvais nombre d'arguments rentrés pour la macro du pré-processeur pour "%s" (%d à la place de %d)
+172	0	paramètre formel attendu après #
+173	0	symbole "%s" non défini dans un #if, 0 utilisé
+174	0	un multi-octet constant "%c" n'est pas portable
+175	0	division par zero dans #if; résultat de zéro supposé
+176	-1	ligne manquante
+177	-1	le symbole "%s" pour l'option -U n'a jamais été définie
+179	-2	commentaire présent à l'intérieur d'un autre commentaire
+180	0	commentaire non terminé dans le fichier inclus
+181	E	les types non scalaires ne peuvent pas être convertis en d'autres types
+182	E	conversion interdite entre des types
+183	E	fonction ou pointeur sur fonction requis
+184	E	appeler une fonction d'interruption est interdit
+185	E	la fonction ne prend pas d'arguments
+186	E	trop d'arguments donnés à la fonction
+187	E	pas assez d'arguments donnés à la fonction
+188	E	expression contante requise
+189	E	type interdit pour une dimension de tableau
+190	E	type interdit pour une expression d'index
+191	E	le type du cast (changement de type) doit être un scalaire ou un void
+192	E	identificateur "%s" indefini
+193	E	l'identificateur "%s" n'est pas une variable
+194	E	")" attendue
+195	E	erreur de syntaxe dans l'expresion
+196	E	une struct/union requis
+197	E	élément struct/union attendu
+198	E	struct/union "%s" non défini
+199	E	type logique requis
+200	E	prendre l'adresse d'une variable register est interdit
+201	E	prendre l'adresse de cet objet est interdit
+202	E	seules les lvalues devraient être assignées ou modifiées
+203	E	opération illégale sur une variable de bit
+204	E	une fonction void ne peut pas retourner de valeur
+205	E	type intégral requis
+206	E	utilisation d'une expression void interdite
+207	E	type simple requis pour "%.3s"
+208	E	les opérandes de "%.3s" ne sont pas du même type
+209	E	conflit de type
+210	E	liste de mauvaise taille
+211	E	demander la taille (sizeof) d'un bit est interdit
+212	E	nombre manquant après le pragma "pack"
+213	E	nombre manquant après le pragma "return_offset"
+214	E	nombre manquant après le pragma "interrupt_level"
+215	E	argument manquant au pragma "switch"
+216	E	argument manquant au pragma "psect"
+217	E	nombre manquant au pragma "stack_size"
+218	E	nom manquant après le pragma "inline"
+219	E	nom manquant après le pragma "printf_check"
+220	E	exposant attendu
+221	E	nombre hexadecimal attendu
+222	E	nombre binaire atendu
+223	E	nombre hors de portée
+224	E	directive "#" interdite
+225	E	caractère manquant dans le caractère constant
+226	E	char const trop long
+227	E	"." attendu après ".."
+228	4	caractère (0%X) interdit
+229	E	qualifieur "%s" fourni à -A inconnu
+230	E	manque un argument à -A
+231	E	qualifieur inconnu "%s" donné à -I
+232	E	manque un argument à  -I
+233	E	mauvaise option -Q ("%s")
+234	E	erreur de fermeture
+236	E	expression entière requise
+237	E	fonction "%s" redéfinie
+238	E	initialisation incorrecte
+239	E	identificateur "%s" redéfini (à partir de la ligne %u)
+240	E	trop d'initialisateurs
+241	E	syntaxe de l'initialisation incorrecte
+242	E	type interdit pour une expression switch
+243	E	break/continue ne convient pas
+244	E	cas du "default" redéfini
+245	E	cas "default" ne se trouve pas dans un switch
+246	E	cas label ne se trouve pas dans un switch
+247	E	label "%s" dupliqué
+248	E	"else" non approprié
+249	E	manque probablement "}" dans le précédent bloc
+251	E	dimension du tableau redéclarée
+252	E	conflit entre l'argument "%d" et le prototype
+253	E	conflit entre la liste d'arguments et le prototype
+254	E	%s non défini: "%s"
+255	E	n'est pas un membre de la struct/union "%s"
+256	E	trop d'indiréctions
+257	E	seule la classe mémoire "register" est autorisée
+258	-1	qualificateur en double
+259	E	ne peut pas être qualifié à la fois de lointain (far) et de près (near)
+260	E	étiquette enum "%s" non définie
+261	E	le membre "%s" de la structure/union redéfinie
+262	E	struct/union "%s" redefinie
+263	E	les membres d'une fontion ou d'une union ne peuvent pas être des fonctions
+264	E	mauvais type de champs de bits (bitfield)
+265	E	entier constant requis
+266	E	classe mémoire (storage) interdite
+267	F	mauvaise classe mémoire (storage)
+268	E	classe mémoire (storage) incohérente
+269	E	type incohérent
+270	E	une variable ne peut pas avoir une classe mémoire (storage) "register"
+271	E	le type ne peut pas être un long
+272	E	le type ne peut pas être un short
+273	E	le type ne peut pas être à la fois signed et unsigned
+274	E	le type ne peut pas être unsigned
+275	E	"..." interdit dans une liste d'arguments non prototypée
+276	E	type identificateur requis pour un argument prototypé
+277	E	ne peut pas mélanger un argument prototyped et un argument non-prototyped
+278	E	argument "%s" redeclaré
+279	E	l'initialisation d'arguments de fonctions est interdit
+280	E	les tableaux de fonctions sont interdits
+281	E	les fonctions ne peuvent pas retourner des fonctions
+282	E	les fonctions ne peuvent pas retourner des tableaux
+283	E	dimension requise
+284	E	dimension invalide
+285	E	pas d'identificateur dans la déclaration
+286	E	déclarateur trop complexe
+287	E	les tableaux de bits ou les pointeurs sur bits sont interdits
+288	E	seules les fonctions peuvent être de type void
+289	E	seules les fonctions peuvent être qualifiées "interrupt"
+290	E	qualifieur(s) de fonction interdit
+291	E	l'identificateur K&R "%s" n'est pas un argument
+292	E	un paramètre d'une fonction ne devrait pas être une fonction
+293	F	mauvaise taille dans index_type()
+294	F	ne peut pas allouer %u bytes de mémoire
+295	F	expression trop complexe
+296	F	plus de mémoire
+297	F	mauvais argument (%d) donné à tysize()
+298	F	fin de fichier dans #asm
+299	F	.ne peut pas allouer %u octets de mémoire pour %s
+300	F	fin de fichier non attendu
+301	F	fin de fichier sur un fichier de chaîne de caractères
+302	F	ne peut pas réouvrir "%s": %m
+303	F	ne peut pas allouer %u octets de mémoire (ligne %d)
+306	E	ne peut aps allouer %u octets de mémoire pour %s
+307	F	trop de noms de qualifieurs
+308	F	trop de cas dans le switch
+309	F	trop de symbols
+310	E	"]" attendu
+311	E	quote de fermeture attendu
+312	E	"%s" attendu
+313	E	corps de la fonction attendu
+314	E	";" attendu
+315	E	"{" attendu
+316	E	"}" attendu
+317	E	"(" attendu
+318	E	chaîne de caractères attendu
+319	E	while attendu
+320	E	":" attendu
+321	E	identificateur d'étiquette (label) attendu
+322	E	enum ou "{" attendu
+323	E	struct/union ou "{" attendu
+324	-1	trop d'arguments pour la chaîne de caractères au format printf
+325	-1	erreur dans la chaîne de caractère au format printf
+326	-1	argument de type long requis pour la chaîne de caractères au format printf
+327	-1	argument de type long long requis pour la chaîne de caractères au format printf
+328	-1	argument de type intégral requis pour la chaîne de caractères au format printf
+329	-1	argument de type double float requis pour la chaîne de de caractères au format printf
+330	-1	argument de type pointeur sur %s argument requis pour la chaîne de caractères au format printf
+331	-1	trop peu d'arguments pour la chaîne de caractères au format printf
+332	0	"interrupt_level" devrait être entre 0 et 7
+333	0	nom de qualifieur non reconnu après "strings"
+334	0	nom de qualifieur non reconnu après "printf_check"
+335	3	pragma "%s" inconnu
+336	-2	concaténation de chaîne de caractères entre les lignes
+337	-1	la ligne ne contient pas de caractère newline (retour chariot)
+338	2	ne peut pas créer le fichier "%s" de type %s 
+339	0	initialisateur dans une déclaration externe
+340	0	chaîne de caractères non terminée par un caractère null
+343	0	return implicite à la fin d'une fonction non void
+344	0	la fonction n'étant pas une void ne retourne pas de valeur
+345	0	code inaccessible
+346	-2	la déclaration de "%s" cache une déclaration externe
+347	2	déclaration externe à l'intérieur de la fonction
+348	4	une variable automatique "%s" ne devrait pas être nommée
+349	0	déclaration de fonction non prototypée pour "%s"
+350	2	%s non utilisé "%s" (à partir de la ligne %u)
+352	0	paramètre float converti en double
+353	1	taille du tableau externe "%s" est de zéro
+354	8	le pointeur pourrait être tronqué
+355	0	conversion implicite de signed à unsigned
+356	2	conversion implicite de float à integer
+357	4	conversion interdite d'un entier (integer) à un pointeur (pointer)
+358	4	conversion interdite dun pointeur (pointer) à un entier (integer)
+359	4	conversion interdite entre les types de pointeurs
+360	5	index du tableau hors des limites
+361	0	fonction déclarée en implicit int
+362	0	"&" redondant appliqué à un tableau
+363	0	"&" redondant appliqué à une fonction
+364	7	tentative de mofification de l'objet nommé %s
+365	4	pointeur sur un objet non-static retourné
+366	1	les opérandes de "%.3s" n'ont pas le même type de pointeur
+367	2	la fonction est déjà externe; elle ne peut pas être statique
+368	0	dimension du tableau "%s[]" ignorée
+369	-1	champs de bits (bitfields) signés non supportés
+370	2	type basic interdit; entier (int) supposé
+371	-3	manque le type basic; entier (int) supposé
+372	E	"," attendu
+373	-3	conversion implicite de signed à unsigned
+374	2	manque le type basic; entier (int) supposé
+375	F	type FNREC inconnu "%u"
+376	F	mauvais noeud non nul dans l'appel du graphe
+378	F	ne peut pas créer le fichier "%s" de type %s 
+379	F	type enregistrement "%d" mauvais
+380	F	type enregistrement (%d) inconnu
+381	F	enregistrement "%s" trop long (%d)
+382	F	enregistrement incomplet: type = %d, longueur = %d
+383	F	l'enregistrement de texte a une longueur (%d) trop petite
+384	F	l'instruction a échouée: fichier %s, ligne %d, expression %s
+387	F	interdit ou trop d'options -G 
+388	F	option -M en double
+389	F	interdit ou trop d'options -O
+390	F	interdit ou trop d'options -P 
+391	F	argument manquant à -Q
+392	F	argument manquant à -U
+393	F	argument manquant à -W
+394	F	option -D ou -H en double
+395	F	argument manquant à -J
+397	F	utilisation: hlink [-options] files.obj files.lib
+398	F	un fichier de sortie ne peut pas être un fichier d'entrée
+400	F	format du code objet faux
+402	F	mauvais argument donné à -F
+403	F	mauvaise option -E: "%s"
+404	F	valeur de la longueur maximum donnée à -<digits> mauvaise
+405	F	taille d'enregistrement d'environ -<digits> mauvaise
+406	F	mauvais argument donné à -A
+407	F	mauvais argument donné à -U
+408	F	mauvais argument donné à -B
+409	F	mauvais argument donné à -P
+410	F	mauvaise combinaison d'options
+412	F	le texte ne commence pas à 0
+413	F	erreur d'écriture sur "%s"
+414	F	erreur de lecture sur "%s"
+415	F	décalage (offset) du code trop bas dans le fichier COFF 
+416	F	mauvais caractère (0%d) dans la ligne TEKHEX
+417	F	erreur de recherche dans "%s"
+418	F	image trop grande
+419	F	le fichier objet n'est pas absolu
+420	F	trop d'objets de déplacement
+421	F	trop de segments
+422	F	pas de fin d'enregistrement
+423	F	type enregistrement interdit
+424	F	enregistrement trop long
+425	F	enregistrement incomplet
+427	F	erreur de syntaxe dans la liste de somme de contrôle (checksum)
+428	F	trop de segments corrigés
+429	F	mauvais segment corrigé
+430	F	mauvaise spécification de somme de contrôle (checksum)
+431	F	mauvais argument donné à -E
+432	F	utilisation: objtohex [-ssymfile] [object-file [exe-file]]
+434	F	trop de symbols (%d)
+435	F	mauvais selecteur de segments "%s"
+436	F	psect "%s" a plusieurs positions en même temps
+437	F	"=" manquant dans la spécification de la classe
+438	F	mauvaise taille pour l'option -S
+439	F	mauvaise spécification pour l'option -D: "%s"
+440	F	mauvaise valeur du delta pour la spécification de -D
+441	F	mauvaise spécification pour l'option -A: "%s"
+442	F	adresse manquante pour la spécification de -A
+443	F	adresse inférieur "%s" dans les spécifications de -A mauvaise
+444	F	"-" attendu dans la spécification de -A
+445	F	adresse supérieure "%s" dans les spécifications de -A mauvaise
+446	F	mauvaise adresse "%s" (débordement du tampon) dans les spécifications de -A 
+447	F	mauvaise adresse de chargement dans la spécification de -A
+448	F	mauvais total de répétition "%s" dans la spécification de -A
+449	F	erreur de syntaxe dans la spécification de -A: %s
+450	F	psect "%s" n'a jamais été défini
+451	F	format d'origine de psect mauvais dans l'option -P
+452	F	mauvais format "+" (adresse minimum) dans l'option -P
+453	F	nombre manquant après "%" pour l'option -P
+454	F	le lien et l'adresse de chargement ne peuvent pas être tous les deux mis à "." dans l'option -P
+455	F	psect "%s" non relocalisé à la limite 0x%X
+456	F	psect "%s" non chargé à la limite 0x%X
+459	F	la suppression a échouée, erreur: %d, %s
+460	F	le changement de nom a échoué, erreur: %d, %s
+461	E	ne peut pas créer le fichier %s "%s"
+463	E	critère de mémoire manquant dans le fichier avmap 
+464	E	critère manquant dans le fichier avmap
+465	E	symbole "%s" non défini dans l"enregistrement FNBREAK
+466	E	symbole "%s" non défini dans l'enregistrement FNINDIR
+467	E	symbole "%s" non défini dans l'enregistrement FNADDR
+468	E	symbole "%s" non défini dans l'enregistrement FNCALL 
+469	E	symbole "%s" non défini dans l'enregistrement FNROOT
+470	E	symbole "%s" non défini dans l'enregistrement FNSIZE 
+471	E	appel de fonction récursive: 
+472	E	function "%s" non rentrante apparaît dans plusieurs appels de graphes: racine à "%s" et "%s"
+473	E	fonction "%s" non appelée à partir d'un interrupt_level spécifié
+474	E	pas de psect spécifié pour l'allocation de la variable/argument de la fonction
+475	E	enregistrements FNCONF en conflit
+476	E	dépassement de capacité de la réparation en consultant %s %s (location 0x%lX (0x%lX+%d), taille %d, valeur 0x%lX)
+477	E	dépassement de capacité de la réparation dans l'expression (adresse 0x%lX (0x%lX+%d), taille %d, valeur 0x%lX)
+478	E	la vérification de la portée %s a échouée (location 0x%lX (0x%lX+%d), value 0x%lX > limit 0x%lX)
+479	E	définition indirect du symbole "%s" circulaire
+480	E	les signatures de la fonction ne correspondent pas: %s (%s): 0x%X/0x%X
+481	E	conflit dans le symbole "%s" du psect
+482	E	symbole "%s" défini plusieurs fois dans "%s"
+483	E	le symbol "%s" ne peut pas être global
+484	E	psect "%s" ne peut pas être dans les classes "%s" et "%s"
+485	E	psect "with" inconnu et référencé par le psect "%s"
+486	E	valeur du sélecteur psect "%s" redéfini
+487	E	type psect "%s" redéfini: %2.2X/%2.2X
+488	E	espace de mémoire psect "%s" redéfini: %2.2X/%2.2X
+489	E	mémoire psect "%s" delta redéfini: %2.2X/%2.2X
+490	E	classe "%s" de l'espace mémoire redéfini: %2.2X/%2.2X
+491	E	ne peut pas trouver les mots 0x%X pour le psect "%s" dans le segment "%s"
+492	E	la tentative de positionner le psect "%s" absolu est interdit
+493	E	l'origine de psect "%s" est défini plusieurs fois
+494	E	mauvais format de -P "%s/%s"
+495	E	l'utilisation de "with=" et de l'allocation "INCLASS/INCLASS" en même temps est interdite
+497	E	psect "%s" dépasse la taille maximum: 0%lXh > 0%lXh
+498	E	psect "%s" dépasse la limite d'adresse: 0%lXh > 0%lXh
+499	E	symbole non défini:
+500	E	symbols non définis:
+501	E	point d'entrée du programme défini plusieurs fois
+502	E	corps de l'enregistrement incomplet %s: longueur = %d
+503	E	l'identifiant des enregistrements ne correspond pas
+504	E	la version du code de l'objet est plus grande que %d.%d
+505	E	pas de fin d'enregistrement trouvé dans le fichier objet
+506	E	enregistrement du fichier objet trop long: %d+%d
+507	E	fin inattendu de fichier dans le fichier objet
+508	E	décalage de la relocation offset (%d) hors de porté 0..%d-%d-1
+509	E	taille du déplacement interdit: %02X
+510	E	déplassements complexes non supportés par les options -R ou -L
+511	E	vérification complexe de la portée mauvaise
+512	E	opérateur complexe 0x%X inconnu
+513	E	déplassement complexe mauvais
+514	E	type de déplassement interdit: %02X
+515	E	type de symbole 0%o inconnu
+516	E	l'enregistrement du texte a eu une longueur: %d-%d-(%d+1) < 0
+520	-3	la fonction "%s" n'est jamais appelée
+521	0	limite de la profondeur des appels atteinte par la fonction "%s"
+522	0	la librairie "%s" n'est pas correctement appelée
+523	0	argument donné à l'option -W (%d) interdit et ignoré
+524	0	incapable d'ouvrir le fichier de liste "%s": %m
+525	0	trop d'espaces d'adresse (mémoire); espace (%u) ignoré
+526	0	psect "%s" non spécifié dans l'option -P (première apparition dans "%s")
+528	0	pas de début d'enregistrement; points d'entrée pas default mis à zero
+529	F	utilisation: objtohex [-Ssymfile] [object-file [hex-file]]
+593	E	ne peut pas trouver les mots 0x%X (0x%x avec le total) pour psect "%s" dans le segment "%s"
+594	0	symbole non défini:
+595	0	symboles non définis:
+596	E	le segment "%s" (%lX-%lX) recouvre le segment "%s" (%lX-%lX)
+599	F	pas de spécifications données pour COFF
+600	F	type de fichier COFF non déterminable
+601	F	type de fichier COFF pour "%s" inconnu
+602	F	nom de format de fichier nul
+603	F	nom du format de fichier "%s" ambigu
+604	F	nom de format de fichier "%s" inconnu
+605	F	n'a pas reconnu le format du fichier d'entrée
+606	F	tables de symbols contradictoire
+607	F	tables de lignes de nombres contradictoire
+608	F	mauvaise spécification de répertoire
+609	F	manque les spécifications du proceseur après -P
+610	F	manque les spécifications après -N
+611	F	trop de fichiers d'entrées
+612	F	trop de fichiers de sorties
+613	F	pas de format de fichiers de sortie spécifié
+614	F	pas de fichier d'entré spécifié
+616	F	l'option -C est interdite avec les options -R ou -L
+618	F	erreur de lecture
+619	F	erreur d'entrée/sortie (I/O) lors de la lecture la table de symbols
+620	F	index de nom de fichier hors de portée dans l'enregistrement des lignes de nombres
+621	F	erreur dans l'écriture de la section ELF/DWARF "%s" sur "%s"
+622	F	trop de types d'entrés
+623	F	mauvaise classe dans le type hashing
+624	F	mauvaise classe dans le type compare
+625	F	trop de fichiers dans le fichier COFF
+626	F	la recherche de chaîne de caractères a échouée dans COFF: get_string()
+627	F	"%c" manquant dans le fichier de SDB "%s" ligne %u colonne %u
+629	F	mauvaise classe mémoire "%s" dans le fichier de SDB "%s" ligne %u colonne %u
+630	F	syntaxe invalide pour la liste préfixé dans le fichier "%s" du SDB
+631	F	erreur de syntaxe au signe "%s" dans le fichier "%s" de SDB à la ligne %u colonne %u
+632	F	ne peut pas manipuler la taille de l'adresse (%lu)
+633	0	symbol de classe (%d) inconnu
+634	0	erreur en déchargeant "%s"
+635	0	fichier HEX invalide "%s" à la ligne %d
+636	0	erreur de somme de contrôle (checksum) dans le fichier Intel HEX "%s" à la ligne %d
+637	0	préfixe "%s" inconnu dans le fichier SDB "%s"
+638	0	la version ne correspond pas: 0x%X attendu
+639	0	largeur de zéro bit dans l'entête optionnelle du Microchip
+640	0	longueur de zéro dans l'opcode étendu
+641	0	ne peut pas manipuler la taille de l'adresse étendue (%ld)
+642	0	longueur courte pour l'opcode étendu
+643	0	mauvaise longueur pour l'opcode étendu
+644	0	longueur invalide (%lu) devrait être >= 14
+645	0	mauvaise longueur (op_base)
+646	0	mauvaise taille (includes)
+647	0	longueur du prologue était de %d pas %d
+648	0	mauvais décalage (offset) de la liste de déclaration: 0x%08lX
+649	0	mauvaise déclaration sur la taille de la liste: 0x%08lX
+650	0	appel de l'instruction frame inconnu: 0x%02lX
+651	0	longueur invalide (%lu) devrait être >= 6
+652	0	les données CIE vont au delà de la fin de l'entrée
+653	0	longueur invalide (%lu) devrait être >= 8
+654	0	mauvais décalage (offset) CIE: 0x%08lX
+655	0	le CIE_id référencé n'est pas 0x%08lX
+656	0	les données vont au delà de la fin de l'entrée
+657	0	mauvaise taille d'entrée (0x%08lX)
+658	0	l'abréviation de l'index de la table est inconnu
+659	0	longueur invalide (%lu); devrait être >= 7
+660	0	décalage (offset) de la table d'abréviation invalide; devrait être < 0x%08lX
+661	0	ne peut pas traiter la taille de l'adresse (%u)
+662	0	mauvaises données à la fin de l'unité de compilation
+663	0	longueur invalide (%lu); devrait être >= 20
+664	0	longueur invalide (%lu); devrait être >= 10
+665	0	l'expression de l'emplacement va au delà de la fin du bloc alloué
+666	0	courte lecture sur "%s" (%s)
+667	0	table d'abréviation manquante
+668	E	le préfix de la liste ne correspondait avec aucun type de SDB
+669	E	le préfix de la liste correspondait avec plus d'un type de SDB
+670	E	mauvais argument donné à -T
+671	E	l'argument donné à -T devrait être entre 1 et 64
+673	E	manque le nom du fichier après l'option %s 
+674	E	trop de références à "%s"
+677	E	set_fact_bit pour pic17!
+678	E	cas 55 pour pic17!
+679	E	extraspecial inconnu: %d
+680	E	mauvais format pour l'option -P
+681	E	mauvaise spécification courante dans l'option -P
+682	E	cet architecture n'est pas supportée par le compilateur PICC Lite
+683	E	les variables du bank 1 ne sont pas supportées pas le compilateur PICC Lite
+684	E	les variables du bank 2 et 3 ne sont pas suportées par le compilateur PICC Lite
+685	E	mauvais putwsize()
+686	E	taille du switch (%d) mauvaise
+687	E	mauvaise empilation du registre "%s"
+688	E	mauvaise dépilation du registre "%s" depiler
+689	F	prédicat "%s" inconnu
+690	E	une fonction d'interruption requiert une adresse
+691	E	les fonctions d'interruption ne sont pas implémentées pour le 12 bit PIC
+692	E	une fonction d'interruption "%s" peut seulement avoir un niveau d'interrution
+693	E	le niveau d'interruption peut seulement être 0 (default) ou 1
+694	E	pas de stratégie d'interruption disponible
+695	E	étiquette case (%ld) dupliquée 
+696	E	étiquette case  (%ld) hors de portée
+697	E	étiquette case non constante
+698	E	les variables de bit doivent être globales ou static
+699	0	pas de labels case dans le switch
+700	0	valeur énumérée tronquée
+701	E	profondeur de correpondance non raisonnable
+702	E	regused() mauvais argument donné à G
+703	E	mauvais GN
+704	E	mauvais RET_MASK
+705	E	mauvais which (%c) après I
+706	E	mauvais which dans expand()
+707	E	mauvais SX
+708	E	mauvais mode "+" pour how = "%c"
+709	E	le méta-registrer "%s" ne peut pas être utilisé directement
+710	E	mauvais uage du U
+711	E	mauvais how dans expand()
+712	E	ne peut pas générer le code pour cette expression
+713	E	mauvaise liste d'initialisation
+714	E	mauvais code intermédiaire
+715	E	mauvais pragma "%c"
+716	E	mauvais argument donné à l'option "%s" de -M
+717	E	switch "%c" interdit
+718	E	version du coe intermédiaire incompatible; devrait être %d.%d
+720	E	plusieurs free: %lX
+721	F	le compteur d'éléments doit être une expression constante
+722	F	mauvaise syntaxe de variable dans le code intermédiaire
+723	E	définitions de fonctions imbriquées trop profondément
+724	F	mauvais opérateur (%d) dans revlog()
+726	E	mauvais opérateur "%s" dans uconval()
+727	E	mauvais opérateur "%s" dans bconfloat()
+728	E	mauvais opérateur "%s" dans confloat()
+729	E	mauvais opérateur "%s" dans conval()
+730	E	mauvais opérateur "%s"
+731	E	erreur d'expression avec un mot réservé
+732	E	l'initialisation des types bit est interdite
+733	E	mauvaise chaîne de caractères "%s" dans le pragma "psect"
+734	E	trop de pragmas "psect"
+735	E	mauvaise chaîne de caractères "%s" dans le pragma "stack_size"
+736	E	la spécification à la fois de la pile SYS_MODE et de la pile USR_MODE est interdite
+737	E	argument "%s" inconnu donné au pragma "switch"
+738	E	renvoit du décalage (offset) (%d) spécifié avec le pragma "return_offset" non raisonnable
+739	E	erreur dans la fermeture du fichier de sortie
+740	E	un tableau de dimension zero est interdit
+741	E	champs de bits (bitfield) trop grand (%d bits)
+742	E	l'évaluation de la fonction "%s" entraîne le chevauchement des arguments
+743	E	division par zero
+744	0	l'objet static "%s" a une taille de zero
+745	0	nodecount = %d
+746	1	l'objet "%s" qualifié de const, mais pas initialisé
+747	0	option "%c" donné à -Z non reconnu
+748	0	la variable "%s" pourrait être utilisée avant d'être mise
+749	2	nom de registre "%s" inconnu et utilisé avec le pragma
+750	2	opérande constante donnée à || ou &&
+751	-1	dépassemement de capacité arithmetique dans l'expression constante
+752	-4	conversion vers un type date plus court
+753	2	changement (%ld bits) indéfini
+754	0	comparaison du champs de bits (bitfield) hors de portée
+755	2	division par zero
+757	0	branche conditionnelle constante
+758	1	branche conditionnelle constante: possible utilisation de "=" à la place de "==" 
+759	-1	l'expression ne génère aucun code
+760	-2	la portion de l'expression n'a pas d'effets
+761	2	taille du champs 0
+762	0	constante tronquée quand elle est assignée à un champs de bits (bitfield)
+763	-1	opérande gauche constante donnée à "? :" operateur
+764	4	comparaison ne correspond pas
+765	4	comparaison non signée (unsigned) dégénérée
+766	4	comparaison signée (signed) dégénérée
+767	-1	constante tronquée à la largeur du champs de bits (bitfield)
+768	0	expression relationnnelle constante
+769	E	pas de place pour la définition de la macro
+772	E	l'imbrication des fichiers include est trop profonde
+773	E	l'imbrication des expansions de macro est trop profonde
+774	E	trop de paramètres de macro
+776	E	ne peut pas allouer d'espace pour l'objet "%s" (offs: %ld)
+777	E	ne peut pas allouer d'espace pour la structure opnd dans l'objet "%s", (offs: %ld)
+779	E	mauvais type de déplacement (0x%X)
+780	E	trop de psects defini
+781	E	ne eut pas entrer le psect abs
+782	E	erreur REMSYM
+783	E	les psects "with" sont cyclique
+784	E	tentative de libérer de la mémoire déja libérée 
+785	E	trop d'étiquettes temporaires
+786	E	argument invalide pour float24
+787	E	ne peut pas traiter "v_rtype" de %d dans copyexpr
+788	E	caractère invalide "%c" dans le nombre
+790	E	fin de fichier dans une condition
+791	E	fin de fichier dans une définition de macro
+792	E	l'argument de la macro après "%" doit être absolu
+793	E	argument de la macro n'est pas complet
+794	E	syntaxe du nombre invalide
+795	E	mauvais argument au contrôle de LIST
+796	E	l'utilisation de LOCAL à l'exterieur des macros est interdit
+797	E	erreur de syntaxe dans l'argument LOCAL
+798	E	un argument de macro ne peut pas apparaitre après LOCAL
+799	E	l'argument REPT doit être >= 0
+800	E	symbole "%s" indéfini
+801	E	portée de la vérification trop complexe
+802	E	adresse invalide après la directive END
+803	E	étiquette temporaire indéfinie
+804	E	erreur d'écriture sur le fichier objet
+805	8	pas d'espace ignoré après la directive END
+806	8	a tenté d'obtenir un objet non défini (%u)
+807	8	a tenté de mettre un objet non défini (%u)
+808	E	mauvaise taille dans add_reloc()
+809	E	mode d'adresse (%d) inconnu
+810	E	opérateur "%s" inconnu dans emasm()
+811	E	"cnt" trop grand (%d) dans display()
+812	E	opérateur (%u) inconnu dans emobj()
+813	E	opérateur (%u) inconnu dans size_psect()
+814	E	type de processeur non défini
+815	E	erreur de syntaxe dans le fichier contenant l'information sur la puce à la ligne %d
+816	E	spécifications ARCH en double dans le fichier "%s" contenant l'information sur la puce à la ligne %d
+817	E	architecture inconnue dans le fichier contenant l'information sur la puce à la ligne %d
+818	E	BANKS en double pour "%s" dans le fichier contenant l'information sur la puce à la ligne %d
+819	E	ZEROREG en double pour "%s" dans le fichier contenant l'information sur la puce à la ligne %d
+820	E	SPAREBIT en double pour "%s" dans le fichier contenant l'information sur la puce à la ligne %d
+821	E	INTSAVE en double pour "%s" dans le fichier contenant l'information sur la puce à la ligne %d
+822	E	ROMSIZE en double pour "%s" dans le fichier contenant l'information sur la puce à la ligne %d
+823	E	START en double pour "%s" dans le fichier contenant l'information sur la puce à la ligne %d
+824	E	LIB en double pour "%s" dans le fichier contenant l'information sur la puce à la ligne %d
+825	E	trop de lignes RAMBANK dans le fichier contenant l'information sur la puce pour "%s"
+826	E	RAM bank inversé dans le fichier contenant l'information dur la puce à la ligne %d
+827	E	trop de lignes COMMON dans le fichier contenant l'information sur la puce pour "%s"
+828	E	bank courant inversé dans le fichier contenant l'information sur la puce à la ligne %d
+829	E	ligne non reconnue dans le fichier contenant l'information sur la puce à la ligne %d
+830	E	spécification ARCH manquante pour "%s" dans le fichier contenant l'information sur la puce
+832	E	fichier "%s" contenant l'information du chip est vide
+833	E	pas d'entrées valides dans le fichier contenant l'information sur la puce
+834	E	la largeur des pages doit être >= 60
+835	E	la longueur du formulaire doit être >= 15
+836	F	pas d'arguments au fichier
+838	E	refc == 0 dans decref()
+839	E	déplacement trop complexe
+840	E	erreur de phase
+841	E	mauvaise source/destination pour l'instruction movfp/movpf
+842	E	mauvais nombre bit
+843	E	un nom de macro ne peut pas aussi être un symbole EQU/SET
+844	E	erreur du lexique
+845	E	symbole "%s" défini plusieurs fois
+846	E	erreur lors du déplacement
+847	E	erreur d'opérande
+848	E	le symbole a été déclaré EXTERN
+849	E	instruction interdite pour ce processeur
+850	E	PAGESEL non utilisable avec ce processeur
+851	E	destination incorrecte
+852	E	la base doit être comprise dans l'intervalle 2 - 16
+853	E	taille invalide pour la directive FNSIZE
+854	E	l'argument DS doit être une constante positive
+855	E	l'argument -ORG doit être une constante positive
+856	E	l'argument ALIGN doit être une constante positive
+857	E	psect ne peut pas être local et global
+858	E	nom de macro déjà utilisé
+859	E	l'argument donné à l'option C doit comporter une constante positive
+860	E	la largeur de la page doit être >= 49
+861	E	l'argument donné à l'option N option doit comporter une constante positive
+862	E	le symbole n'est pas externe
+863	E	le synbole ne peut pas être à la fois externe et public
+864	E	l'argument de l'option "size" de psect doit spécifier une constante positive
+865	E	option "size" de psect redéfinie
+866	E	l'argument de l'option "reloc" de psect doit spécifier une constante positive
+867	E	option "reloc" de psect redéfinie
+868	E	l'argument de l'option "delta" de psect doit spécifier une constante positive
+869	E	option "delta" de psect redéfinie
+870	E	l'argument de l'option "pad" de psect doit spécifier une constante positive
+871	E	l'argument de l'option "space" de psect doit spécifier une constante positive
+872	E	option "space" de psect redéfinie
+873	E	psect a peut seulement être dans une seule classe
+874	E	psect a peut seulement avoir une option "with"
+875	E	le caractère constant est mauvais dans l'expression
+876	E	erreur de syntaxe
+877	E	dépassement de capacité de la pile yacc
+878	4	-S option utilisé: "%s" ignoré
+880	E	nombre invalide de paramètres. Utilisez "%s --HELP" pour l'aide
+881	M	installation réussie
+882	M	utilisation du fichier de configuration %s; vous pouvez outrepasser cela avec la variable d'environnement HTC_CONF
+883	E	l'installation a échouée
+884	E	assurez-vous d'avoir les droits d'écriture sur le fichier de configuration
+889	E	ce compilateur (%s) a expiré
+890	E	veuillez contacter Microchip pour acquérir et réactiver ce compilateur
+891	E	ne peut pas ouvrir le fichier des emplacements psect "%s": %m
+892	E	ne peut pas ouvrir le fichier des emplacements mémoire "%s": %m
+893	E	ne peut pas ouvrir le fichier des emplacements HEX "%s": %m
+894	F	type de la source du fichier "%s" inconnue
+895	F	ne peut pas demander et spécifier d'options dans la commande
+896	F	pas de portée de mémoire spécifiée pour l'espace de données
+897	F	portée de la mémoire non spécifiée pour l'espace programme
+899	F	ne peut pas ouvrire le fichier d'options "%s" pour l'application "%s": %m
+900	F	l'exécutable a échoué : %s
+902	F	pas de nom de chip spécifié; utilisez "%s" --CHIPINFO pour voir les chips disponibles
+904	F	format interdit spécifié dans l'option "%s"
+905	F	l'application spécifiée dans l'option "%s" est interdite
+906	F	spécification de l'option de mémoire "%s" mauvaise
+907	F	étiquette de l'espace mémoire "%s" inconnue dans la spécification de l'option "%s"
+908	E	statut de sortie = %d
+911	8	la version du compilateur est %s et va expirer dans %d jour%s
+912	8	les options du linker mises en désactivant -L sont désactivées dans la version %s
+913	8	l'option "%s" pourrait causer des erreurs de compilation pour certains fichiers standards d'entêtes 
+914	M	la version du compilateur est %s
+915	E	pas de place pour les arguments
+917	E	argument trop long
+918	E	-%s: ne correspond pas
+919	F	%s dans le fichier "%s" contenant l'information sur la puce à la ligne %d
+920	F	fichier contenant l'information sur la puce vide
+922	F	puce "%s" non présente dans le fichier "%s" contenant l'information sur la puce
+923	F	sous option "%s" inconnue
+924	F	manque un argument à l'option "%s"
+925	F	argument en dehors de l'option "%s"
+926	F	option "%s" en double
+927	F	type de sous option "other" pas encore implémentée
+928	F	mauvaise valeur ("%s") pour l'option
+929	F	mauvaise portées pour l'option "%s"
+930	F	mauvaise spécification ("%s") pour l'option
+931	F	fichier de commande non spécifié
+934	F	puce "P" pas précédé par "x"
+935	F	variante "%c" inconnue dans VARIANT
+936	F	"x" non suivi par une letre différente
+937	8	l'option "%s" (%s) est désactivée dans la version %s 
+938	8	l'option "%s" est désactivée dans la version %s 
+939	F	pas d'arguments
+940	M	%d-bit somme de contrôle (checksum) %02lX placé à %04lX
+941	F	mauvais assignement "%s"; UTILISATION: %s%s
+942	F	caractère non attendu à la ligne %d du fichier "%s"
+944	F	conflit de données à l'adresse %Xh entre %s et %s
+945	F	la portée de la somme de contrôle (checksum) (%Xh to %Xh) contenait une valeur indéterminé
+947	F	trop de sommes de contrôle (checksums) spécifiées; %d maximum
+948	F	le résultat de la somme de contrôle (checksum) doit être compris entre 1 et 4 octets
+949	F	le début de la portée de la somme de contrôle (checksum) doit être inférieure à la fin de la portée
+950	F	trop de spécifications  -FILL; %d maximum
+951	F	début de la portée doit être inférieure à la fin de la portée
+952	F	la longueure de la valeure FILL doit être comprise entre 1 et %d octets
+953	F	sous option -HELP inconnue: %s
+954	F	option -O incomplète; pas de fichier spécifié
+955	F	trop de code spécifiés; %d maximum
+956	F	la valeur de SERIAL doit être d'une longueur comprise entre 1 et %d octets
+957	F	trop de chaînes de caractères spécifiés; %d maximum
+958	F	trop de fichiers en entrée spécifiés; %d fichiers au maximum
+960	F	type enregistrement (%X) à la ligne %d de "%s"
+962	9	conflit de données forcé à l'adresse %Xh entre %s et %s
+963	9	la portée de la somme de contrôle (checksum) inclue les voids ou les zones d'adresses non spécifiées
+964	3	le demi-octet (nibble) dans la valeur -FILL va être tronqué
+965	9	option STRPACK non encore implémentée, l'option sera ignorée
+966	9	pas d'enregistrement END pour le fichier HEX "%s"
+967	2	la définition "%s" de la fonction non utilisée (à partir de la ligne %u)
+968	E	chaîne de caractère non terminée
+969	E	fin de chaîne de caractères dans l'identificateur de format
+970	E	à cet endroit, caractère non valide dans l'identificateur de format
+971	E	les modificateurs de type ne sont pas valides avec ce format
+972	E	seuls les modificateurs "h" et "l" sont valides avec ce format
+973	E	seul le modificateur "l" est valide avec ce format
+974	E	type modificateur déjà spécifié
+975	E	identificateur de format ou type modificateur invalide
+976	E	largeur du champs non valide à cet endroit
+978	0	cet identificateur est déjà une étiquette enum
+979	0	cet identificateur est déjà une étiquette struct
+980	0	cet identificateur est déjà une étiquette union
+981	E	pointeur requis
+982	E	opéateur "%s" inconnu dans nxtuse()
+983	0	classe mémoire redéclarée
+984	E	type redeclaré
+985	E	qualififieurs redéclarés
+986	E	membre enum redéclaré
+987	E	arguments redeclarés
+988	E	nombre d'arguments redéclaré
+989	F	le module a le code en dessous de la base du fichier de 0%lxh
+990	0	division par zéro dans le #if; résultat de zéro suposé
+991	E	expression entière requise
+992	E	ne peut pas trouver l'opérateur
+993	M	des lignes de commande sont désactivées
+994	M	des options de lignes de commande sont désactivées et la compilation est retardée
+995	M	des options de lignes de commande sont désactivées, la taille du code est limitée à 16kB; compilation retardée
+996	E	type de déplacement (%d) inconnu
+1000	F	pas de fichiers en ligne de commandes
+1003	E	imbrication de directives "if" trop nombreuse
+1004	E	erreur de lexique pour "%s"
+1005	E	un nom de macro ne peut pas être une étiquette
+1006	E	destination "immediate" invalide
+1007	E	nom invalide avant ENDP
+1009	E	une section peut seulement être dans une seule classe
+1010	E	le symbole courant n peut pas être dans un psect absolu
+1011	E	trouvé "%s"; attendu "common"
+1012	E	l'argument -AT doit être une constante positive
+1013	E	l'argument LIMIT doit être une constante positive
+1014	E	marque "limit" de pset redéfini
+1015	F	spécification "%s" manquante dans le fichier "%s" contenant l'information sur la puce à la ligne %d
+1016	F	argument%s manquant à la spécification "%s" dans le fichier "%s" contenant l'information sur la puce à la ligne %d
+1017	F	argument%s sans rapport à la spécification "%s" dans le fichier "%s" contenant l'information sur la puce à la ligne %d
+1018	F	nombre "%s" de spécification%s interdit (%u trouvés; %u attendus) dans le fichier "%s" contenant l'information sur la puce à la ligne %d
+1019	F	spécification "%s" en double dans le fichier "%s" contenant l'information sur la puce à la ligne %d
+1020	F	attribut "%s" inconnu dans le fichier "%s"  contenant l'information sur la puce à la ligne %d
+1021	F	erreur de syntaxe en lisant la valeur "%s" dans le fichier "%s" contenant l'information sur la puce à la ligne %d
+1022	F	erreur  de syntaxe en lisant la portée "%s" dans le fichier "%s"  contenant l'information sur la puce à la ligne %d
+1024	F	erreur de syntaxe dans le fichier "%s" contenant l'information sur la puce à la ligne %d
+1025	F	architecture inconnue dans le fichier "%s" contenant l'information sur la puce à la ligne %d
+1026	F	architecture manquante dans le fichier "%s" contenant l'information sur la puce à la ligne %d
+1027	M	l'activation a réussit
+1028	M	l'activation n'a pas réussit - code d'erreur (%d)
+1029	M	une erreur s'est produite lors de l'installation du compilateur - code d'erreur (%d)
+1030	M	HEXMATE - éditeur hexadécimal Intel (Build 1.%i)
+1031	M	USAGE: %s [input1.hex] [input2.hex]... [inputN.hex] [options]
+1032	M	utilisez --HELP=<option> pour l'utilisation de ces options de ligne de commandes
+1033	M	options de ligne de commande disponibles:
+1034	M	tapez "%s" pour les options disponible
+1035	E	mauvais nombre d'arguments (%u)
+1036	E	mauvaise longueur d'entête "%s" (0x%X attendu)
+1037	E	courte lecture pour %s
+1038	E	la longueur de la table de chaîne de caractères trop courte
+1039	E	compteur de symboles non cohérent
+1040	E	mauvaise somme de contrôle: enregistre 0x%2.2X, somme de contrôle (checksum) 0x%2.2X
+1041	E	court enregistrement
+1042	E	type enregistrement %s inconnu 0x%X
+1043	E	entête optionnelle inconnue
+1044	E	fin de fichier rencontré
+1045	E	courte lecture sur le bloc de %u bytes
+1046	E	courte chaîne de caractères lue
+1047	E	mauvais type byte pour le fichier UBROF
+1048	E	heure/date mauvaise
+1049	E	mauvais CRC pour 0x%lX bytes; devrait êtree %04X
+1050	E	mauvaise date dans l'enregistrement 0x52
+1051	E	mauvaise date dans l'enregistrement 0x01
+1052	E	type enregistrement inconnu
+1053	F	portée de la RAM additionnelle plus grande que la taille de bank
+1054	F	portée de la RAM additionnelle en dehord des limites
+1055	E	portée de la RAM en dehors des limites (%lX)
+1056	F	architecture de la puce inconnue
+1057	F	option fast double seulement disponible sur les processeurs séries 17
+1058	F	affirmation
+1059	F	rewrite loop
+1060	9	type de model de mémoire "%c" inconnu; utilisation du petit.
+1061	M	vecteurs %ld non défini détectés; initialisation à un vecteur reset
+1062	E	plus d'un espace eeprom défini
+1064	F	utilisation de SX non implémenté
+1081	2	initialisation statique de la variable "%s"
+1082	E	la taille de l'élément initialisateur du tableau est de zéro
+1085	F	nul libre: %s: %lu
+1086	F	-%s: %lu: plusieurs free (précédent %s: %lu)
+1087	F	bloc incorrect ou corrompu
+1088	9	le pointeur sur fonction "%s" est utilisé mais jamais assigné à une valeur
+1089	E	fonction récursive appelle "%s"
+1090	0	variable "%s" non utilisée
+1091	F	fonction main "%s" non définie
+1094	F	mauvais type dérivé
+1095	F	mauvais appel à typeSub()
+1096	F	le type ne devrait pas être qualifié
+1097	F	type chaîne de caractères "%s" inconnu
+1098	F	conflit de déclaration pour la variable "%s"
+1104	F	erreur non qualifiée
+1109	F	arguments se chevauchant dans l'appel indirect non encore traité
+1118	F	mauvaise chaîne de caractères "%s" dans getexpr(J)
+1119	F	mauvaise chaîne de caractère "%s" dans getexpr(LRN)
+1121	F	erreur d'expression
+1137	F	match() erreur: %s
+1138	F	tentative de retourner un objet bit sur la pile
+1139	E	le domaine du paramètre de la fonction est trop grand; doit être inférieur à 1024 bytes
+1141	E	nauvaise adresse du vecteur d'interruption pour "%s": 0x%X
+1142	E	adresse du vecteur d'interruption nmanquante pour la fonction "%s"
+1143	E	le domaine automatique de la fonction est trop grand, doit être inférieur à 65536 bytes
+1144	9	ne peut pas ouvrir le fichier %s "%s": %m
+1145	F	dépassement de capacité du buffer dans vsnprintf()
+1146	E	index du registre inconnu
+1147	E	opbase inconnu
+1148	E	bit de statut (%X) inconnu dans nxtuse()
+1150	E	l'opérande constante doit être un de ces chiffres: -6, -4, -2, 2, 4, 6
+1151	E	le registre d'écriture doit être W13
+1152	E	le pas de progresion doit être une constante
+1153	E	le pas de progression doit être de 2
+1154	E	la prélecture du registre W doit être W8 ou W9
+1155	E	la prélecture du registre W doit être W10 ou W11
+1156	E	la prélecture de la destination du registre doit être un de ceux-ci: W4, W5, W6, W7
+1157	E	le registre W doit être W9
+1158	E	le registre W doit être W12
+1159	E	le registre W doit être W11
+1160	E	registre W invalide
+1161	E	mode d'adresse invalide
+1162	E	opération dur octet non permis
+1163	E	mode de réponse invalide
+1164	E	la marque psect "width" doit spécifier une constante 1,2,3 positive
+1165	E	la largeur de psect redéfinie
+1166	E	marque de psect "pad" redéfinie
+1168	E	type conditionnel %x inconnu
+1169	E	constante hors de portée
+1170	E	type d'opérande inconnue dans emobj()
+1171	E	taille de constante inconnue dans emobj()
+1172	E	constante %s hors de portée
+1173	E	erreur de phase %X != %X
+1174	E	taille de largeur de psect invalide, doit être 0, 1 ou 2
+1175	E	branche hors de portée
+1176	E	l'adresse de l'appel doit être égalisée
+1177	E	combinaison de registre invalide
+1178	0	l'option "%s" a été supprimé et n'a pas d'effet
+1179	0	le niveau d'interruption pour la fonction "%s" ne devrait pas dépasser %d
+1180	F	le répertoire "%s" n'existe pas
+1181	M	Cette version est seulement faite pour être testée
+1182    E   les variables qualifiée near doivent être globale ou static
+1183    E   numéro de verion non valide
+1184    E   nombre d'actiavation maximum atteinte
+1185    E   numéro de série non valide
+1186    E   la licence est expirée
+1187    E   demande d'activation non valide
+1188    E   erreur réseau %u
+1189    E   seul les fonction d'interuption peuvent être qualifiée "fast"
+1190    M   licence seulement pour FAE - ne peut être utilisée pour des applications commerciales
+1191    M   Sous licence à des fins éducatives seulement
+1192    M   Sous licence à des fins d'évaluation seulement
+1193    M   Cette licence va expirée le %s.
+1194    F   impossible d'utiliser les options --runtime "vec_init" et "vec_reset" en même temps
+1195    E   syntaxe non valide pour l'option "%s"
+1196    E   address d'offset de code non valide
+1197    E   mémoire de modèle non valide pour le chip "%s"
+1198	F	trop de spécifications "%s"; %d maximum
+1199    E   le compilateur n'a pas été activé
+1200    3   trouvé %0*lXh à l'adresse %lXh
+1201    F   toutes les spécifications de code FIND/REPLACE doivent avoir la même taille
+1202    E   format demandé inconnu dans l'option -FORMAT: %s
+1203	3	le demi-octet (nibble) dans la valeur %s va être tronqué
+1204	F	la longueure de la valeure %s doit être comprise entre 1 et %d octets
+1205	M	utilisation du fichier de configuration %s; vous pouvez outrepasser cela avec la variable d'environnement HTC_XML
+1206	E	combinaison de qualifieur invalide dans %s	
+1207	M	Certaines des options utilisées dans la ligne de commande sont maintenant obsolètes
+1208	M	Utilisez l'option --help ou référez vous au manuel d'utilisateur pour le détail des options
+1209	M	Un ancien plugin pour MPLAB à été détecté
+1210	M	Visitez le site web de Microchip pour une possible mise-à-jour
+1211	9	Type de mémoire %s non valide pour ce dispositif
+1212	3	Trouvé %s (%0*lXh) à l'adresse %lXh
+1213	E	ARCH dupliqué pour %s dans le fichier chipinfo à la ligne %d
+1214	E	RAMSIZE dupliqué pour %s dans le fichier chipinfo à la ligne %d
+1215	F	impossible d'ouvrir le fichier chipinfo %s
+1216	E	fichier chipinfo %s vide
+1217	E	impossible d'ouvrir le fichier de command %s
+1218	E	impossible de créer le fichier de renvoi %s
+1219	E	impossible de créer le fichier liste %s
+1220	E	impossible de créer le fichier assembleur %s
+1221	E	impossible de créer le fichier liste relogeable %s
+1222	E	impossible de créer le fichier objet %s
+1223	E	décalage relatif branch/call hors de portée
+1224	E	conflit banked/common
+1225	E	argument de l'instruction LSFR doit être 0-3
+1226	F	instruction invalide ou mode d'instruction pour cette architecture: "%s"
+1227	8	le support pour le dispositif %s dans cette version du compilateur est %s
+1228	F	impossible de localiser le répértoire d'installation
+1229	E	seulement vec_reset ou vec_func peuvent être séléctionnés
+1230	0	déréférencement d'un pointeur non-initialisé "%s"
+1231	E	impossible de déterminé l'ID du système
+1232	0	les données persistante peuvent être altérées durant une réinitialisation asynchrone (voir errata)
+1233	M	Employant l'errata %s permet de contourner le problème:
+1234	M	* %s
+1235	E	mot clé inconnu %s
+1236	E	argument pour %s invlide: %s
+1237	E	endpoint 0 est pré-défini
+1238	E	FNALIGN échec sur %s
+1239	E	le pointeur %s n'a pas de cible valide
+1240	E	type d'algorithme de checksum inconnu (%i)
+1241	E	mauvaise adresse de départ dans %s
+1242	E	mauvaise adresse de fin dans %s
+1243	E	mauvaise adresse de destination dans %s
+1244	E	donnée locale trop grande dans %s()
+1245	F	valuer plus grand que zéro requise pour %s
+1246	F	aucune RAM n'est définie pour le placement des variables
+1247	F	aucun accès à la RAM n'est définit pour le placement des variables
+1248	E	symbole (%s) rencontré avec un type de taille indéfini
+1249	E	ne peut pas trouver de place (%ld byte%s) pour la variable %s dans la bank d'accès
+1250	E	ne peut pas trouver de place (%ld byte%s) pour la variable %s
+1251	F	aucune RAM éloignée n'est définie pour le placement des variables
+1252	E	ne peut pas trouver de place (%ld byte%s) pour la variable %s en RAM éloignée
+1253	E	ne peut pas trouver de place (%ld byte%s) pour le bloc auto/param
+1254	E	ne peut pas trouver de place (%ld byte%s) pour le bloc data
+1255	F	conflits entre les chemins du répertoire de sortie	
+1256	-1	symbol "%s" non défini traité comme une constante hexadécimale 
+1257	4	la variable local "%s" est utilisé mais ne reçoit jamais de valeur
+1258	9	dépassement de capacité de la pile possible en applant la fonction "%s"	
+1259	E	impossible d'optimiser pour la vitess et l'espace en même temps
+1260	2	macro "%s" redéfinie
+1261	E	chaîne de caractères constante requise
+1262	0	l'objet "%s" se trouve à l'extérieur de l'espace %s disponible
+1263	0	multiple variables dans un unique bloque #pragma abs_address vont être chevauchées
+1264	0	dangereuse conversion de pointer
+1265	0	vecteur de reset à une address non standard 0x%lX (0x%lX attendu)
+1267	E	dépassement de capacité de la réparation référençant %s %s (0x%lX) dans %d byte%s à 0x%lX (%s%s%s %d/0x%X)
+1268	E	dépassement de capacité de la réparation stockant 0x%lX dans %d byte%s à 0x%lX (%s%s%s %d/0x%X)
+1269	0	il reste %s %u day%s avant que cette licence n'expire
+1270	E	la taille de l'algorithme de checksum n'est pas allignée uniformément dans la gamme de checksum possible
+1271	E	ne pas pas trouver de place (%ld byte%s) pour la variable %s dans la RAM commune
+1272	F	aucune RAM commune n'est définie pour le placement des variables
+1273	3	Omniscient Code Generation n'est pas disponible dans le mode Free
+1274	E	le delay dépasse la limite maximale de %lu cycles
+1275	E	seules les fonctions peuvent être qualifiées "%s"
+1276    E   dépassement de capacité du tampon dans la liste d'emplacement  DWARF
+1277    E	"using" ne peut être utilisé qu'avec des fonctions
+1278    0   en omettant "%s" qui ne dispose pas d'emplacement
+1279	E	la banque selectionnée (%u) n'existe pas
+1280	E	"%s" adresse invalide
+1281	2	caractère (0%X) interdit
+1282    F   aucune options de transport pour le REAL ICE n'a été spécifiée
+1283    E   taille de l'address de pointeur de table illégales %lu (__activetblptr)
+1284    0   mapfile malformé durant le génération du résumé: CLASS expecté mais pas trouvé
+1285    0   mapfile malformé durant le génération du résumé: pas de nom à la position %u
+1286    0   mapfile malformé durant le génération du résumé: pas d'address de lien à la position %u
+1287    0   mapfile malformé durant le génération du résumé: pas d'address de chargement à la position %u
+1288    0   mapfile malformé durant le génération du résumé: pas de taille à la position %u
+1289    -9  limite de ligne dépassée, le débogage peut être affecté
+1290    E   dépassement de capacité du tampon dans la configuration du débogage de DWARF
+1291    E   mauvais index dans la table de chaîne de caractères ELF
+1292    E   definition malformée dans le fichier .SDB %s
+1293    0   impossible de trouvé le type èour "%s" dans les information de débogage de DWARF
+1294    0   il n'y a plus qu'un jour avant que cette licence n'expire
+1295    0   il n'y a plus que %u jours avant que cette licence n'expire
+1296    F   le fichier source "%s" est en conflit avec "%s"
+1297    3   l'option %s n'est pas disponible en mode Free
+1298	E	l'utilisation de %s à l'exterieur des macros est interdit
+1299    0   modificateur "%s" non standard - utiliser "%s" à la place
+1300    0   nombre maximum de classes atteinte. La liste peut être tronquée
+1301    0   en-tête de section ELF non-valide. Sauter
+1302    F   impossible de trouver une extension de sortie ELF valide pour ce chip
+1303    -5  positionnement de variable non-valide détécté: %s - %s
+1304    5   nom de registre inconnu: "%s"
+1305    5   classe de stockage incompatible pour la variable: "%s"
+1306    5   taille incompatible (%d vs %d) pour la variable: "%s"
+1307    3   psect %s tronquée à %ld bytes
+1308    -1  sous-options de fonctions d'interuption manquante/en conflits, remplacé par défaut par "%s"
+1309    0   sous-option de runtime %s non-valide va être ignorée et remplacé par celle par celle par défaut (%s)
+1310    0   vitesse spécifiée (%luHz) dépace la fréquence d'opération maximum (%luHz), remplacé par celle par défaut %luHz
+1311    0   paramètre de configuration manquant pour le mot de configuration 0x%X, celui par défaut va être utilisé
+1312    0   sous-option de runtime perform en conflits avec les paramètres de configuration, supposé à %luHz
+1313    0   sous-options %s ("%s") ignorée
+1314    F   action illégale dans d'allocation de mémoire
+1315    E   class non définie ou illégale utilisé pour lier la psect %s
+1316    -2  attribut "%s" ignoré
+1317    F   argument manquant pour l'attribut "%s"
+1318    F   argument non valide pour l'attribut "%s"
+1319    F   type invlaide "%s" pour l'attribut "%s"
+1320    F   l'attribut "%s" existe déjà
+1321    F   mauvais attribut pour l'option -T "%s"
+1322    E   qualificatif inconnue passé à l'option -T "%s"
+1323    E   attribut attendus
+1324    -2  qualificatif "%s" ignoré
+1325    E   le registre CP%u n'existe pas: ($%u), sélectionner (%u)
+1326    E   la variable qualifiée "%s" à son adresse manquante (%s)
+1327    5   function d'interuption "%s" redéfinie par "%s"
+1328    E   les registres du coproccessor %u ne peuvent pas être accessibles à partir du code %s
+1329    E   ne peut seulement modifier les vecteur d'interuption de type RAM
+1330    E   seulement les fonctions ou les pointeurs de fonctions peuvent avoir un qualificatif d'architecture du set d'instruction
+1331    E   les fonctions d'interuption ne peuvent pas être qualifiées "%s"
+1332    E   combinaison du qualificatif (%s) et d'un type impossible pour "%s"
+1333    5   l'instruction ne peut pas être étendue
+1334    E   opérande de registre %s non valide
+1335    0   l'instruction "%s" est obsolète
+1336    E   une psect ne peut appartenir qu'a une seul ISA
+1337    E   l'instruction instruction/macro "%s" ne fait pas partie de la psect ISA
+1338    E   l'opérande doit être une valeur sur %u bit
+1339    E   la taille de l'opérande doit être %u et doit être une valeure %s
+1340    E   l'opérande doit être >= %ld et <= %ld
+1341    E   pos+size doit être > 0 et <= 32
+1342    0   espace après "\"
+1343    0   les donnée du fichier hex à l'addresse 0x%lX (0x%2.2X) sont écrasé par 0x%2.2X
+1344    E   la fonction "%s" à le mauvais type pour cet appel de fonction
+1345    0   texte complémentaire à la fin de #pragma ignored - "%s"
+1346    E   ne peu pas trouvé 0x%X words pour la psect psect "%s" dans le ségment "%s" (plus grande plage contiguë inutilisés 0x%lX)
+1347    E   ne peu pas trouvé 0x%X words (0x%x withtotal) pour la  psect "%s" dans le ségment "%s" (plus grande plage contiguë inutilisés 0x%lX)
+1348    E   la tag d'enumération "%s" est redéfini (depuis %s:%d)
+1349    E   l'initialisation de la variable absolue "%s" en RAM n'est pas supportée
+1350    8   les opérande de pointer à "-" doivent référencé les même tableau
+1351    E   ficher clé manquant
+1352    1   troncature de la valeur de l'opérande (0x%lx) à %d bits
+1353    8   la fonction d'interuption exige une adresse
+1354    0   la configuration de programmation du registre non implémenté à %s va être ignorée
+1355    E   le paramêtre pour la fonction delay est trop grand
+1356	E	dépassement de capacité de la réparation référençant %s %s (0x%lX) dans %d byte%s à 0x%lX/0x%X -> 0x%lX (%s%s%s %d/0x%X)
+1357	E	dépassement de capacité de la réparation stockant 0x%lX dans %d byte%s à 0x%lX/0x%X -> 0x%lX (%s%s%s %d/0x%X)
+1358    F   pas de place pour les temp de la function %s (%u)
+1359    F   pas de place pour les paramètres de la function  %s
+1360    F   pas de place pour les auto/param %s
+1361    E   erreur de syntax des les paramètres de configuration
+1362    0   paramètre de configuration %s=%s redéfini
+1363    E  paramètre de configuration inconnu (%s = %s)
+1364    F   impossible d'ouvrir le fichier de données des registres de configuration %s
+1365    E   paramètre manquant pour le pragma "varlocate"
+1366    E   erreur de syntaxe pour le pragma "varlocate"
+1367    F   fin de fichier dans _asm
+1368    M   Message de l'assembleur: %s
+1369    F   impossible d'ouvrir le fichier proc %s
+1370    E   La libraire de périphériques n'est pas supportée pour le %s
+1371    3   le type Float ne peut pas être plus grand que le type Double. Le type Double à été modifié à %d bits
+1372    E   le level d'interruption ne peu pas être supérieur à %u
+1373    0   registre de configuration reprogrammé à 0x%X
+1374    0   la fonction du compilateur "%s" n'est plus supportée, %s
+1375   E	plusieurs fonctions d'interruptions (%s et %s) définies pour un seul vecteur d'interruption
+1376	0	valeur initiale (%ld) trop importante pour la largeur du champ de bits (%u)
+1377    E   paramètre manquant pour le pragma "%s"
+1378    E   erreur de syntaxe pour le pragma "%s"
+1379	E	pas de stratégie adéquate pour ce switch de compilation
+1380	1	impossible d'utiliser le switch "%s"
+1381	E	portée du label non valide
+1382	-1	inline assembly non supporté pour mode extended
+1383	E	erreur de syntaxe pour mode extended
+1384	E	opérande manquant pour mode extended 
+1384	E	expression C manquant un opérande poure mode extended
+1385	1	%s "%s" est obsolète (declarée à %s:%u)
+1386	0	incapable de déterminer la sens de la configuration "%s" pour le registre "%s"
+1387	E	l'argument inline delay doit être de type constant
+1388	0	la configuration de "%s" avec 0x%lX sera tronquée en 0x%lX
+1389	E	tentative de reconfiguration de %s "%s" avec %s (is %s)
+1390	8	l'identificateur spécifie des caractères non significatifs au-delà de sa longueur maximum
+1391	E	la taille de l'objet constant %d excède le maximum de %d pour ce composant
+1392	E	la fonction "%s" est appelée indirectement à partir du code principal et d'au moins un interruption
+1393	8	dépassement de pile potentiel détecté, la profondeur de la pile estimée est: %u
+1394	0	tentative de créer une zone mémoire (%lx - %lx) plus grande que la page, %lx
+1395	M	séquence de code compatible avec la suite de validation du compilateur (%u)
+1396	9	"%s" est positionné dans la region mémoire %s (0x%X - 0x%X) réservée par le compilateur
+1397	8	dépassement de pile probable; incapable d'implémenter l'appel hors-pile de "%s"
+1398	E	format hpaprod invalide
+1399	E	hpaprod incorrect pour ce numéro de série
+1400	E	le hpaprod ne peut être appliqué
+1401	F	les variables déclarées dans l'eeprom ne peuvent être accédées par le code principal et celui des interruptions
+1402	F	un pointeur vers l'eeprom ne peut également pointer un autre type de données
+1403	-2	pragma "%s" ignoré
+1404	0	Non supporté: %s
+1405	-2	type identificateur de la classe mémoire "%s" ignoré
+1406	E	les variables auto pour l'eeprom  ne sont pas supportées
+1407	E	les variables de type bit pour l'eeprom  ne sont pas supportées
+1408	0	initialization de variables far ignorées
+1409	E	le No de Warning utilisé dans le pragma "warning" n'est pas valide
+1410	E	Affectation du résultat incorrect d'un pointeur de fonction impossible
+1411	E	Zone de ROM additionnelle en dehors des limites
+1419	M	using the configuration file %s; you may override this with the environment variable XC_XML
+1458	3	Omniscient Code Generation n'est pas disponible dans le mode Standard

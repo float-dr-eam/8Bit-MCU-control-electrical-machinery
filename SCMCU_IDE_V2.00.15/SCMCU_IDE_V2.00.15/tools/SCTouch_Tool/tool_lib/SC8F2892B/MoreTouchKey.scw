@@ -1,0 +1,12 @@
+[PROJECT]
+Version=200
+Compile=1
+Device=SC8F2892B
+OptValue=-local,-asmfile,+asm,-speed,+space,-debug
+RuntimeValue=
+WarningValue=-9
+config=EFFD,FFEF,FFD0,FFFF,FFFF,FFFF,FFFF,FFFF,FFFF,FFFF,FFFF,FFFF,FFFF,FFFF,FFFF,FFFF,
+[FILE]
+SourceFile=main.c
+SourceFile=CheckTouchKey.c
+HeadFile=CheckTouchKey.h

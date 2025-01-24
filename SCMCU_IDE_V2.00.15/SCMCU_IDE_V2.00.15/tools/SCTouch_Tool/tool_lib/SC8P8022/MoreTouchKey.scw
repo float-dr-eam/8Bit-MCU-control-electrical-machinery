@@ -1,0 +1,9 @@
+[PROJECT]
+Version=1.18
+Compile=1
+Device=SC8P8022
+config=37FF,FFAB,FFFF,FFFF,FFFF,2915,FFFF,FFFF,FFFF,FFFF,FFFF,FFFF,FFFF,FFFF,FFFF,FFFF,
+[FILE]
+SourceFile=CheckTouchKey.c
+SourceFile=main.c
+HeadFile=CheckTouchKey.h
