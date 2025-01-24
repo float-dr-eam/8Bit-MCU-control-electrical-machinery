@@ -1,0 +1,14 @@
+Warning[373]:	H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c	第140行	implicit signed to unsigned conversion
+Warning[752]:	H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c	第103行	conversion to shorter data type
+Warning[752]:	H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c	第104行	conversion to shorter data type
+Warning[752]:	H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c	第154行	conversion to shorter data type
+Warning[752]:	H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c	第155行	conversion to shorter data type
+
+Memory Summary:
+    Program space        used    8Fh (   143) of   800h words   (  7.0%)
+    Data space           used     Eh (    14) of    A0h bytes   (  8.8%)
+    EEPROM space         None available
+    Data stack space     used     0h (     0) of    50h bytes   (  0.0%)
+    Configuration bits   used     0h (     0) of     2h words   (  0.0%)
+    ID Location space    used     0h (     0) of     4h bytes   (  0.0%)
+

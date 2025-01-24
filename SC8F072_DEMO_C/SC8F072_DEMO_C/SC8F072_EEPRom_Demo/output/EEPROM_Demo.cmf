@@ -1,0 +1,347 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$EEPROM_Demo.obj
+cinit CODE 0 704 704 8 2
+text1 CODE 0 782 782 D 2
+text2 CODE 0 756 756 18 2
+text3 CODE 0 76E 76E 14 2
+nvCOMMON COMMON 1 7B 7B 1 1
+maintext CODE 0 70C 70C 4A 2
+_tmp1_text CODE 0 700 700 1 2
+_tmp2_text CODE 0 701 701 1 2
+_tmp3_text CODE 0 702 702 1 2
+_tmp4_text CODE 0 703 703 1 2
+cstackCOMMON COMMON 1 76 76 5 1
+bssCOMMON COMMON 1 70 70 6 1
+$startup.obj
+end_init CODE 0 0 0 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 20-6F 1
+RAM A0-EF 1
+BANK0 20-6F 1
+BANK1 A0-EF 1
+CONST 1-6FF 2
+CONST 78F-7FF 2
+ENTRY 1-6FF 2
+ENTRY 78F-7FF 2
+IDLOC 2000-2003 2
+STACK 20-6F 1
+CODE 1-6FF 2
+CODE 78F-7FF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+COMMON 7C-7D 1
+CONFIG 2007-2008 2
+STRCODE 1-6FF 2
+STRCODE 78F-7FF 2
+STRING 1-6FF 2
+STRING 78F-7FF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$EEPROM_Demo.obj
+704 cinit CODE >169:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\EEPROM_Demo.as
+704 cinit CODE >172:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\EEPROM_Demo.as
+704 cinit CODE >192:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\EEPROM_Demo.as
+705 cinit CODE >193:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\EEPROM_Demo.as
+706 cinit CODE >194:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\EEPROM_Demo.as
+707 cinit CODE >195:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\EEPROM_Demo.as
+708 cinit CODE >196:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\EEPROM_Demo.as
+709 cinit CODE >197:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\EEPROM_Demo.as
+70A cinit CODE >203:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\EEPROM_Demo.as
+70A cinit CODE >205:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\EEPROM_Demo.as
+70B cinit CODE >206:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\EEPROM_Demo.as
+76E text3 CODE >129:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+76F text3 CODE >132:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+770 text3 CODE >133:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+771 text3 CODE >135:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+772 text3 CODE >136:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+773 text3 CODE >137:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+774 text3 CODE >139:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+778 text3 CODE >140:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+781 text3 CODE >142:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+756 text2 CODE >97:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+757 text2 CODE >100:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+759 text2 CODE >101:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+75A text2 CODE >103:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+75C text2 CODE >104:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+75E text2 CODE >106:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+75F text2 CODE >107:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+760 text2 CODE >109:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+762 text2 CODE >111:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+765 text2 CODE >112:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+767 text2 CODE >113:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+768 text2 CODE >114:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+769 text2 CODE >115:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+76A text2 CODE >116:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+76C text2 CODE >117:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+76D text2 CODE >119:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+782 text1 CODE >151:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+782 text1 CODE >154:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+785 text1 CODE >155:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+787 text1 CODE >157:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+788 text1 CODE >159:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+789 text1 CODE >160:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+78A text1 CODE >161:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+78B text1 CODE >163:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+78E text1 CODE >165:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+70C maintext CODE >23:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+70C maintext CODE >25:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+70D maintext CODE >26:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+70E maintext CODE >27:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+710 maintext CODE >28:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+711 maintext CODE >47:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+711 maintext CODE >49:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+712 maintext CODE >50:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+717 maintext CODE >52:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+71D maintext CODE >53:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+71F maintext CODE >54:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+725 maintext CODE >56:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+726 maintext CODE >50:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+72B maintext CODE >60:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+72D maintext CODE >62:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+72E maintext CODE >60:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+730 maintext CODE >62:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+731 maintext CODE >63:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+732 maintext CODE >64:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+733 maintext CODE >65:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+734 maintext CODE >67:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+739 maintext CODE >69:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+73C maintext CODE >70:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+740 maintext CODE >71:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+745 maintext CODE >72:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+748 maintext CODE >74:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+749 maintext CODE >67:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+74E maintext CODE >78:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+752 maintext CODE >80:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+754 maintext CODE >83:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c
+$startup.obj
+0 end_init CODE >75:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\startup.as
+0 init CODE >72:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\startup.as
+0 functab ENTRY >42:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\startup.as
+0 functab ENTRY >43:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\startup.as
+0 functab ENTRY >44:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\startup.as
+0 functab ENTRY >45:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\startup.as
+0 functab ENTRY >46:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\startup.as
+0 functab ENTRY >47:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\startup.as
+0 reset_vec CODE >66:H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\output\startup.as
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_t 72 0 COMMON 1 bssCOMMON EEPROM_Demo.obj
+___latbits 0 0 ABS 0 - EEPROM_Demo.obj
+__Hspace_0 78F 0 ABS 0 - -
+__Hspace_1 7C 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__size_of_Memory_Write 0 0 ABS 0 - EEPROM_Demo.obj
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+_tmp4_absaddr 703 0 ABS 0 - EEPROM_Demo.obj
+_RD 468 0 ABS 0 - EEPROM_Demo.obj
+_WR 469 0 ABS 0 - EEPROM_Demo.obj
+__Hstrings 0 0 ABS 0 strings -
+_WREN 46A 0 ABS 0 - EEPROM_Demo.obj
+___sp 0 0 STACK 2 stack startup.obj
+_data 75 0 COMMON 1 bssCOMMON EEPROM_Demo.obj
+_main E18 0 CODE 0 maintext EEPROM_Demo.obj
+_tmp1 E00 0 CODE 0 _tmp1_text EEPROM_Demo.obj
+_tmp2 E02 0 CODE 0 _tmp2_text EEPROM_Demo.obj
+_tmp3 E04 0 CODE 0 _tmp3_text EEPROM_Demo.obj
+_tmp4 E06 0 CODE 0 _tmp4_text EEPROM_Demo.obj
+btemp 7E 0 ABS 0 - EEPROM_Demo.obj
+__end_of_Memory_Read F04 0 CODE 0 text3 EEPROM_Demo.obj
+start 0 0 CODE 0 init startup.obj
+__size_of_main 0 0 ABS 0 - EEPROM_Demo.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__end_of_Memory_Write EDC 0 CODE 0 text2 EEPROM_Demo.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__LnvCOMMON 0 0 ABS 0 nvCOMMON -
+_tmp2_absaddr 701 0 ABS 0 - EEPROM_Demo.obj
+intlevel0 0 0 ENTRY 0 functab startup.obj
+intlevel1 0 0 ENTRY 0 functab startup.obj
+intlevel2 0 0 ENTRY 0 functab startup.obj
+intlevel3 0 0 ENTRY 0 functab startup.obj
+intlevel4 0 0 ENTRY 0 functab startup.obj
+intlevel5 0 0 ENTRY 0 functab startup.obj
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+_datanum 7B 0 COMMON 1 nvCOMMON EEPROM_Demo.obj
+wtemp0 7E 0 ABS 0 - EEPROM_Demo.obj
+__Hfunctab 0 0 ENTRY 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+__Hpa_nodes0 0 0 ABS 0 pa_nodes0 -
+_EEADRH 92 0 ABS 0 - EEPROM_Demo.obj
+_EECON2 8E 0 ABS 0 - EEPROM_Demo.obj
+_EEDATH 90 0 ABS 0 - EEPROM_Demo.obj
+__Lmaintext 0 0 ABS 0 maintext -
+__Lpa_nodes0 0 0 ABS 0 pa_nodes0 -
+__HnvCOMMON 0 0 ABS 0 nvCOMMON -
+start_initialization E08 0 CODE 0 cinit EEPROM_Demo.obj
+__size_of_Memory_Read 0 0 ABS 0 - EEPROM_Demo.obj
+___int_sp 0 0 STACK 2 stack startup.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hcinit E18 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__p_tmp1_text E00 0 CODE 0 _tmp1_text EEPROM_Demo.obj
+__Hmaintext 0 0 ABS 0 maintext -
+Memory_Read@Addr 78 0 COMMON 1 cstackCOMMON EEPROM_Demo.obj
+__p_tmp2_text E02 0 CODE 0 _tmp2_text EEPROM_Demo.obj
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 0 0 CONFIG 0 config -
+__p_tmp3_text E04 0 CODE 0 _tmp3_text EEPROM_Demo.obj
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lcinit E08 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__p_tmp4_text E06 0 CODE 0 _tmp4_text EEPROM_Demo.obj
+__Lstack 0 0 STACK 2 stack -
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 0 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 0 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Ltext 0 0 ABS 0 text -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_GIE 5F 0 ABS 0 - EEPROM_Demo.obj
+_RA0 430 0 ABS 0 - EEPROM_Demo.obj
+_RA1 431 0 ABS 0 - EEPROM_Demo.obj
+__S0 78F 0 ABS 0 - -
+__S1 7C 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__pnvCOMMON 7B 0 COMMON 1 nvCOMMON EEPROM_Demo.obj
+__Lintentry 0 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec startup.obj
+_Program_Read F04 0 CODE 0 text1 EEPROM_Demo.obj
+__H_tmp1_text E02 0 CODE 0 _tmp1_text -
+_tmp3_absaddr 702 0 ABS 0 - EEPROM_Demo.obj
+__H_tmp2_text E04 0 CODE 0 _tmp2_text -
+__H_tmp3_text E06 0 CODE 0 _tmp3_text -
+Memory_Write@Addr 78 0 COMMON 1 cstackCOMMON EEPROM_Demo.obj
+__H_tmp4_text E08 0 CODE 0 _tmp4_text -
+__pmaintext E18 0 CODE 0 maintext EEPROM_Demo.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 0 config -
+_read_rom_data 74 0 COMMON 1 bssCOMMON EEPROM_Demo.obj
+_Memory_Read EDC 0 CODE 0 text3 EEPROM_Demo.obj
+__L_tmp1_text E00 0 CODE 0 _tmp1_text -
+__L_tmp2_text E02 0 CODE 0 _tmp2_text -
+_tmp1_absaddr 700 0 ABS 0 - EEPROM_Demo.obj
+__size_of_Program_Read 0 0 ABS 0 - EEPROM_Demo.obj
+stackhi 0 0 ABS 0 - startup.obj
+stacklo 0 0 ABS 0 - startup.obj
+__L_tmp3_text E04 0 CODE 0 _tmp3_text -
+__L_tmp4_text E06 0 CODE 0 _tmp4_text -
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__pbssCOMMON 70 0 COMMON 1 bssCOMMON EEPROM_Demo.obj
+__Lend_init 0 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization E14 0 CODE 0 cinit EEPROM_Demo.obj
+__Hintentry 0 0 CODE 0 intentry -
+__end_of_Program_Read F1E 0 CODE 0 text1 EEPROM_Demo.obj
+__Lstrings 0 0 ABS 0 strings -
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__ptext1 F04 0 CODE 0 text1 EEPROM_Demo.obj
+__ptext2 EAC 0 CODE 0 text2 EEPROM_Demo.obj
+__ptext3 EDC 0 CODE 0 text3 EEPROM_Demo.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__end_of__initialization E14 0 CODE 0 cinit EEPROM_Demo.obj
+__Lfunctab 0 0 ENTRY 0 functab -
+__Lclrtext 0 0 ABS 0 clrtext -
+__pcstackCOMMON 76 0 COMMON 1 cstackCOMMON EEPROM_Demo.obj
+__Hend_init 2 0 CODE 0 end_init -
+_read_data 70 0 COMMON 1 bssCOMMON EEPROM_Demo.obj
+__end_of_main EAC 0 CODE 0 maintext EEPROM_Demo.obj
+__end_of_tmp1 E02 0 CODE 0 _tmp1_text EEPROM_Demo.obj
+__end_of_tmp2 E04 0 CODE 0 _tmp2_text EEPROM_Demo.obj
+__end_of_tmp3 E06 0 CODE 0 _tmp3_text EEPROM_Demo.obj
+__end_of_tmp4 E08 0 CODE 0 _tmp4_text EEPROM_Demo.obj
+Memory_Write@Value 76 0 COMMON 1 cstackCOMMON EEPROM_Demo.obj
+_EEADR 91 0 ABS 0 - EEPROM_Demo.obj
+_EEDAT 8F 0 ABS 0 - EEPROM_Demo.obj
+_EEPGD 46F 0 ABS 0 - EEPROM_Demo.obj
+_TRISA 85 0 ABS 0 - EEPROM_Demo.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_Memory_Write EAC 0 CODE 0 text2 EEPROM_Demo.obj
+main@read_addr 79 0 COMMON 1 cstackCOMMON EEPROM_Demo.obj
+Program_Read@P_Addr 76 0 COMMON 1 cstackCOMMON EEPROM_Demo.obj
+__initialization E08 0 CODE 0 cinit EEPROM_Demo.obj
+__pstrings 0 0 STRING 0 strings EEPROM_Demo.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+_tmp1_text 0 700 E00 1 2
+_tmp2_text 0 701 E02 1 2
+_tmp3_text 0 702 E04 1 2
+_tmp4_text 0 703 E06 8C 2
+reset_vec 0 0 0 1 2
+bssCOMMON 1 70 70 C 1

@@ -1,0 +1,18 @@
+[CMSC]
+TRISA=07,0085,01,00
+EECON2=07,008E,01,00
+EEDAT=07,008F,01,00
+EEDATH=07,0090,01,00
+EEADR=07,0091,01,00
+EEADRH=07,0092,01,00
+t=09,0072,02,00
+read_data=09,0070,02,00
+datanum=07,007B,01,00
+data=07,0075,01,00
+read_rom_data=07,0074,01,00
+main@read_addr=09,0079,02,00
+Program_Read@P_Addr=09,0076,02,00
+Memory_Write@Addr=07,0078,01,00
+Memory_Write@Value=09,0076,02,00
+Memory_Read@Addr=07,0078,01,00
+[R data,read_rom_data,PORTA,

@@ -1,0 +1,315 @@
+---- H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_EEPRom_Demo\main.c ----------------------------------------------------------------------
+1:                /**********************************************************
+2:                
+3:                **********************************************************/
+4:                
+5:                #include <sc.h>
+6:                
+7:                
+8:                
+9:                void Memory_Write(unsigned char Addr,unsigned int Value);
+10:               void Memory_Read(unsigned char Addr);
+11:               
+12:               void Program_Read(unsigned int P_Addr);
+13:               
+14:               volatile unsigned int t,read_data;
+15:               volatile unsigned char datanum, data;
+16:               volatile unsigned char read_rom_data;
+17:               
+18:               const unsigned char tmp1 @ 0x700 = 0xaa;	//定义滚码地址
+19:               const unsigned char tmp2 @ 0x701 = 0xaa;
+20:               const unsigned char tmp3 @ 0x702 = 0xaa;
+21:               const unsigned char tmp4 @ 0x703 = 0xaa;
+22:               
+23:               void main()
+  070C    0000    NOP
+  070D    0064    CLRWDT
+24:               {
+25:               	asm("nop");
+26:               	asm("clrwdt");
+27:               	TRISA = 0;
+  070E    1683    SETB	0x3,5
+  070F    0185    CLR	0x5
+28:               	data = 0;
+  0710    01F5    CLR	0x75
+29:               
+30:               	/***************** EECON1 *******************************************8
+31:               		Bit7 EEPGD: 程序/程序EEPROM选择位； 1= 操作程序存储器； 0= 操作程序EEPROM。 
+32:               		Bit6~Bit4 未用。 
+33:               		Bit3 WRERR: EEPROM错误标志位； 
+34:               			1= 写操作过早终止（正常工作期间的任何WDT复位或欠压复位）； 
+35:               			0= 写操作完成。 
+36:               		Bit2 WREN: EEPROM写使能位； 
+37:               			1= 允许写周期； 
+38:               			0= 禁止写入存储器。 
+39:               		Bit1 WR: 写控制位； 
+40:               			1= 启动写周期（写操作一旦完成由硬件清零该位，用软件只能将WR位置1，但不能清零）
+41:               			0= 写周期完成。 
+42:               		Bit0 RD: 读控制位； 
+43:               			1= 启动存储器读操作（由硬件清零RD，用软件只能将RD位置1，但不能清零）； 
+44:               			0= 不启动存储器读操作。
+45:               	***************************************************************************/
+46:               	
+47:               	while(1)
+  0711    0064    CLRWDT
+48:               	{
+49:               		asm("clrwdt");
+50:               		for(datanum=0;datanum<32;datanum++)
+  0712    01FB    CLR	0x7B
+  0713    3020    LDIA	0x20
+  0714    027B    SUBA	0x7B
+  0715    1803    SZB	0x3,0
+  0716    2F2B    JP	0x72B
+51:               		{
+52:               			Memory_Write(datanum,0x55aa);			//调用EEDATA写函数
+  0717    30AA    LDIA	0xAA
+  0718    00F6    LD	0x76,A
+  0719    3055    LDIA	0x55
+  071A    00F7    LD	0x77,A
+  071B    087B    LD	A,0x7B
+  071C    2756    CALL	0x756
+53:               			Memory_Read(datanum);					//调用EEDATA读函数
+  071D    087B    LD	A,0x7B
+  071E    276E    CALL	0x76E
+54:               			if(0x55aa == read_data)
+  071F    30AA    LDIA	0xAA
+  0720    0670    XORA	0x70
+  0721    3055    LDIA	0x55
+  0722    1903    SZB	0x3,2
+  0723    0671    XORA	0x71
+  0724    1903    SZB	0x3,2
+55:               			{
+56:               				data++;
+  0725    0AF5    INCR	0x75
+  0726    0AFB    INCR	0x7B
+  0727    3020    LDIA	0x20
+  0728    027B    SUBA	0x7B
+  0729    1C03    SNZB	0x3,0
+  072A    2F17    JP	0x717
+57:               			}
+58:               			
+59:               		}
+60:               		if(data == 32)
+  072B    3020    LDIA	0x20
+  072C    0675    XORA	0x75
+61:               		{
+62:               			RA0 = 1;
+  072D    1683    SETB	0x3,5
+  072E    1D03    SNZB	0x3,2
+  072F    2F33    JP	0x733
+  0730    1406    SETB	0x6,0
+63:               			data = 0;
+  0731    01F5    CLR	0x75
+64:               		}
+  0732    2F34    JP	0x734
+65:               		else RA0 = 0;
+  0733    1006    CLRB	0x6,0
+66:               		
+67:               		for(datanum=0;datanum<4;datanum++)
+  0734    01FB    CLR	0x7B
+  0735    3004    LDIA	0x4
+  0736    027B    SUBA	0x7B
+  0737    1803    SZB	0x3,0
+  0738    2F4E    JP	0x74E
+68:               		{
+69:               			unsigned int read_addr = 0x0700;
+  0739    3007    LDIA	0x7
+  073A    01F9    CLR	0x79
+  073B    00FA    LD	0x7A,A
+70:               			read_addr = read_addr + datanum;		//赋值滚码所在地址
+  073C    087B    LD	A,0x7B
+  073D    07F9    ADDR	0x79
+  073E    1803    SZB	0x3,0
+  073F    0AFA    INCR	0x7A
+71:               			Program_Read(read_addr);				//调用PROGRAM读函数
+  0740    087A    LD	A,0x7A
+  0741    00F7    LD	0x77,A
+  0742    0879    LD	A,0x79
+  0743    00F6    LD	0x76,A
+  0744    2782    CALL	0x782
+72:               			if(0xaa == read_rom_data)
+  0745    30AA    LDIA	0xAA
+  0746    0674    XORA	0x74
+  0747    1903    SZB	0x3,2
+73:               			{
+74:               				data++;
+  0748    0AF5    INCR	0x75
+  0749    0AFB    INCR	0x7B
+  074A    3004    LDIA	0x4
+  074B    027B    SUBA	0x7B
+  074C    1C03    SNZB	0x3,0
+  074D    2F39    JP	0x739
+75:               			}
+76:               			
+77:               		}
+78:               		if(data == 4)
+  074E    3004    LDIA	0x4
+  074F    0675    XORA	0x75
+  0750    1D03    SNZB	0x3,2
+  0751    2F54    JP	0x754
+79:               		{
+80:               			RA1 = 1;
+  0752    1486    SETB	0x6,1
+  0753    2F10    JP	0x710
+81:               			data = 0;
+82:               		}
+83:               		else RA1 = 0;
+  0754    1086    CLRB	0x6,1
+  0755    2F11    JP	0x711
+84:               		
+85:               	}
+86:               }
+87:               
+88:               
+89:               /***********************************************
+90:               函数名称：Memory_Write
+91:               函数功能：写数据/程序寄存器
+92:               入口参数：Addr - 写入地址
+93:                         Value - 写入数值
+94:               出口参数：无
+95:               备注：
+96:               ************************************************/
+97:               void Memory_Write(unsigned char Addr,unsigned int Value)
+  0756    00F8    LD	0x78,A
+98:               {
+99:               											//将要写入的地址放入EEADDR寄存器
+100:              	EEADR = Addr;
+  0757    1683    SETB	0x3,5
+  0758    0091    LD	0x11,A
+101:              	EEPGD = 0;								//访问数据存储器
+  0759    138D    CLRB	0xD,7
+102:              											
+103:              	EEDAT = Value & 0x00ff;					//将要写入的数据给EEPROM的数据寄存器
+  075A    0876    LD	A,0x76
+  075B    008F    LD	0xF,A
+104:              	EEDATH = (Value & 0xff00)>>8;
+  075C    0877    LD	A,0x77
+  075D    0090    LD	0x10,A
+105:              	
+106:              	WREN = 1;								//允许写周期
+  075E    150D    SETB	0xD,2
+107:              	GIE = 0;								//关闭中断
+  075F    138B    CLRB	0xB,7
+108:              	
+109:              	while(GIE) GIE = 0;						//确保中断已关闭
+  0760    1B8B    SZB	0xB,7
+  0761    2F5F    JP	0x75F
+110:              		
+111:              	EECON2 = 0x55;							//给EECON2写入0x55
+  0762    3055    LDIA	0x55
+  0763    1683    SETB	0x3,5
+  0764    008E    LD	0xE,A
+112:              	EECON2 = 0xaa;							//给EECON2写入0xaa
+  0765    30AA    LDIA	0xAA
+  0766    008E    LD	0xE,A
+113:              	WR = 1;									//启动写周期
+  0767    148D    SETB	0xD,1
+  0768    0000    NOP
+  0769    0000    NOP
+114:              	asm("nop");								//写EEDATA的时候，CPU 会停止工作，写完才执行这条语句
+115:              	asm("nop");
+116:              	WREN = 0;								//禁止写入
+  076A    1683    SETB	0x3,5
+  076B    110D    CLRB	0xD,2
+117:              	GIE = 1;								//开启中断							
+  076C    178B    SETB	0xB,7
+  076D    0008    RET
+118:              	
+119:              }
+120:              
+121:              
+122:              /***********************************************
+123:              函数名称：Memory_Read
+124:              函数功能：读数据/程序寄存器
+125:              入口参数：Addr - 读取地址
+126:              出口参数：返回读取地址相应数值
+127:              备注：
+128:              ************************************************/
+129:              void Memory_Read(unsigned char Addr)
+  076E    00F8    LD	0x78,A
+130:              {
+131:              									//将要写入的地址放入EEADDR寄存器
+132:              	EEADR = Addr;
+  076F    0091    LD	0x11,A
+133:              	EEPGD = 0;						//访问数据存储器
+  0770    138D    CLRB	0xD,7
+134:              	
+135:              	RD = 1;							//允许读操作
+  0771    140D    SETB	0xD,0
+  0772    0000    NOP
+  0773    0000    NOP
+136:              	asm("nop");						//读取数据必须加两个nop
+137:              	asm("nop");
+138:              	
+139:              	read_data = EEDAT;
+  0774    1683    SETB	0x3,5
+  0775    080F    LD	A,0xF
+  0776    00F0    LD	0x70,A
+  0777    01F1    CLR	0x71
+140:              	read_data = read_data | (int)(EEDATH<<8);
+  0778    0810    LD	A,0x10
+  0779    00F6    LD	0x76,A
+  077A    01F7    CLR	0x77
+  077B    00F7    LD	0x77,A
+  077C    01F6    CLR	0x76
+  077D    0876    LD	A,0x76
+  077E    04F0    ORR	0x70
+  077F    0877    LD	A,0x77
+  0780    04F1    ORR	0x71
+  0781    0008    RET
+141:              	
+142:              }
+143:              
+144:              /***********************************************
+145:              函数名称：Program_Read
+146:              函数功能：读数据/程序寄存器
+147:              入口参数：Addr - 读取地址
+148:              出口参数：返回读取地址相应数值
+149:              备注：
+150:              ************************************************/
+151:              void Program_Read(unsigned int P_Addr)
+152:              {
+153:              									//将要写入的低位地址放入EEADR寄存器
+154:              	EEADR = P_Addr & 0x00ff;
+  0782    0876    LD	A,0x76
+  0783    1683    SETB	0x3,5
+  0784    0091    LD	0x11,A
+155:              	EEADRH = (P_Addr & 0xff00)>>8;	//将要写入的高位地址放入EEADRH寄存器
+  0785    0877    LD	A,0x77
+  0786    0092    LD	0x12,A
+156:              	
+157:              	EEPGD = 1;						//访问程序存储器
+  0787    178D    SETB	0xD,7
+158:              	
+159:              	RD = 1;							//允许读操作
+  0788    140D    SETB	0xD,0
+  0789    0000    NOP
+  078A    0000    NOP
+160:              	asm("nop");						//读取数据必须加两个nop
+161:              	asm("nop");
+162:              	
+163:              	read_rom_data = EEDAT;
+  078B    1683    SETB	0x3,5
+  078C    080F    LD	A,0xF
+  078D    00F4    LD	0x74,A
+  078E    0008    RET
+164:              	
+165:              }
+---- stringtab ------------------------------------------------------------------
+---- reset_enter ------------------------------------------------------------------
+  0000    2F04    JP	0x704
+---- start_initialization ------------------------------------------------------------------
+  0704    01F0    CLR	0x70
+  0705    01F1    CLR	0x71
+  0706    01F2    CLR	0x72
+  0707    01F3    CLR	0x73
+  0708    01F4    CLR	0x74
+  0709    01F5    CLR	0x75
+---- interrupt_function_enter ----------------------------------------------------------
+---- common_function ------------------------------------------------------------------
+  0700    34AA    RET	0xAA
+  0701    34AA    RET	0xAA
+  0702    34AA    RET	0xAA
+  0703    34AA    RET	0xAA
+  070A    0183    CLR	0x3
+  070B    2F0C    JP	0x70C

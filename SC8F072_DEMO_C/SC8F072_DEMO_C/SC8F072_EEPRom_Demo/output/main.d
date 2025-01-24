@@ -1,0 +1,1 @@
+ main.d  main.p1:  H:/MyDownloads/说明书&测试报告/开发包/SC8F072开发包/SC8F072_DEMO_C/SC8F072_EEPRom_Demo/main.c

@@ -1,0 +1,830 @@
+
+# 1 "C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_Demo\SC8F072_Pwm_Demo.c"
+
+# 26 "C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\include\htc.h"
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
+
+
+# 13 "C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\include\xc8debug.h"
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
+
+# 5 "C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\include\SC8f072.h"
+volatile unsigned char INDF @ 0x00;
+volatile unsigned char OPTION_REG @ 0x01;
+volatile unsigned char PCL @ 0x02;
+volatile unsigned char STATUS @ 0x03;
+volatile unsigned char FSR @ 0x04;
+volatile unsigned char TRISB @ 0x05;
+volatile unsigned char PORTB @ 0x06;
+volatile unsigned char WPDB @ 0x07;
+volatile unsigned char WPUB @ 0x08;
+volatile unsigned char IOCB @ 0x09;
+volatile unsigned char PCLATH @ 0x0A;
+volatile unsigned char INTCON @ 0x0B;
+volatile unsigned char ODCONB @ 0x0C;
+volatile unsigned char PIR1 @ 0x0D;
+volatile unsigned char PIE1 @ 0x0E;
+volatile unsigned char CMPCON0 @ 0x0F;
+volatile unsigned char CMPCON1 @ 0x10;
+volatile unsigned char PR2 @ 0x11;
+volatile unsigned char TMR2 @ 0x12;
+volatile unsigned char T2CON @ 0x13;
+volatile unsigned char OSCCON @ 0x14;
+volatile unsigned char PWMCON0 @ 0x15;
+volatile unsigned char PWMCON1 @ 0x16;
+volatile unsigned char PWMTL @ 0x17;
+volatile unsigned char PWMTH @ 0x18;
+volatile unsigned char PWMD0L @ 0x19;
+volatile unsigned char PWMD1L @ 0x1A;
+volatile unsigned char PWMD4L @ 0x1B;
+volatile unsigned char PWMT4L @ 0x1C;
+volatile unsigned char PWMCON2 @ 0x1D;
+volatile unsigned char PWMD01H @ 0x1E;
+volatile unsigned char PWM01DT @ 0x1F;
+volatile unsigned char TMR0 @ 0x81;
+volatile unsigned char TRISA @ 0x85;
+volatile unsigned char PORTA @ 0x86;
+volatile unsigned char WPDA @ 0x87;
+volatile unsigned char WPUA @ 0x88;
+volatile unsigned char IOCA @ 0x89;
+volatile unsigned char ODCONA @ 0x8C;
+volatile unsigned char EECON1 @ 0x8D;
+volatile unsigned char EECON2 @ 0x8E;
+volatile unsigned char EEDAT @ 0x8F;
+volatile unsigned char EEDATH @ 0x90;
+volatile unsigned char EEADR @ 0x91;
+volatile unsigned char EEADRH @ 0x92;
+volatile unsigned char ANSEL0 @ 0x93;
+volatile unsigned char ANSEL1 @ 0x94;
+volatile unsigned char ADCON0 @ 0x95;
+volatile unsigned char ADCON1 @ 0x96;
+volatile unsigned char ADRESL @ 0x98;
+volatile unsigned char ADRESH @ 0x99;
+volatile unsigned char PWMD2L @ 0x9B;
+volatile unsigned char PWMD3L @ 0x9C;
+volatile unsigned char PWM23DT @ 0x9D;
+volatile unsigned char PWMD23H @ 0x9E;
+
+volatile bit T0LSE_EN @ ((unsigned)&OPTION_REG*8)+7;
+volatile bit INTEDG @ ((unsigned)&OPTION_REG*8)+6;
+volatile bit T0CS @ ((unsigned)&OPTION_REG*8)+5;
+volatile bit T0SE @ ((unsigned)&OPTION_REG*8)+4;
+volatile bit PSA @ ((unsigned)&OPTION_REG*8)+3;
+volatile bit PS2 @ ((unsigned)&OPTION_REG*8)+2;
+volatile bit PS1 @ ((unsigned)&OPTION_REG*8)+1;
+volatile bit PS0 @ ((unsigned)&OPTION_REG*8)+0;
+
+
+volatile bit IRP @ ((unsigned)&STATUS*8)+7;
+volatile bit RP1 @ ((unsigned)&STATUS*8)+6;
+volatile bit RP0 @ ((unsigned)&STATUS*8)+5;
+volatile bit TO @ ((unsigned)&STATUS*8)+4;
+volatile bit PD @ ((unsigned)&STATUS*8)+3;
+volatile bit Z @ ((unsigned)&STATUS*8)+2;
+volatile bit DC @ ((unsigned)&STATUS*8)+1;
+volatile bit C @ ((unsigned)&STATUS*8)+0;
+
+
+volatile bit TRISB7 @ ((unsigned)&TRISB*8)+7;
+volatile bit TRISB6 @ ((unsigned)&TRISB*8)+6;
+volatile bit TRISB5 @ ((unsigned)&TRISB*8)+5;
+volatile bit TRISB4 @ ((unsigned)&TRISB*8)+4;
+volatile bit TRISB3 @ ((unsigned)&TRISB*8)+3;
+volatile bit TRISB2 @ ((unsigned)&TRISB*8)+2;
+volatile bit TRISB1 @ ((unsigned)&TRISB*8)+1;
+volatile bit TRISB0 @ ((unsigned)&TRISB*8)+0;
+
+
+volatile bit RB7 @ ((unsigned)&PORTB*8)+7;
+volatile bit RB6 @ ((unsigned)&PORTB*8)+6;
+volatile bit RB5 @ ((unsigned)&PORTB*8)+5;
+volatile bit RB4 @ ((unsigned)&PORTB*8)+4;
+volatile bit RB3 @ ((unsigned)&PORTB*8)+3;
+volatile bit RB2 @ ((unsigned)&PORTB*8)+2;
+volatile bit RB1 @ ((unsigned)&PORTB*8)+1;
+volatile bit RB0 @ ((unsigned)&PORTB*8)+0;
+
+
+volatile bit WPDB7 @ ((unsigned)&WPDB*8)+7;
+volatile bit WPDB6 @ ((unsigned)&WPDB*8)+6;
+volatile bit WPDB5 @ ((unsigned)&WPDB*8)+5;
+volatile bit WPDB4 @ ((unsigned)&WPDB*8)+4;
+volatile bit WPDB2 @ ((unsigned)&WPDB*8)+2;
+volatile bit WPDB1 @ ((unsigned)&WPDB*8)+1;
+volatile bit WPDB0 @ ((unsigned)&WPDB*8)+0;
+
+
+volatile bit WPUB7 @ ((unsigned)&WPUB*8)+7;
+volatile bit WPUB6 @ ((unsigned)&WPUB*8)+6;
+volatile bit WPUB5 @ ((unsigned)&WPUB*8)+5;
+volatile bit WPUB4 @ ((unsigned)&WPUB*8)+4;
+volatile bit WPUB3 @ ((unsigned)&WPUB*8)+3;
+volatile bit WPUB2 @ ((unsigned)&WPUB*8)+2;
+volatile bit WPUB1 @ ((unsigned)&WPUB*8)+1;
+volatile bit WPUB0 @ ((unsigned)&WPUB*8)+0;
+
+
+volatile bit IOCB7 @ ((unsigned)&IOCB*8)+7;
+volatile bit IOCB6 @ ((unsigned)&IOCB*8)+6;
+volatile bit IOCB5 @ ((unsigned)&IOCB*8)+5;
+volatile bit IOCB4 @ ((unsigned)&IOCB*8)+4;
+volatile bit IOCB3 @ ((unsigned)&IOCB*8)+3;
+volatile bit IOCB2 @ ((unsigned)&IOCB*8)+2;
+volatile bit IOCB1 @ ((unsigned)&IOCB*8)+1;
+volatile bit IOCB0 @ ((unsigned)&IOCB*8)+0;
+
+
+volatile bit GIE @ ((unsigned)&INTCON*8)+7;
+volatile bit PEIE @ ((unsigned)&INTCON*8)+6;
+volatile bit T0IE @ ((unsigned)&INTCON*8)+5;
+volatile bit INTE @ ((unsigned)&INTCON*8)+4;
+volatile bit RBIE @ ((unsigned)&INTCON*8)+3;
+volatile bit T0IF @ ((unsigned)&INTCON*8)+2;
+volatile bit INTF @ ((unsigned)&INTCON*8)+1;
+volatile bit RBIF @ ((unsigned)&INTCON*8)+0;
+
+
+volatile bit ODCONB7 @ ((unsigned)&ODCONB*8)+7;
+volatile bit ODCONB6 @ ((unsigned)&ODCONB*8)+6;
+volatile bit ODCONB5 @ ((unsigned)&ODCONB*8)+5;
+volatile bit ODCONB4 @ ((unsigned)&ODCONB*8)+4;
+volatile bit ODCONB3 @ ((unsigned)&ODCONB*8)+3;
+volatile bit ODCONB2 @ ((unsigned)&ODCONB*8)+2;
+volatile bit ODCONB1 @ ((unsigned)&ODCONB*8)+1;
+volatile bit ODCONB0 @ ((unsigned)&ODCONB*8)+0;
+
+
+volatile bit CMPIF @ ((unsigned)&PIR1*8)+5;
+volatile bit PWMIF @ ((unsigned)&PIR1*8)+4;
+volatile bit RAIF @ ((unsigned)&PIR1*8)+3;
+volatile bit TMR2IF @ ((unsigned)&PIR1*8)+1;
+volatile bit ADIF @ ((unsigned)&PIR1*8)+0;
+
+
+volatile bit CMPIE @ ((unsigned)&PIE1*8)+5;
+volatile bit PWMIE @ ((unsigned)&PIE1*8)+4;
+volatile bit RAIE @ ((unsigned)&PIE1*8)+3;
+volatile bit TMR2IE @ ((unsigned)&PIE1*8)+1;
+volatile bit ADIE @ ((unsigned)&PIE1*8)+0;
+
+
+volatile bit CMPEN @ ((unsigned)&CMPCON0*8)+7;
+volatile bit CMPPS @ ((unsigned)&CMPCON0*8)+6;
+volatile bit CMPNS2 @ ((unsigned)&CMPCON0*8)+5;
+volatile bit CMPNS1 @ ((unsigned)&CMPCON0*8)+4;
+volatile bit CMPNS0 @ ((unsigned)&CMPCON0*8)+3;
+volatile bit CMPNV @ ((unsigned)&CMPCON0*8)+2;
+volatile bit CMPOUT @ ((unsigned)&CMPCON0*8)+1;
+volatile bit CMPOEN @ ((unsigned)&CMPCON0*8)+0;
+
+
+volatile bit CMPIM @ ((unsigned)&CMPCON1*8)+7;
+volatile bit AN_EN @ ((unsigned)&CMPCON1*8)+6;
+volatile bit RBIAS_H @ ((unsigned)&CMPCON1*8)+5;
+volatile bit RBIAS_L @ ((unsigned)&CMPCON1*8)+4;
+volatile bit LVDS3 @ ((unsigned)&CMPCON1*8)+3;
+volatile bit LVDS2 @ ((unsigned)&CMPCON1*8)+2;
+volatile bit LVDS1 @ ((unsigned)&CMPCON1*8)+1;
+volatile bit LVDS0 @ ((unsigned)&CMPCON1*8)+0;
+
+
+volatile bit CLK_SEL @ ((unsigned)&T2CON*8)+7;
+volatile bit TOUTPS3 @ ((unsigned)&T2CON*8)+6;
+volatile bit TOUTPS2 @ ((unsigned)&T2CON*8)+5;
+volatile bit TOUTPS1 @ ((unsigned)&T2CON*8)+4;
+volatile bit TOUTPS0 @ ((unsigned)&T2CON*8)+3;
+volatile bit TMR2ON @ ((unsigned)&T2CON*8)+2;
+volatile bit T2CKPS1 @ ((unsigned)&T2CON*8)+1;
+volatile bit T2CKPS0 @ ((unsigned)&T2CON*8)+0;
+
+
+volatile bit IRCF2 @ ((unsigned)&OSCCON*8)+6;
+volatile bit IRCF1 @ ((unsigned)&OSCCON*8)+5;
+volatile bit IRCF0 @ ((unsigned)&OSCCON*8)+4;
+volatile bit SWDTEN @ ((unsigned)&OSCCON*8)+1;
+
+
+volatile bit CLKDIV2 @ ((unsigned)&PWMCON0*8)+7;
+volatile bit CLKDIV1 @ ((unsigned)&PWMCON0*8)+6;
+volatile bit CLKDIV0 @ ((unsigned)&PWMCON0*8)+5;
+volatile bit PWM4EN @ ((unsigned)&PWMCON0*8)+4;
+volatile bit PWM3EN @ ((unsigned)&PWMCON0*8)+3;
+volatile bit PWM2EN @ ((unsigned)&PWMCON0*8)+2;
+volatile bit PWM1EN @ ((unsigned)&PWMCON0*8)+1;
+volatile bit PWM0EN @ ((unsigned)&PWMCON0*8)+0;
+
+
+volatile bit PWMIO_SEL1 @ ((unsigned)&PWMCON1*8)+7;
+volatile bit PWMIO_SEL0 @ ((unsigned)&PWMCON1*8)+6;
+volatile bit PWM2DTEN @ ((unsigned)&PWMCON1*8)+5;
+volatile bit PWM0DTEN @ ((unsigned)&PWMCON1*8)+4;
+volatile bit DT_DIV1 @ ((unsigned)&PWMCON1*8)+1;
+volatile bit DT_DIV0 @ ((unsigned)&PWMCON1*8)+0;
+
+
+volatile bit PWM4D9 @ ((unsigned)&PWMTH*8)+5;
+volatile bit PWM4D8 @ ((unsigned)&PWMTH*8)+4;
+volatile bit PWM4T9 @ ((unsigned)&PWMTH*8)+3;
+volatile bit PWM4T8 @ ((unsigned)&PWMTH*8)+2;
+volatile bit PWMT9 @ ((unsigned)&PWMTH*8)+1;
+volatile bit PWMT8 @ ((unsigned)&PWMTH*8)+0;
+
+
+volatile bit PWM4DIR @ ((unsigned)&PWMCON2*8)+4;
+volatile bit PWM3DIR @ ((unsigned)&PWMCON2*8)+3;
+volatile bit PWM2DIR @ ((unsigned)&PWMCON2*8)+2;
+volatile bit PWM1DIR @ ((unsigned)&PWMCON2*8)+1;
+volatile bit PWM0DIR @ ((unsigned)&PWMCON2*8)+0;
+
+
+volatile bit PWMD19 @ ((unsigned)&PWMD01H*8)+5;
+volatile bit PWMD18 @ ((unsigned)&PWMD01H*8)+4;
+volatile bit PWMD09 @ ((unsigned)&PWMD01H*8)+1;
+volatile bit PWMD08 @ ((unsigned)&PWMD01H*8)+0;
+
+
+volatile bit PWM01DT5 @ ((unsigned)&PWM01DT*8)+5;
+volatile bit PWM01DT4 @ ((unsigned)&PWM01DT*8)+4;
+volatile bit PWM01DT3 @ ((unsigned)&PWM01DT*8)+3;
+volatile bit PWM01DT2 @ ((unsigned)&PWM01DT*8)+2;
+volatile bit PWM01DT1 @ ((unsigned)&PWM01DT*8)+1;
+volatile bit PWM01DT0 @ ((unsigned)&PWM01DT*8)+0;
+
+
+volatile bit TRISA5 @ ((unsigned)&TRISA*8)+5;
+volatile bit TRISA4 @ ((unsigned)&TRISA*8)+4;
+volatile bit TRISA3 @ ((unsigned)&TRISA*8)+3;
+volatile bit TRISA2 @ ((unsigned)&TRISA*8)+2;
+volatile bit TRISA1 @ ((unsigned)&TRISA*8)+1;
+volatile bit TRISA0 @ ((unsigned)&TRISA*8)+0;
+
+
+volatile bit RA5 @ ((unsigned)&PORTA*8)+5;
+volatile bit RA4 @ ((unsigned)&PORTA*8)+4;
+volatile bit RA3 @ ((unsigned)&PORTA*8)+3;
+volatile bit RA2 @ ((unsigned)&PORTA*8)+2;
+volatile bit RA1 @ ((unsigned)&PORTA*8)+1;
+volatile bit RA0 @ ((unsigned)&PORTA*8)+0;
+
+
+volatile bit WPDA5 @ ((unsigned)&WPDA*8)+5;
+volatile bit WPDA4 @ ((unsigned)&WPDA*8)+4;
+volatile bit WPDA3 @ ((unsigned)&WPDA*8)+3;
+volatile bit WPDA2 @ ((unsigned)&WPDA*8)+2;
+volatile bit WPDA1 @ ((unsigned)&WPDA*8)+1;
+volatile bit WPDA0 @ ((unsigned)&WPDA*8)+0;
+
+
+volatile bit WPUA5 @ ((unsigned)&WPUA*8)+5;
+volatile bit WPUA4 @ ((unsigned)&WPUA*8)+4;
+volatile bit WPUA3 @ ((unsigned)&WPUA*8)+3;
+volatile bit WPUA2 @ ((unsigned)&WPUA*8)+2;
+volatile bit WPUA1 @ ((unsigned)&WPUA*8)+1;
+volatile bit WPUA0 @ ((unsigned)&WPUA*8)+0;
+
+
+volatile bit IOCA5 @ ((unsigned)&IOCA*8)+5;
+volatile bit IOCA4 @ ((unsigned)&IOCA*8)+4;
+volatile bit IOCA3 @ ((unsigned)&IOCA*8)+3;
+volatile bit IOCA2 @ ((unsigned)&IOCA*8)+2;
+volatile bit IOCA1 @ ((unsigned)&IOCA*8)+1;
+volatile bit IOCA0 @ ((unsigned)&IOCA*8)+0;
+
+
+volatile bit ODCONA5 @ ((unsigned)&ODCONA*8)+5;
+volatile bit ODCONA4 @ ((unsigned)&ODCONA*8)+4;
+volatile bit ODCONA3 @ ((unsigned)&ODCONA*8)+3;
+volatile bit ODCONA2 @ ((unsigned)&ODCONA*8)+2;
+volatile bit ODCONA1 @ ((unsigned)&ODCONA*8)+1;
+volatile bit ODCONA0 @ ((unsigned)&ODCONA*8)+0;
+
+
+volatile bit EEPGD @ ((unsigned)&EECON1*8)+7;
+volatile bit WRERR @ ((unsigned)&EECON1*8)+3;
+volatile bit WREN @ ((unsigned)&EECON1*8)+2;
+volatile bit WR @ ((unsigned)&EECON1*8)+1;
+volatile bit RD @ ((unsigned)&EECON1*8)+0;
+
+
+volatile bit EEDAT7 @ ((unsigned)&EEDAT*8)+7;
+volatile bit EEDAT6 @ ((unsigned)&EEDAT*8)+6;
+volatile bit EEDAT5 @ ((unsigned)&EEDAT*8)+5;
+volatile bit EEDAT4 @ ((unsigned)&EEDAT*8)+4;
+volatile bit EEDAT3 @ ((unsigned)&EEDAT*8)+3;
+volatile bit EEDAT2 @ ((unsigned)&EEDAT*8)+2;
+volatile bit EEDAT1 @ ((unsigned)&EEDAT*8)+1;
+volatile bit EEDAT0 @ ((unsigned)&EEDAT*8)+0;
+
+
+volatile bit EEDATH7 @ ((unsigned)&EEDATH*8)+7;
+volatile bit EEDATH6 @ ((unsigned)&EEDATH*8)+6;
+volatile bit EEDATH5 @ ((unsigned)&EEDATH*8)+5;
+volatile bit EEDATH4 @ ((unsigned)&EEDATH*8)+4;
+volatile bit EEDATH3 @ ((unsigned)&EEDATH*8)+3;
+volatile bit EEDATH2 @ ((unsigned)&EEDATH*8)+2;
+volatile bit EEDATH1 @ ((unsigned)&EEDATH*8)+1;
+volatile bit EEDATH0 @ ((unsigned)&EEDATH*8)+0;
+
+
+volatile bit EEADR7 @ ((unsigned)&EEADR*8)+7;
+volatile bit EEADR6 @ ((unsigned)&EEADR*8)+6;
+volatile bit EEADR5 @ ((unsigned)&EEADR*8)+5;
+volatile bit EEADR4 @ ((unsigned)&EEADR*8)+4;
+volatile bit EEADR3 @ ((unsigned)&EEADR*8)+3;
+volatile bit EEADR2 @ ((unsigned)&EEADR*8)+2;
+volatile bit EEADR1 @ ((unsigned)&EEADR*8)+1;
+volatile bit EEADR0 @ ((unsigned)&EEADR*8)+0;
+
+
+volatile bit EEADRH2 @ ((unsigned)&EEADRH*8)+2;
+volatile bit EEADRH1 @ ((unsigned)&EEADRH*8)+1;
+volatile bit EEADRH0 @ ((unsigned)&EEADRH*8)+0;
+
+
+volatile bit ANS5 @ ((unsigned)&ANSEL0*8)+5;
+volatile bit ANS4 @ ((unsigned)&ANSEL0*8)+4;
+volatile bit ANS3 @ ((unsigned)&ANSEL0*8)+3;
+volatile bit ANS2 @ ((unsigned)&ANSEL0*8)+2;
+volatile bit ANS1 @ ((unsigned)&ANSEL0*8)+1;
+volatile bit ANS0 @ ((unsigned)&ANSEL0*8)+0;
+
+
+volatile bit ANS15 @ ((unsigned)&ANSEL1*8)+7;
+volatile bit ANS14 @ ((unsigned)&ANSEL1*8)+6;
+volatile bit ANS13 @ ((unsigned)&ANSEL1*8)+5;
+volatile bit ANS12 @ ((unsigned)&ANSEL1*8)+4;
+volatile bit ANS11 @ ((unsigned)&ANSEL1*8)+3;
+volatile bit ANS10 @ ((unsigned)&ANSEL1*8)+2;
+volatile bit ANS9 @ ((unsigned)&ANSEL1*8)+1;
+volatile bit ANS8 @ ((unsigned)&ANSEL1*8)+0;
+
+
+volatile bit ADCS1 @ ((unsigned)&ADCON0*8)+7;
+volatile bit ADCS0 @ ((unsigned)&ADCON0*8)+6;
+volatile bit CHS3 @ ((unsigned)&ADCON0*8)+5;
+volatile bit CHS2 @ ((unsigned)&ADCON0*8)+4;
+volatile bit CHS1 @ ((unsigned)&ADCON0*8)+3;
+volatile bit CHS0 @ ((unsigned)&ADCON0*8)+2;
+volatile bit GODONE @ ((unsigned)&ADCON0*8)+1;
+volatile bit ADON @ ((unsigned)&ADCON0*8)+0;
+
+
+volatile bit ADFM @ ((unsigned)&ADCON1*8)+7;
+volatile bit CHS4 @ ((unsigned)&ADCON1*8)+6;
+volatile bit LDO_EN @ ((unsigned)&ADCON1*8)+2;
+volatile bit LDO_SEL1 @ ((unsigned)&ADCON1*8)+1;
+volatile bit LDO_SEL0 @ ((unsigned)&ADCON1*8)+0;
+
+
+volatile bit PWMD39 @ ((unsigned)&PWMD23H*8)+5;
+volatile bit PWMD38 @ ((unsigned)&PWMD23H*8)+4;
+volatile bit PWMD29 @ ((unsigned)&PWMD23H*8)+1;
+volatile bit PWMD28 @ ((unsigned)&PWMD23H*8)+0;
+
+
+# 27 "C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\include\sc.h"
+#pragma intrinsic(__nop)
+extern void __nop(void);
+
+# 76
+extern unsigned int flash_read(unsigned short addr);
+
+
+# 149
+#pragma intrinsic(_delay)
+extern __nonreentrant void _delay(unsigned long);
+
+# 184
+extern unsigned char __resetbits;
+extern __bit __powerdown;
+extern __bit __timeout;
+
+# 12 "C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\include\stdbool.h"
+typedef unsigned char bool;
+
+# 41 "C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_Demo\LED_188.h"
+void Led_Gpio_Init(void);
+void Charge_num(void);
+void Uncharge_num(void);
+void Motor_num(void);
+void Set_AllPin_INPUT(void);
+void Display(void);
+
+
+# 5 "C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_Demo\SC8F072_Pwm_Demo.c"
+#pragma warning disable 752
+#pragma warning disable 373
+
+# 20
+volatile unsigned int adresult;
+volatile unsigned char test_adc;
+volatile unsigned int power_ad;
+volatile unsigned char power_percent;
+volatile bool ADC_Flag=0;
+volatile unsigned int ADC_delay=0;
+static unsigned int adc_last = 0;
+
+volatile unsigned char pwm_duty = 0;
+
+volatile unsigned char debounce_counter = 0;
+volatile unsigned int long_press_counter = 0;
+volatile unsigned int Time_delay = 0;
+volatile bool button_sflag = 0;
+volatile bool button_lflag = 0;
+const unsigned char duty_steps[6] = {66, 73, 85, 91, 95,0};
+
+volatile bool T_flag = 0;
+volatile unsigned char hundreds = 4;
+volatile unsigned char tens = 4;
+volatile unsigned char unit = 2;
+
+
+
+void Init_System();
+void PWM_Init();
+void Set_PWM(unsigned char channel, unsigned char duty);
+void Button_response() ;
+unsigned char ADC_Sample(unsigned char adch, unsigned char adldo);
+void ADC_read();
+
+
+void main(void)
+{
+
+
+Init_System();
+Led_Gpio_Init();
+PWM_Init();
+while(1)
+{
+asm("clrwdt");
+Button_response();
+if(ADC_Flag)
+{
+ADC_read();
+}
+asm("clrwdt");
+}
+}
+
+# 79
+void Init_System()
+{
+asm("nop");
+asm("clrwdt");
+INTCON = 0;
+OSCCON = 0X72;
+OPTION_REG = 0B00000100;
+asm("clrwdt");
+
+WPUA = 0B00000000;
+WPUB = 0B00000000;
+WPDA = 0B00000000;
+WPDB = 0B00000000;
+TRISA = 0B00000000;
+TRISB = 0B00000000;
+PORTA = 0B00000000;
+PORTB = 0B00000000;
+
+TMR0 = 6;
+T0IF = 0;
+T0IE = 1;
+GIE = 1;
+
+
+PR2 = 249;
+TMR2IF = 0;
+TMR2IE = 1;
+T2CON = 0B00000111;
+
+
+
+WPUB = 0B00100000;
+TRISB= 0B00100000;
+IOCB = 0B00100000;
+RBIE = 1;
+
+PORTB;
+
+
+WPUA = 0B00100000;
+TRISA= 0B00100000;
+IOCA = 0B00100000;
+RAIE = 1;
+
+RAIF = 0;
+PORTA;
+INTCON = 0xE8;
+
+}
+
+void PWM_Init()
+{
+PWMCON1 = 0B11000000;
+TRISA = 0B00111111;
+PWMTL = 0XFF;
+PWMT4L = 0XFF;
+PWMTH = 0X00;
+
+
+
+
+PWMD0L = 0X00;
+
+
+PWMD1L = 0X00;
+PWMD01H = 0X00;
+
+
+PWMD2L = 0X00;
+
+PWMD23H = 0X00;
+
+PWMD4L = 0X00;
+
+# 167
+PWMCON0 = 0X17;
+PWMCON2 =0X00;
+
+}
+
+# 180
+void Set_PWM(unsigned char channel, unsigned char duty)
+{
+unsigned char pulse_width = (unsigned char)((duty * 255) / 100);
+switch (channel)
+{
+case 0:
+PWMD0L = pulse_width & 0xFF;
+
+break;
+case 1:
+PWMD1L = pulse_width & 0xFF;
+
+break;
+case 2:
+PWMD2L = pulse_width & 0xFF;
+
+break;
+case 3:
+PWMD3L = pulse_width & 0xFF;
+
+break;
+case 4:
+PWMD4L = pulse_width & 0xFF;
+
+break;
+default:
+break;
+}
+}
+
+# 228
+unsigned char ADC_Sample(unsigned char adch, unsigned char adldo)
+{
+
+volatile unsigned long adsum = 0;
+volatile unsigned int admin = 0, admax = 0;
+volatile unsigned int ad_temp = 0;
+
+if ((!LDO_EN) && (adldo & 0x04) )
+{
+
+ADCON1 = adldo;
+_delay((unsigned long)((100)*(16000000/4000000.0)));
+}
+else
+ADCON1 = adldo;
+if(adch & 0x10)
+{
+CHS4 = 1;
+adch &= 0x0f;
+}
+unsigned char i = 0;
+for (i = 0; i < 10; i++)
+{
+ADCON0 = (unsigned char)(0X41 | (adch << 2));
+asm("nop");
+asm("nop");
+asm("nop");
+asm("nop");
+GODONE = 1;
+unsigned char j = 0;
+while (GODONE)
+{
+_delay((unsigned long)((2)*(16000000/4000000.0)));
+if (0 == (--j))
+return 0;
+}
+
+ad_temp = (unsigned int)((ADRESH << 4) + (ADRESL >> 4));
+
+if (0 == admax)
+{
+admax = ad_temp;
+admin = ad_temp;
+}
+else if (ad_temp > admax)admax = ad_temp;
+
+else if (ad_temp < admin)admin = ad_temp;
+adsum += ad_temp;
+}
+adsum -= admax;
+if (adsum >= admin)
+adsum -= admin;
+else
+adsum = 0;
+
+if (adc_last)
+{
+adresult = adsum>>3;
+adresult = (int)(0.3*adresult + 0.7*adc_last);
+adc_last = adresult;
+} else
+{
+adresult = adsum>>3;
+adc_last = adresult;
+}
+adsum = 0;
+admin = 0;
+admax = 0;
+return 0xA5;
+}
+
+void ADC_read()
+{
+test_adc = ADC_Sample(31, 0);
+if (0xA5 == test_adc)
+{
+volatile unsigned long power_temp;
+power_temp = (unsigned long)(((4096UL*1.2*1000))/adresult);
+power_ad = (unsigned int)(power_temp);
+power_percent = (unsigned char)((power_ad-(1000UL*2.8))/(10UL*1.4));
+}
+else
+{
+ADCON0 = 0;
+ADCON1 = 0;
+_delay((unsigned long)((100)*(16000000/4000000.0)));
+}
+ADC_Flag=0;
+}
+void Button_response()
+{
+if (button_sflag)
+{
+TRISA = 0B00101000;
+_delay((unsigned long)((100)*(16000000/4000000.0)));
+button_sflag = 0;
+switch (pwm_duty)
+{
+case 0:
+Set_PWM(0, duty_steps[pwm_duty]);
+Set_PWM(1, duty_steps[5]);
+Set_PWM(2, duty_steps[5]);
+Set_PWM(4, duty_steps[pwm_duty]);
+break;
+case 1:
+Set_PWM(0, duty_steps[pwm_duty]);
+Set_PWM(1, duty_steps[pwm_duty]);
+Set_PWM(2, duty_steps[5]);
+Set_PWM(4, duty_steps[pwm_duty]);
+break;
+case 2:
+Set_PWM(0, duty_steps[pwm_duty]);
+Set_PWM(1, duty_steps[5]);
+Set_PWM(2, duty_steps[pwm_duty]);
+Set_PWM(4, duty_steps[pwm_duty]);
+break;
+case 3:
+Set_PWM(0, duty_steps[5]);
+Set_PWM(1, duty_steps[pwm_duty]);
+Set_PWM(2, duty_steps[pwm_duty]);
+Set_PWM(4, duty_steps[pwm_duty]);
+break;
+case 4:
+Set_PWM(0, duty_steps[pwm_duty]);
+Set_PWM(1, duty_steps[pwm_duty]);
+Set_PWM(2, duty_steps[pwm_duty]);
+Set_PWM(4, duty_steps[pwm_duty]);
+
+# 360
+break;
+default:
+break;
+}
+Time_delay=2500;
+Motor_num();
+pwm_duty = (pwm_duty + 1) % 5;
+T_flag=1;
+
+}
+if (button_lflag)
+{
+button_lflag = 0;
+Set_PWM(0, duty_steps[5]);
+Set_PWM(1, duty_steps[5]);
+Set_PWM(2, duty_steps[5]);
+Set_PWM(4, duty_steps[5]);
+pwm_duty =0;
+TRISA = 0B00111111;
+TRISB = 0B00111111;
+T_flag=0;
+
+asm("clrwdt");
+asm("stop");
+asm("nop");
+asm("nop");
+}
+}
+
+
+void interrupt Isr_Timer()
+{
+if(RAIF)
+{
+T_flag=1;
+if (!(PORTA & 0x20))
+{
+Charge_num();
+}
+else
+{
+Uncharge_num();
+}
+RAIF = 0;
+}
+if(RBIF)
+{
+
+# 411
+if (PORTB & 0x20)
+{
+if (long_press_counter >= 1000)
+{
+button_lflag = 1;
+}
+else if(long_press_counter<=1000 && long_press_counter>=50)
+{
+button_sflag = 1;
+}
+long_press_counter = 0;
+}
+RBIF = 0;
+}
+if(T0IF)
+{
+if(T_flag)
+{
+Display();
+}
+TMR0 += 6;
+T0IF = 0;
+
+if(ADC_delay > 0)
+{
+ADC_delay--;
+}
+else
+{
+ADC_delay=1000;
+ADC_Flag=1;
+}
+}
+if(TMR2IF)
+{
+TMR2IF = 0;
+
+# 465
+if (!(PORTB & 0x20))
+{
+if (debounce_counter < 15) debounce_counter++;
+if (debounce_counter == 15) long_press_counter++;
+}
+else
+{
+debounce_counter = 0;
+}
+
+
+if(Time_delay > 0)
+{
+Time_delay--;
+}
+else
+{
+if (!(PORTA & 0x20))
+{
+Charge_num();
+}
+else
+{
+Uncharge_num();
+}
+}
+}
+}
+

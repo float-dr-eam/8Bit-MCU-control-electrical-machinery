@@ -1,0 +1,1 @@
+ SC8F072_Sleep_Demo.d  SC8F072_Sleep_Demo.p1:  H:/MyDownloads/说明书&测试报告/开发包/SC8F072开发包/SC8F072_DEMO_C/SC8F072_Sleep_Demo/SC8F072_Sleep_Demo.c

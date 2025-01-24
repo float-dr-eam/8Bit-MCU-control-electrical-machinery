@@ -1,0 +1,69 @@
+[p PRO_MODE GLOBOPT AUTOSTATIC PIC14 PICREGULAR PICMID SPACEOPT ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip SC8F072 ]
+[d frameptr 6 ]
+"8 C:\Users\86135\Desktop\项目实践\SC8F072_DEMO_C\SC8F072_DEMO_C\SC8F072_Pwm_Demo\SC8F072_Pwm_Demo.c
+[v _main main `(v  1 e 1 0 ]
+"99
+[v _Init_System Init_System `(v  1 e 1 0 ]
+"62 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\include\SC8f072.h
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @1 ]
+"10
+[v _TRISB TRISB `VEuc  1 e 1 @5 ]
+"11
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"16
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+"25
+[v _OSCCON OSCCON `VEuc  1 e 1 @20 ]
+"26
+[v _PWMCON0 PWMCON0 `VEuc  1 e 1 @21 ]
+"27
+[v _PWMCON1 PWMCON1 `VEuc  1 e 1 @22 ]
+"28
+[v _PWMTL PWMTL `VEuc  1 e 1 @23 ]
+"29
+[v _PWMTH PWMTH `VEuc  1 e 1 @24 ]
+"30
+[v _PWMD0L PWMD0L `VEuc  1 e 1 @25 ]
+"31
+[v _PWMD1L PWMD1L `VEuc  1 e 1 @26 ]
+"32
+[v _PWMD4L PWMD4L `VEuc  1 e 1 @27 ]
+"33
+[v _PWMT4L PWMT4L `VEuc  1 e 1 @28 ]
+"34
+[v _PWMCON2 PWMCON2 `VEuc  1 e 1 @29 ]
+"35
+[v _PWMD01H PWMD01H `VEuc  1 e 1 @30 ]
+"36
+[v _PWM01DT PWM01DT `VEuc  1 e 1 @31 ]
+"38
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"39
+[v _PORTA PORTA `VEuc  1 e 1 @134 ]
+"56
+[v _PWMD2L PWMD2L `VEuc  1 e 1 @155 ]
+"57
+[v _PWMD3L PWMD3L `VEuc  1 e 1 @156 ]
+"59
+[v _PWMD23H PWMD23H `VEuc  1 e 1 @158 ]
+"8 C:\Users\86135\Desktop\项目实践\SC8F072_DEMO_C\SC8F072_DEMO_C\SC8F072_Pwm_Demo\SC8F072_Pwm_Demo.c
+[v _main main `(v  1 e 1 0 ]
+{
+"10
+[v main@delaycnt delaycnt `ui  1 a 2 0 ]
+"11
+[v main@pwmbuf pwmbuf `uc  1 a 1 2 ]
+"89
+} 0
+"99
+[v _Init_System Init_System `(v  1 e 1 0 ]
+{
+"114
+} 0

@@ -1,0 +1,87 @@
+[p PRO_MODE GLOBOPT AUTOSTATIC PIC14 PICREGULAR PICMID SPACEOPT ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip SC8F072 ]
+[d frameptr 6 ]
+"62 H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"25 H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_Sleep_Demo\SC8F072_Sleep_Demo.c
+[v _DelayXms DelayXms `(v  1 e 1 0 ]
+"37
+[v _main main `(v  1 e 1 0 ]
+"60
+[v _Sleep_Mode Sleep_Mode `(v  1 e 1 0 ]
+"112
+[v _Init_System Init_System `(v  1 e 1 0 ]
+"6 H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\include\sc8f072.h
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @1 ]
+"10
+[v _TRISB TRISB `VEuc  1 e 1 @5 ]
+"11
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"13
+[v _WPUB WPUB `VEuc  1 e 1 @8 ]
+"14
+[v _IOCB IOCB `VEuc  1 e 1 @9 ]
+"16
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+"25
+[v _OSCCON OSCCON `VEuc  1 e 1 @20 ]
+"26
+[v _PWMCON0 PWMCON0 `VEuc  1 e 1 @21 ]
+"38
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"39
+[v _PORTA PORTA `VEuc  1 e 1 @134 ]
+"41
+[v _WPUA WPUA `VEuc  1 e 1 @136 ]
+"42
+[v _IOCA IOCA `VEuc  1 e 1 @137 ]
+"52
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @149 ]
+"53
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @150 ]
+"92
+[v _RB6 RB6 `VEb  1 e 0 @54 ]
+"130
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"131
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"134
+[v _RBIE RBIE `VEb  1 e 0 @91 ]
+"137
+[v _RBIF RBIF `VEb  1 e 0 @88 ]
+"152
+[v _RAIF RAIF `VEb  1 e 0 @107 ]
+"159
+[v _RAIE RAIE `VEb  1 e 0 @115 ]
+"37 H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_Sleep_Demo\SC8F072_Sleep_Demo.c
+[v _main main `(v  1 e 1 0 ]
+{
+"50
+} 0
+"60
+[v _Sleep_Mode Sleep_Mode `(v  1 e 1 0 ]
+{
+"103
+} 0
+"112
+[v _Init_System Init_System `(v  1 e 1 0 ]
+{
+"130
+} 0
+"25
+[v _DelayXms DelayXms `(v  1 e 1 0 ]
+{
+[v DelayXms@x x `uc  1 a 1 wreg ]
+"27
+[v DelayXms@j j `uc  1 a 1 2 ]
+[v DelayXms@i i `uc  1 a 1 1 ]
+"25
+[v DelayXms@x x `uc  1 a 1 wreg ]
+"28
+[v DelayXms@x x `uc  1 a 1 0 ]
+"33
+} 0

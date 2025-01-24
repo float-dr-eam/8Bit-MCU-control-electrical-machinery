@@ -1,0 +1,13 @@
+[PROJECT]
+Version=200
+Compile=1
+Device=SC8F072
+OptValue=-local,-asmfile,+asm,-speed,+space,-debug
+RuntimeValue=
+WarningValue=-9
+config=FFFF,FFEF,FFFF,FFFF,
+[FILE]
+SourceFile=SC8F072_Pwm_Demo.c
+SourceFile=LED_188.c
+HeadFile=LED_188.h
+HeadFile=C:\Users\86135\Desktop\ÏîÄ¿Êµ¼ù\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\include\SC8F072.h

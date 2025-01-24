@@ -1,0 +1,437 @@
+
+
+Microchip Technology PIC PRO Macro Assembler V1.45 build -152302408 
+                                                                                               Thu Nov 14 17:42:54 2024
+
+Microchip Technology Omniscient Code Generator v1.45 (PRO mode) build 201711160504
+     1                           	processor	SC8F072
+     2                           	opt	pw 120
+     3                           	opt	pm
+     4                           	psect	text0,local,class=CODE,merge=1,delta=2
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     7                           	psect	maintext,global,class=CODE,split=1,delta=2
+     8                           	psect	text1,local,class=CODE,merge=1,delta=2
+     9                           	psect	pa_nodes0,global,class=CODE,delta=2
+    10                           	dabs	1,0x7E,2
+    11  0000                     
+    12                           ; Version 1.45
+    13                           ; Generated 16/11/2017 GMT
+    14                           ; 
+    15                           ; Copyright 漏 2017, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    16                           ; All rights reserved.
+    17                           ; 
+    18                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    19                           ; 
+    20                           ; Redistribution and use in source and binary forms, with or without modification, are
+    21                           ; permitted provided that the following conditions are met:
+    22                           ; 
+    23                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    24                           ;        conditions and the following disclaimer.
+    25                           ; 
+    26                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    27                           ;        of conditions and the following disclaimer in the documentation and/or other
+    28                           ;        materials provided with the distribution.
+    29                           ; 
+    30                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    31                           ;        software without specific prior written permission.
+    32                           ; 
+    33                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    34                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    35                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    36                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    37                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    38                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    39                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    40                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    41                           ; 
+    42                           ; 
+    43                           ; Code-generator required, PIC16F887 Definitions
+    44                           ; 
+    45                           ; SFR Addresses
+    46  0000                     
+    47                           	psect	text0
+    48  0000                     __ptext0:	
+    49  001F                     _PWM01DT	set	31
+    50  001E                     _PWMD01H	set	30
+    51  001D                     _PWMCON2	set	29
+    52  001C                     _PWMT4L	set	28
+    53  001B                     _PWMD4L	set	27
+    54  001A                     _PWMD1L	set	26
+    55  0019                     _PWMD0L	set	25
+    56  0018                     _PWMTH	set	24
+    57  0017                     _PWMTL	set	23
+    58  0016                     _PWMCON1	set	22
+    59  0015                     _PWMCON0	set	21
+    60  0014                     _OSCCON	set	20
+    61  000B                     _INTCON	set	11
+    62  0006                     _PORTB	set	6
+    63  0005                     _TRISB	set	5
+    64  0001                     _OPTION_REG	set	1
+    65  009E                     _PWMD23H	set	158
+    66  009C                     _PWMD3L	set	156
+    67  009B                     _PWMD2L	set	155
+    68  0086                     _PORTA	set	134
+    69  0085                     _TRISA	set	133
+    70                           
+    71                           	psect	cinit
+    72  07FE                     start_initialization:	
+    73                           ; #config settings
+    74                           
+    75  07FE                     __initialization:	
+    76  07FE                     end_of_initialization:	
+    77                           ;End of C runtime variable initialization code
+    78                           
+    79  07FE                     __end_of__initialization:	
+    80  07FE  0183               	clrf	3
+    81  07FF  2FC3               	ljmp	_main	;jump to C main() function
+    82                           
+    83                           	psect	cstackCOMMON
+    84  0070                     __pcstackCOMMON:	
+    85  0070                     ?_Init_System:	
+    86  0070                     ??_Init_System:	
+    87                           ; 1 bytes @ 0x0
+    88                           
+    89  0070                     ?_main:	
+    90                           ; 1 bytes @ 0x0
+    91                           
+    92  0070                     ??_main:	
+    93                           ; 1 bytes @ 0x0
+    94                           
+    95  0070                     main@delaycnt:	
+    96                           ; 1 bytes @ 0x0
+    97                           
+    98                           
+    99                           ; 2 bytes @ 0x0
+   100  0070                     	ds	2
+   101  0072                     main@pwmbuf:	
+   102                           
+   103                           ; 1 bytes @ 0x2
+   104  0072                     	ds	1
+   105                           
+   106                           	psect	maintext
+   107  07C3                     __pmaintext:	
+   108 ;;
+   109 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   110 ;;
+   111 ;; *************** function _main *****************
+   112 ;; Defined at:
+   113 ;;		line 8 in file "C:\Users\86135\Desktop\项目实践\SC8F072_DEMO_C\SC8F072_DEMO_C\SC8F072_Pwm_Demo\SC8F072_Pwm_Demo.c"
+   114 ;; Parameters:    Size  Location     Type
+   115 ;;		None
+   116 ;; Auto vars:     Size  Location     Type
+   117 ;;  delaycnt        2    0[COMMON] unsigned int 
+   118 ;;  pwmbuf          1    2[COMMON] unsigned char 
+   119 ;; Return value:  Size  Location     Type
+   120 ;;                  1    wreg      void 
+   121 ;; Registers used:
+   122 ;;		wreg, status,2, status,0, pclath, cstack
+   123 ;; Tracked objects:
+   124 ;;		On entry : B00/0
+   125 ;;		On exit  : 100/0
+   126 ;;		Unchanged: 0/0
+   127 ;; Data sizes:     COMMON   BANK0   BANK1
+   128 ;;      Params:         0       0       0
+   129 ;;      Locals:         3       0       0
+   130 ;;      Temps:          0       0       0
+   131 ;;      Totals:         3       0       0
+   132 ;;Total ram usage:        3 bytes
+   133 ;; Hardware stack levels required when called:    1
+   134 ;; This function calls:
+   135 ;;		_Init_System
+   136 ;; This function is called by:
+   137 ;;		Startup code after reset
+   138 ;; This function uses a non-reentrant model
+   139 ;;
+   140                           
+   141                           
+   142                           ;psect for function _main
+   143  07C3                     _main:	
+   144  07C3  301F               	movlw	31
+   145                           
+   146                           ;SC8F072_Pwm_Demo.c: 10: unsigned int delaycnt = 0;
+   147                           
+   148                           ;incstack = 0
+   149                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   150  07C4  01F0               	clrf	main@delaycnt
+   151  07C5  01F1               	clrf	main@delaycnt+1
+   152                           
+   153                           ;SC8F072_Pwm_Demo.c: 11: unsigned char pwmbuf = 0X1F;
+   154  07C6  00F2               	movwf	main@pwmbuf
+   155                           
+   156                           ;SC8F072_Pwm_Demo.c: 13: Init_System();
+   157  07C7  27B1               	fcall	_Init_System
+   158                           
+   159                           ;SC8F072_Pwm_Demo.c: 35: PWMCON1 = 0B11010010;
+   160  07C8  30D2               	movlw	210
+   161  07C9  0096               	movwf	22	;volatile
+   162                           
+   163                           ;SC8F072_Pwm_Demo.c: 37: TRISA = 0B00011111;
+   164  07CA  301F               	movlw	31
+   165  07CB  1683               	bsf	3,5	;RP0=1, select bank1
+   166  07CC  0085               	movwf	5	;volatile
+   167                           
+   168                           ;SC8F072_Pwm_Demo.c: 38: PWMTL = 0XFF;
+   169  07CD  30FF               	movlw	255
+   170  07CE  1283               	bcf	3,5	;RP0=0, select bank0
+   171  07CF  0097               	movwf	23	;volatile
+   172                           
+   173                           ;SC8F072_Pwm_Demo.c: 39: PWMT4L = 0XFF;
+   174  07D0  009C               	movwf	28	;volatile
+   175                           
+   176                           ;SC8F072_Pwm_Demo.c: 40: PWMTH = 0X0C;
+   177  07D1  300C               	movlw	12
+   178  07D2  0098               	movwf	24	;volatile
+   179                           
+   180                           ;SC8F072_Pwm_Demo.c: 43: PWMD0L = 0X1F;
+   181  07D3  301F               	movlw	31
+   182  07D4  0099               	movwf	25	;volatile
+   183                           
+   184                           ;SC8F072_Pwm_Demo.c: 46: PWMD1L = 0X7F;
+   185  07D5  307F               	movlw	127
+   186  07D6  009A               	movwf	26	;volatile
+   187                           
+   188                           ;SC8F072_Pwm_Demo.c: 47: PWMD01H = 0;
+   189  07D7  019E               	clrf	30	;volatile
+   190                           
+   191                           ;SC8F072_Pwm_Demo.c: 49: PWM01DT = 0X03;
+   192  07D8  3003               	movlw	3
+   193  07D9  009F               	movwf	31	;volatile
+   194                           
+   195                           ;SC8F072_Pwm_Demo.c: 52: PWMD2L = 0X3F;
+   196  07DA  303F               	movlw	63
+   197  07DB  1683               	bsf	3,5	;RP0=1, select bank1
+   198  07DC  009B               	movwf	27	;volatile
+   199                           
+   200                           ;SC8F072_Pwm_Demo.c: 53: PWMD3L = 0X7F;
+   201  07DD  307F               	movlw	127
+   202  07DE  009C               	movwf	28	;volatile
+   203                           
+   204                           ;SC8F072_Pwm_Demo.c: 54: PWMD23H = 0;
+   205  07DF  019E               	clrf	30	;volatile
+   206                           
+   207                           ;SC8F072_Pwm_Demo.c: 56: PWMD4L = 0X1F;
+   208  07E0  301F               	movlw	31
+   209  07E1  1283               	bcf	3,5	;RP0=0, select bank0
+   210  07E2  009B               	movwf	27	;volatile
+   211                           
+   212                           ;SC8F072_Pwm_Demo.c: 72: PWMCON0 = 0X1F;
+   213  07E3  0095               	movwf	21	;volatile
+   214                           
+   215                           ;SC8F072_Pwm_Demo.c: 73: PWMCON2 =0X10;
+   216  07E4  3010               	movlw	16
+   217  07E5  009D               	movwf	29	;volatile
+   218                           
+   219                           ;SC8F072_Pwm_Demo.c: 74: TRISA = 0;
+   220  07E6  1683               	bsf	3,5	;RP0=1, select bank1
+   221  07E7  0185               	clrf	5	;volatile
+   222  07E8                     l603:	
+   223                           ;SC8F072_Pwm_Demo.c: 76: while(1)
+   224                           
+   225  07E8  0064               	clrwdt	;# 
+   226                           
+   227                           ;SC8F072_Pwm_Demo.c: 79: if(++delaycnt > 5000)
+   228  07E9  0AF0               	incf	main@delaycnt,f
+   229  07EA  1903               	skipnz
+   230  07EB  0AF1               	incf	main@delaycnt+1,f
+   231  07EC  3013               	movlw	19
+   232  07ED  0271               	subwf	main@delaycnt+1,w
+   233  07EE  3089               	movlw	137
+   234  07EF  1903               	skipnz
+   235  07F0  0270               	subwf	main@delaycnt,w
+   236  07F1  1C03               	skipc
+   237  07F2  2FE8               	goto	l603
+   238                           
+   239                           ;SC8F072_Pwm_Demo.c: 80: {
+   240                           ;SC8F072_Pwm_Demo.c: 81: delaycnt = 0;
+   241  07F3  01F0               	clrf	main@delaycnt
+   242  07F4  01F1               	clrf	main@delaycnt+1
+   243                           
+   244                           ;SC8F072_Pwm_Demo.c: 82: if(++pwmbuf > 0xfe)
+   245  07F5  0AF2               	incf	main@pwmbuf,f
+   246  07F6  0F72               	incfsz	main@pwmbuf,w
+   247  07F7  2FFA               	goto	l605
+   248                           
+   249                           ;SC8F072_Pwm_Demo.c: 83: {
+   250                           ;SC8F072_Pwm_Demo.c: 84: pwmbuf = 0x01f;
+   251  07F8  301F               	movlw	31
+   252  07F9  00F2               	movwf	main@pwmbuf
+   253  07FA                     l605:	
+   254                           
+   255                           ;SC8F072_Pwm_Demo.c: 85: }
+   256                           ;SC8F072_Pwm_Demo.c: 86: PWMD0L = pwmbuf;
+   257  07FA  0872               	movf	main@pwmbuf,w
+   258  07FB  1283               	bcf	3,5	;RP0=0, select bank0
+   259  07FC  0099               	movwf	25	;volatile
+   260  07FD  2FE8               	goto	l603
+   261  07FE                     __end_of_main:	
+   262                           
+   263                           	psect	text1
+   264  07B1                     __ptext1:	
+   265 ;; *************** function _Init_System *****************
+   266 ;; Defined at:
+   267 ;;		line 99 in file "C:\Users\86135\Desktop\项目实践\SC8F072_DEMO_C\SC8F072_DEMO_C\SC8F072_Pwm_Demo\SC8F072_Pwm_Demo.c"
+   268 ;; Parameters:    Size  Location     Type
+   269 ;;		None
+   270 ;; Auto vars:     Size  Location     Type
+   271 ;;		None
+   272 ;; Return value:  Size  Location     Type
+   273 ;;                  1    wreg      void 
+   274 ;; Registers used:
+   275 ;;		wreg, status,2
+   276 ;; Tracked objects:
+   277 ;;		On entry : B00/0
+   278 ;;		On exit  : 100/0
+   279 ;;		Unchanged: 0/0
+   280 ;; Data sizes:     COMMON   BANK0   BANK1
+   281 ;;      Params:         0       0       0
+   282 ;;      Locals:         0       0       0
+   283 ;;      Temps:          0       0       0
+   284 ;;      Totals:         0       0       0
+   285 ;;Total ram usage:        0 bytes
+   286 ;; Hardware stack levels used:    1
+   287 ;; This function calls:
+   288 ;;		Nothing
+   289 ;; This function is called by:
+   290 ;;		_main
+   291 ;; This function uses a non-reentrant model
+   292 ;;
+   293                           
+   294                           
+   295                           ;psect for function _Init_System
+   296  07B1                     _Init_System:	
+   297                           
+   298                           ;incstack = 0
+   299                           ; Regs used in _Init_System: [wreg+status,2]
+   300  07B1  0000               	nop	;# 
+   301  07B2  0064               	clrwdt	;# 
+   302                           
+   303                           ;SC8F072_Pwm_Demo.c: 103: INTCON = 0;
+   304  07B3  018B               	clrf	11	;volatile
+   305                           
+   306                           ;SC8F072_Pwm_Demo.c: 104: OSCCON = 0X72;
+   307  07B4  3072               	movlw	114
+   308  07B5  1283               	bcf	3,5	;RP0=0, select bank0
+   309  07B6  0094               	movwf	20	;volatile
+   310                           
+   311                           ;SC8F072_Pwm_Demo.c: 105: OPTION_REG = 0;
+   312  07B7  0181               	clrf	1	;volatile
+   313  07B8  0064               	clrwdt	;# 
+   314                           
+   315                           ;SC8F072_Pwm_Demo.c: 108: TRISA = 0B00011111;
+   316  07B9  301F               	movlw	31
+   317  07BA  1683               	bsf	3,5	;RP0=1, select bank1
+   318  07BB  0085               	movwf	5	;volatile
+   319                           
+   320                           ;SC8F072_Pwm_Demo.c: 109: TRISB = 0B00000000;
+   321  07BC  1283               	bcf	3,5	;RP0=0, select bank0
+   322  07BD  0185               	clrf	5	;volatile
+   323                           
+   324                           ;SC8F072_Pwm_Demo.c: 111: PORTA = 0B00000000;
+   325  07BE  1683               	bsf	3,5	;RP0=1, select bank1
+   326  07BF  0186               	clrf	6	;volatile
+   327                           
+   328                           ;SC8F072_Pwm_Demo.c: 112: PORTB = 0B00000000;
+   329  07C0  1283               	bcf	3,5	;RP0=0, select bank0
+   330  07C1  0186               	clrf	6	;volatile
+   331  07C2  0008               	return
+   332  07C3                     __end_of_Init_System:	
+   333  007E                     btemp	set	126	;btemp
+   334  007E                     wtemp0	set	126
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      3       3
+    BANK0            80      0       0
+    BANK1            80      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 3     3      0      45
+                                              0 COMMON     3     3      0
+                        _Init_System
+ ---------------------------------------------------------------------------------
+ (1) _Init_System                                          0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _Init_System
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            E      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMMON               E      3       3       1       21.4%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BITBANK0            50      0       0       3        0.0%
+BANK0               50      0       0       4        0.0%
+BITBANK1            50      0       0       5        0.0%
+BANK1               50      0       0       6        0.0%
+ABS                  0      0       0       7        0.0%
+DATA                 0      0       0       8        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.45 build -152302408 
+Symbol Table                                                                                   Thu Nov 14 17:42:54 2024
+
+                    l603 07E8                      l605 07FA                     _main 07C3  
+                   btemp 007E                     start 0000             main@delaycnt 0070  
+          ??_Init_System 0070                    ?_main 0070                    _PORTA 0086  
+                  _PORTB 0006                    _TRISA 0085                    _TRISB 0005  
+                  _PWMTH 0018                    _PWMTL 0017                    status 0003  
+                  wtemp0 007E          __initialization 07FE             __end_of_main 07FE  
+                 ??_main 0070      __end_of_Init_System 07C3                   _INTCON 000B  
+                 _OSCCON 0014                   _PWMD0L 0019                   _PWMD1L 001A  
+                 _PWMD2L 009B                   _PWMD3L 009C                   _PWMD4L 001B  
+                 _PWMT4L 001C  __end_of__initialization 07FE           __pcstackCOMMON 0070  
+            _Init_System 07B1               __pmaintext 07C3                  _PWM01DT 001F  
+                _PWMD01H 001E                  _PWMD23H 009E                  _PWMCON0 0015  
+                _PWMCON1 0016                  _PWMCON2 001D                  __ptext0 0000  
+                __ptext1 07B1     end_of_initialization 07FE               main@pwmbuf 0072  
+           ?_Init_System 0070      start_initialization 07FE                ___latbits 0000  
+   __size_of_Init_System 0012            __size_of_main 003B               _OPTION_REG 0001  

@@ -1,0 +1,10 @@
+[PROJECT]
+Version=200
+Compile=1
+Device=SC8F072
+OptValue=-local,-asmfile,+asm,-speed,+space,-debug
+RuntimeValue=
+WarningValue=-9
+config=FFFF,FFEF,FFFF,FFFF,
+[FILE]
+SourceFile=SC8F072_Pwm_Demo.c

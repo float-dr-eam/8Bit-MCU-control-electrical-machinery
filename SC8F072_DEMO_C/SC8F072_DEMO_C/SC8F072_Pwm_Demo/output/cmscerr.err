@@ -1,0 +1,10 @@
+Warning[165]:	C:\Users\86135\Desktop\项目实践\SC8F072_DEMO_C\SC8F072_DEMO_C\SC8F072_Pwm_Demo\SC8F072_Pwm_Demo.c	第3行	#include filename "C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\include\SC8f072.h" does not match actual name (check upper/lower case)
+
+Memory Summary:
+    Program space        used    4Fh (    79) of   800h words   (  3.9%)
+    Data space           used     5h (     5) of    A0h bytes   (  3.1%)
+    EEPROM space         None available
+    Data stack space     used     0h (     0) of    50h bytes   (  0.0%)
+    Configuration bits   used     0h (     0) of     2h words   (  0.0%)
+    ID Location space    used     0h (     0) of     4h bytes   (  0.0%)
+

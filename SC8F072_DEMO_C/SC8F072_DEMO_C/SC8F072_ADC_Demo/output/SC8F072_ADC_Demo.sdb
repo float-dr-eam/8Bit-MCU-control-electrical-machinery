@@ -1,0 +1,161 @@
+[p PRO_MODE GLOBOPT AUTOSTATIC PIC14 PICREGULAR PICMID SPACEOPT ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip SC8F072 ]
+[d frameptr 6 ]
+"62 H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"56 H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"44 H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"28 H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"46 H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_ADC_Demo\SC8F072_ADC.c
+[v _ADC_Sample ADC_Sample `(uc  1 e 1 0 ]
+"118
+[v _main main `(v  1 e 1 0 ]
+"162
+[v _Init_System Init_System `(v  1 e 1 0 ]
+"198
+[v _Isr_Timer Isr_Timer `II(v  1 e 1 0 ]
+"217
+[v _AD_Init AD_Init `(v  1 e 1 0 ]
+"6 H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\include\sc8f072.h
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @1 ]
+"10
+[v _TRISB TRISB `VEuc  1 e 1 @5 ]
+"11
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"13
+[v _WPUB WPUB `VEuc  1 e 1 @8 ]
+"16
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+"22
+[v _PR2 PR2 `VEuc  1 e 1 @17 ]
+"24
+[v _T2CON T2CON `VEuc  1 e 1 @19 ]
+"25
+[v _OSCCON OSCCON `VEuc  1 e 1 @20 ]
+"38
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"39
+[v _PORTA PORTA `VEuc  1 e 1 @134 ]
+"41
+[v _WPUA WPUA `VEuc  1 e 1 @136 ]
+"51
+[v _ANSEL1 ANSEL1 `VEuc  1 e 1 @148 ]
+"52
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @149 ]
+"53
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @150 ]
+"54
+[v _ADRESL ADRESL `VEuc  1 e 1 @152 ]
+"55
+[v _ADRESH ADRESH `VEuc  1 e 1 @153 ]
+"81
+[v _TRISB7 TRISB7 `VEb  1 e 0 @47 ]
+"153
+[v _TMR2IF TMR2IF `VEb  1 e 0 @105 ]
+"160
+[v _TMR2IE TMR2IE `VEb  1 e 0 @113 ]
+"343
+[v _GODONE GODONE `VEb  1 e 0 @1193 ]
+"348
+[v _CHS4 CHS4 `VEb  1 e 0 @1206 ]
+"349
+[v _LDO_EN LDO_EN `VEb  1 e 0 @1202 ]
+"15 H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_ADC_Demo\SC8F072_ADC.c
+[v _adresult adresult `VEui  1 e 2 0 ]
+"16
+[v _result result `VEui  1 e 2 0 ]
+"17
+[v _test_adc test_adc `VEuc  1 e 1 0 ]
+"18
+[v _power_ad power_ad `VEui  1 e 2 0 ]
+"118
+[v _main main `(v  1 e 1 0 ]
+{
+"145
+[v main@power_temp power_temp `VEul  1 a 4 32 ]
+"153
+} 0
+"28 H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+{
+[v ___lwtoft@c c `ui  1 p 2 0 ]
+"31
+} 0
+"44 H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 26 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 30 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 25 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 18 ]
+"73
+} 0
+"56 H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 13 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 17 ]
+[v ___ftdiv@exp exp `uc  1 a 1 16 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 12 ]
+"56
+[v ___ftdiv@f2 f2 `f  1 p 3 3 ]
+[v ___ftdiv@f1 f1 `f  1 p 3 6 ]
+"86
+} 0
+"62 H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 2 ]
+[v ___ftpack@exp exp `uc  1 p 1 5 ]
+[v ___ftpack@sign sign `uc  1 p 1 6 ]
+"86
+} 0
+"162 H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_ADC_Demo\SC8F072_ADC.c
+[v _Init_System Init_System `(v  1 e 1 0 ]
+{
+"187
+} 0
+"217
+[v _AD_Init AD_Init `(v  1 e 1 0 ]
+{
+"268
+} 0
+"46
+[v _ADC_Sample ADC_Sample `(uc  1 e 1 0 ]
+{
+[v ADC_Sample@adch adch `uc  1 a 1 wreg ]
+"76
+[v ADC_Sample@j j `uc  1 a 1 0 ]
+"48
+[v ADC_Sample@adsum adsum `VEul  1 a 4 3 ]
+"50
+[v ADC_Sample@ad_temp ad_temp `VEui  1 a 2 11 ]
+"49
+[v ADC_Sample@admax admax `VEui  1 a 2 9 ]
+[v ADC_Sample@admin admin `VEui  1 a 2 7 ]
+"66
+[v ADC_Sample@i i `uc  1 a 1 2 ]
+"46
+[v ADC_Sample@adch adch `uc  1 a 1 wreg ]
+[v ADC_Sample@adldo adldo `uc  1 p 1 2 ]
+"48
+[v ADC_Sample@adch adch `uc  1 a 1 1 ]
+"112
+} 0
+"198
+[v _Isr_Timer Isr_Timer `II(v  1 e 1 0 ]
+{
+"206
+} 0

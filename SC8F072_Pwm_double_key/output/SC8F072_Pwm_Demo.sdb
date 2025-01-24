@@ -1,0 +1,468 @@
+[p PRO_MODE GLOBOPT AUTOSTATIC PIC14 PICREGULAR PICMID SPACEOPT ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip SC8F072 ]
+[d frameptr 6 ]
+"50 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\KEY.c
+[v _Button_response Button_response `(v  1 e 1 0 ]
+"11 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c
+[v _Charge_num Charge_num `(v  1 e 1 0 ]
+"25
+[v _Uncharge_num Uncharge_num `(v  1 e 1 0 ]
+"39
+[v _Motor_num Motor_num `(v  1 e 1 0 ]
+"76
+[v _Led_Gpio_Init Led_Gpio_Init `(v  1 e 1 0 ]
+"85
+[v _Set_AllPin_INPUT Set_AllPin_INPUT `(v  1 e 1 0 ]
+"105
+[v _Display_Scan1 Display_Scan1 `(v  1 e 1 0 ]
+"119
+[v _Display_Scan2 Display_Scan2 `(v  1 e 1 0 ]
+"133
+[v _Display_Scan3 Display_Scan3 `(v  1 e 1 0 ]
+"147
+[v _Display_Scan4 Display_Scan4 `(v  1 e 1 0 ]
+"161
+[v _Display_Scan5 Display_Scan5 `(v  1 e 1 0 ]
+"170
+[v _Display Display `(v  1 e 1 0 ]
+"4 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\PWM.c
+[v _PWM_Init PWM_Init `(v  1 e 1 0 ]
+"55
+[v _Set_PWM Set_PWM `(v  1 e 1 0 ]
+"81 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c
+[v _main main `(v  1 e 1 0 ]
+"130
+[v _Init_System Init_System `(v  1 e 1 0 ]
+"199
+[v _ADC_Sample ADC_Sample `(uc  1 e 1 0 ]
+"259
+[v _ADC_read ADC_read `(uc  1 e 1 0 ]
+"283
+[v _Isr_Timer Isr_Timer `II(v  1 e 1 0 ]
+"6 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"62 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"56 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"44 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"4 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"4 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"6 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"28 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"15 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"21 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\KEY.h
+[v _duty_steps duty_steps `DC[6]uc  1 e 6 0 ]
+"23
+[v _pwm_duty pwm_duty `uc  1 e 1 0 ]
+"24
+[v _LED_num LED_num `uc  1 e 1 0 ]
+"55 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c
+[v _num_hund num_hund `[5]uc  1 e 5 0 ]
+"73
+[v _nums nums `[12]uc  1 e 12 0 ]
+"28 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c
+[v _adresult adresult `VEui  1 e 2 0 ]
+"29
+[v _test_adc test_adc `VEuc  1 e 1 0 ]
+"30
+[v _power_ad power_ad `VEui  1 e 2 0 ]
+"31
+[v _power_percent power_percent `VEuc  1 e 1 0 ]
+"32
+[v _ADC_Flag ADC_Flag `uc  1 e 1 0 ]
+"33
+[v _ADC_delay ADC_delay `ui  1 e 2 0 ]
+"42
+[v _long_press_counter long_press_counter `ui  1 e 2 0 ]
+"43
+[v _Time_delay Time_delay `ui  1 e 2 0 ]
+"44
+[v _button_sflag button_sflag `uc  1 e 1 0 ]
+"45
+[v _button_lflag button_lflag `uc  1 e 1 0 ]
+"48
+[v _T_flag T_flag `uc  1 e 1 0 ]
+"49
+[v _hundreds hundreds `uc  1 e 1 0 ]
+"50
+[v _tens tens `uc  1 e 1 0 ]
+"51
+[v _unit unit `uc  1 e 1 0 ]
+"54
+[v _LED_Key_counter LED_Key_counter `ui  1 e 2 0 ]
+"55
+[v _LED_lflag LED_lflag `uc  1 e 1 0 ]
+"56
+[v _LED_sflag LED_sflag `uc  1 e 1 0 ]
+"6 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\include\SC8F072.h
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @1 ]
+"10
+[v _TRISB TRISB `VEuc  1 e 1 @5 ]
+"11
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"12
+[v _WPDB WPDB `VEuc  1 e 1 @7 ]
+"13
+[v _WPUB WPUB `VEuc  1 e 1 @8 ]
+"14
+[v _IOCB IOCB `VEuc  1 e 1 @9 ]
+"16
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+"22
+[v _PR2 PR2 `VEuc  1 e 1 @17 ]
+"24
+[v _T2CON T2CON `VEuc  1 e 1 @19 ]
+"25
+[v _OSCCON OSCCON `VEuc  1 e 1 @20 ]
+"26
+[v _PWMCON0 PWMCON0 `VEuc  1 e 1 @21 ]
+"27
+[v _PWMCON1 PWMCON1 `VEuc  1 e 1 @22 ]
+"28
+[v _PWMTL PWMTL `VEuc  1 e 1 @23 ]
+"29
+[v _PWMTH PWMTH `VEuc  1 e 1 @24 ]
+"30
+[v _PWMD0L PWMD0L `VEuc  1 e 1 @25 ]
+"31
+[v _PWMD1L PWMD1L `VEuc  1 e 1 @26 ]
+"32
+[v _PWMD4L PWMD4L `VEuc  1 e 1 @27 ]
+"33
+[v _PWMT4L PWMT4L `VEuc  1 e 1 @28 ]
+"34
+[v _PWMCON2 PWMCON2 `VEuc  1 e 1 @29 ]
+"35
+[v _PWMD01H PWMD01H `VEuc  1 e 1 @30 ]
+"37
+[v _TMR0 TMR0 `VEuc  1 e 1 @129 ]
+"38
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"39
+[v _PORTA PORTA `VEuc  1 e 1 @134 ]
+"40
+[v _WPDA WPDA `VEuc  1 e 1 @135 ]
+"41
+[v _WPUA WPUA `VEuc  1 e 1 @136 ]
+"42
+[v _IOCA IOCA `VEuc  1 e 1 @137 ]
+"52
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @149 ]
+"53
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @150 ]
+"54
+[v _ADRESL ADRESL `VEuc  1 e 1 @152 ]
+"55
+[v _ADRESH ADRESH `VEuc  1 e 1 @153 ]
+"56
+[v _PWMD2L PWMD2L `VEuc  1 e 1 @155 ]
+"57
+[v _PWMD3L PWMD3L `VEuc  1 e 1 @156 ]
+"59
+[v _PWMD23H PWMD23H `VEuc  1 e 1 @158 ]
+"84
+[v _TRISB4 TRISB4 `VEb  1 e 0 @44 ]
+"85
+[v _TRISB3 TRISB3 `VEb  1 e 0 @43 ]
+"86
+[v _TRISB2 TRISB2 `VEb  1 e 0 @42 ]
+"87
+[v _TRISB1 TRISB1 `VEb  1 e 0 @41 ]
+"88
+[v _TRISB0 TRISB0 `VEb  1 e 0 @40 ]
+"94
+[v _RB4 RB4 `VEb  1 e 0 @52 ]
+"95
+[v _RB3 RB3 `VEb  1 e 0 @51 ]
+"96
+[v _RB2 RB2 `VEb  1 e 0 @50 ]
+"97
+[v _RB1 RB1 `VEb  1 e 0 @49 ]
+"98
+[v _RB0 RB0 `VEb  1 e 0 @48 ]
+"130
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"132
+[v _T0IE T0IE `VEb  1 e 0 @93 ]
+"134
+[v _RBIE RBIE `VEb  1 e 0 @91 ]
+"135
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"137
+[v _RBIF RBIF `VEb  1 e 0 @88 ]
+"152
+[v _RAIF RAIF `VEb  1 e 0 @107 ]
+"153
+[v _TMR2IF TMR2IF `VEb  1 e 0 @105 ]
+"159
+[v _RAIE RAIE `VEb  1 e 0 @115 ]
+"160
+[v _TMR2IE TMR2IE `VEb  1 e 0 @113 ]
+"248
+[v _TRISA4 TRISA4 `VEb  1 e 0 @1068 ]
+"250
+[v _TRISA2 TRISA2 `VEb  1 e 0 @1066 ]
+"251
+[v _TRISA1 TRISA1 `VEb  1 e 0 @1065 ]
+"252
+[v _TRISA0 TRISA0 `VEb  1 e 0 @1064 ]
+"361
+[v _GODONE GODONE `VEb  1 e 0 @1193 ]
+"366
+[v _CHS4 CHS4 `VEb  1 e 0 @1206 ]
+"367
+[v _LDO_EN LDO_EN `VEb  1 e 0 @1202 ]
+"81 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c
+[v _main main `(v  1 e 1 0 ]
+{
+"120
+} 0
+"4 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\PWM.c
+[v _PWM_Init PWM_Init `(v  1 e 1 0 ]
+{
+"45
+} 0
+"76 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c
+[v _Led_Gpio_Init Led_Gpio_Init `(v  1 e 1 0 ]
+{
+"83
+} 0
+"130 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c
+[v _Init_System Init_System `(v  1 e 1 0 ]
+{
+"178
+} 0
+"50 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\KEY.c
+[v _Button_response Button_response `(v  1 e 1 0 ]
+{
+"169
+} 0
+"6 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"35
+} 0
+"55 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\PWM.c
+[v _Set_PWM Set_PWM `(v  1 e 1 0 ]
+{
+[v Set_PWM@channel channel `uc  1 a 1 wreg ]
+"57
+[v Set_PWM@pulse_width pulse_width `us  1 a 2 15 ]
+"55
+[v Set_PWM@channel channel `uc  1 a 1 wreg ]
+[v Set_PWM@duty duty `uc  1 p 1 13 ]
+"57
+[v Set_PWM@channel channel `uc  1 a 1 14 ]
+"83
+} 0
+"15 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"6 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 10 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 12 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 6 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 8 ]
+"31
+} 0
+"39 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c
+[v _Motor_num Motor_num `(v  1 e 1 0 ]
+{
+"44
+} 0
+"259 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c
+[v _ADC_read ADC_read `(uc  1 e 1 0 ]
+{
+"264
+[v ADC_read@power_temp power_temp `VEul  1 a 4 52 ]
+"281
+} 0
+"28 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+{
+[v ___lwtoft@c c `ui  1 p 2 8 ]
+"31
+} 0
+"44 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 46 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 50 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 45 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 38 ]
+"73
+} 0
+"56 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 33 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 37 ]
+[v ___ftdiv@exp exp `uc  1 a 1 36 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 32 ]
+"56
+[v ___ftdiv@f2 f2 `f  1 p 3 23 ]
+[v ___ftdiv@f1 f1 `f  1 p 3 26 ]
+"86
+} 0
+"86 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 22 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 21 ]
+[v ___ftadd@sign sign `uc  1 a 1 20 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 11 ]
+[v ___ftadd@f2 f2 `f  1 p 3 14 ]
+"148
+} 0
+"62 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"199 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\SC8F072_Pwm_Demo.c
+[v _ADC_Sample ADC_Sample `(uc  1 e 1 0 ]
+{
+[v ADC_Sample@adch adch `uc  1 a 1 wreg ]
+"227
+[v ADC_Sample@j j `uc  1 a 1 5 ]
+"201
+[v ADC_Sample@adsum adsum `VEul  1 a 4 8 ]
+"203
+[v ADC_Sample@ad_temp ad_temp `VEui  1 a 2 16 ]
+"202
+[v ADC_Sample@admax admax `VEui  1 a 2 14 ]
+[v ADC_Sample@admin admin `VEui  1 a 2 12 ]
+"218
+[v ADC_Sample@i i `uc  1 a 1 7 ]
+"199
+[v ADC_Sample@adch adch `uc  1 a 1 wreg ]
+[v ADC_Sample@adldo adldo `uc  1 p 1 0 ]
+"201
+[v ADC_Sample@adch adch `uc  1 a 1 6 ]
+"257
+} 0
+"283
+[v _Isr_Timer Isr_Timer `II(v  1 e 1 0 ]
+{
+"414
+} 0
+"25 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_double_key\LED_188.c
+[v _Uncharge_num Uncharge_num `(v  1 e 1 0 ]
+{
+"27
+[v Uncharge_num@hundred hundred `uc  1 a 1 9 ]
+"38
+} 0
+"170
+[v _Display Display `(v  1 e 1 0 ]
+{
+"172
+[v Display@scan_cnt scan_cnt `uc  1 s 1 scan_cnt ]
+"184
+} 0
+"85
+[v _Set_AllPin_INPUT Set_AllPin_INPUT `(v  1 e 1 0 ]
+{
+"92
+} 0
+"161
+[v _Display_Scan5 Display_Scan5 `(v  1 e 1 0 ]
+{
+"168
+} 0
+"147
+[v _Display_Scan4 Display_Scan4 `(v  1 e 1 0 ]
+{
+"158
+} 0
+"133
+[v _Display_Scan3 Display_Scan3 `(v  1 e 1 0 ]
+{
+"144
+} 0
+"119
+[v _Display_Scan2 Display_Scan2 `(v  1 e 1 0 ]
+{
+"130
+} 0
+"105
+[v _Display_Scan1 Display_Scan1 `(v  1 e 1 0 ]
+{
+"116
+} 0
+"11
+[v _Charge_num Charge_num `(v  1 e 1 0 ]
+{
+"13
+[v Charge_num@hundred hundred `uc  1 a 1 9 ]
+"24
+} 0
+"4 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+{
+[v ___lbmod@dividend dividend `uc  1 a 1 wreg ]
+"6
+[v ___lbmod@rem rem `uc  1 a 1 4 ]
+"7
+[v ___lbmod@counter counter `uc  1 a 1 3 ]
+"4
+[v ___lbmod@dividend dividend `uc  1 a 1 wreg ]
+[v ___lbmod@divisor divisor `uc  1 p 1 0 ]
+"9
+[v ___lbmod@dividend dividend `uc  1 a 1 2 ]
+"18
+} 0
+"4 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\sources\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+{
+[v ___lbdiv@dividend dividend `uc  1 a 1 wreg ]
+"6
+[v ___lbdiv@quotient quotient `uc  1 a 1 8 ]
+"7
+[v ___lbdiv@counter counter `uc  1 a 1 7 ]
+"4
+[v ___lbdiv@dividend dividend `uc  1 a 1 wreg ]
+[v ___lbdiv@divisor divisor `uc  1 p 1 5 ]
+"9
+[v ___lbdiv@dividend dividend `uc  1 a 1 6 ]
+"26
+} 0

@@ -1,0 +1,10 @@
+Warning[165]:	C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\include\sc_chip_select.h	第175行	#include filename "C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\include\SC8f072.h" does not match actual name (check upper/lower case)
+
+Memory Summary:
+    Program space        used   73Eh (  1854) of   800h words   ( 90.5%)
+    Data space           used    72h (   114) of    A0h bytes   ( 71.2%)
+    EEPROM space         None available
+    Data stack space     used     0h (     0) of    3Dh bytes   (  0.0%)
+    Configuration bits   used     0h (     0) of     2h words   (  0.0%)
+    ID Location space    used     0h (     0) of     4h bytes   (  0.0%)
+

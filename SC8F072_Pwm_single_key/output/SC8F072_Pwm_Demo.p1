@@ -1,0 +1,2128 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[p mainexit ]
+"44 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_Demo\SC8F072_Pwm_Demo.c
+[v _Init_System `(v ~T0 @X0 0 ef ]
+"41 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_Demo\LED_188.h
+[v _Led_Gpio_Init `(v ~T0 @X0 0 ef ]
+"45 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_Demo\SC8F072_Pwm_Demo.c
+[v _PWM_Init `(v ~T0 @X0 0 ef ]
+"47
+[v _Button_response `(v ~T0 @X0 0 ef ]
+"49
+[v _ADC_read `(v ~T0 @X0 0 ef ]
+[v F553 `(v ~T0 @X0 1 tf1`ul ]
+"150 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\include\sc.h
+[v __delay `JF553 ~T0 @X0 0 e ]
+[p i __delay ]
+"44 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_Demo\LED_188.h
+[v _Motor_num `(v ~T0 @X0 0 ef ]
+"42
+[v _Charge_num `(v ~T0 @X0 0 ef ]
+"43
+[v _Uncharge_num `(v ~T0 @X0 0 ef ]
+"46
+[v _Display `(v ~T0 @X0 0 ef ]
+[; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
+[; ;htc.h: 28: extern double __fpnormalize(double);
+[; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
+"5 C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\include\SC8f072.h
+[v _INDF `Vuc ~T0 @X0 1 e@0 ]
+[; ;SC8f072.h: 5: volatile unsigned char INDF @ 0x00;
+"6
+[v _OPTION_REG `Vuc ~T0 @X0 1 e@1 ]
+[; ;SC8f072.h: 6: volatile unsigned char OPTION_REG @ 0x01;
+"7
+[v _PCL `Vuc ~T0 @X0 1 e@2 ]
+[; ;SC8f072.h: 7: volatile unsigned char PCL @ 0x02;
+"8
+[v _STATUS `Vuc ~T0 @X0 1 e@3 ]
+[; ;SC8f072.h: 8: volatile unsigned char STATUS @ 0x03;
+"9
+[v _FSR `Vuc ~T0 @X0 1 e@4 ]
+[; ;SC8f072.h: 9: volatile unsigned char FSR @ 0x04;
+"10
+[v _TRISB `Vuc ~T0 @X0 1 e@5 ]
+[; ;SC8f072.h: 10: volatile unsigned char TRISB @ 0x05;
+"11
+[v _PORTB `Vuc ~T0 @X0 1 e@6 ]
+[; ;SC8f072.h: 11: volatile unsigned char PORTB @ 0x06;
+"12
+[v _WPDB `Vuc ~T0 @X0 1 e@7 ]
+[; ;SC8f072.h: 12: volatile unsigned char WPDB @ 0x07;
+"13
+[v _WPUB `Vuc ~T0 @X0 1 e@8 ]
+[; ;SC8f072.h: 13: volatile unsigned char WPUB @ 0x08;
+"14
+[v _IOCB `Vuc ~T0 @X0 1 e@9 ]
+[; ;SC8f072.h: 14: volatile unsigned char IOCB @ 0x09;
+"15
+[v _PCLATH `Vuc ~T0 @X0 1 e@10 ]
+[; ;SC8f072.h: 15: volatile unsigned char PCLATH @ 0x0A;
+"16
+[v _INTCON `Vuc ~T0 @X0 1 e@11 ]
+[; ;SC8f072.h: 16: volatile unsigned char INTCON @ 0x0B;
+"17
+[v _ODCONB `Vuc ~T0 @X0 1 e@12 ]
+[; ;SC8f072.h: 17: volatile unsigned char ODCONB @ 0x0C;
+"18
+[v _PIR1 `Vuc ~T0 @X0 1 e@13 ]
+[; ;SC8f072.h: 18: volatile unsigned char PIR1 @ 0x0D;
+"19
+[v _PIE1 `Vuc ~T0 @X0 1 e@14 ]
+[; ;SC8f072.h: 19: volatile unsigned char PIE1 @ 0x0E;
+"20
+[v _CMPCON0 `Vuc ~T0 @X0 1 e@15 ]
+[; ;SC8f072.h: 20: volatile unsigned char CMPCON0 @ 0x0F;
+"21
+[v _CMPCON1 `Vuc ~T0 @X0 1 e@16 ]
+[; ;SC8f072.h: 21: volatile unsigned char CMPCON1 @ 0x10;
+"22
+[v _PR2 `Vuc ~T0 @X0 1 e@17 ]
+[; ;SC8f072.h: 22: volatile unsigned char PR2 @ 0x11;
+"23
+[v _TMR2 `Vuc ~T0 @X0 1 e@18 ]
+[; ;SC8f072.h: 23: volatile unsigned char TMR2 @ 0x12;
+"24
+[v _T2CON `Vuc ~T0 @X0 1 e@19 ]
+[; ;SC8f072.h: 24: volatile unsigned char T2CON @ 0x13;
+"25
+[v _OSCCON `Vuc ~T0 @X0 1 e@20 ]
+[; ;SC8f072.h: 25: volatile unsigned char OSCCON @ 0x14;
+"26
+[v _PWMCON0 `Vuc ~T0 @X0 1 e@21 ]
+[; ;SC8f072.h: 26: volatile unsigned char PWMCON0 @ 0x15;
+"27
+[v _PWMCON1 `Vuc ~T0 @X0 1 e@22 ]
+[; ;SC8f072.h: 27: volatile unsigned char PWMCON1 @ 0x16;
+"28
+[v _PWMTL `Vuc ~T0 @X0 1 e@23 ]
+[; ;SC8f072.h: 28: volatile unsigned char PWMTL @ 0x17;
+"29
+[v _PWMTH `Vuc ~T0 @X0 1 e@24 ]
+[; ;SC8f072.h: 29: volatile unsigned char PWMTH @ 0x18;
+"30
+[v _PWMD0L `Vuc ~T0 @X0 1 e@25 ]
+[; ;SC8f072.h: 30: volatile unsigned char PWMD0L @ 0x19;
+"31
+[v _PWMD1L `Vuc ~T0 @X0 1 e@26 ]
+[; ;SC8f072.h: 31: volatile unsigned char PWMD1L @ 0x1A;
+"32
+[v _PWMD4L `Vuc ~T0 @X0 1 e@27 ]
+[; ;SC8f072.h: 32: volatile unsigned char PWMD4L @ 0x1B;
+"33
+[v _PWMT4L `Vuc ~T0 @X0 1 e@28 ]
+[; ;SC8f072.h: 33: volatile unsigned char PWMT4L @ 0x1C;
+"34
+[v _PWMCON2 `Vuc ~T0 @X0 1 e@29 ]
+[; ;SC8f072.h: 34: volatile unsigned char PWMCON2 @ 0x1D;
+"35
+[v _PWMD01H `Vuc ~T0 @X0 1 e@30 ]
+[; ;SC8f072.h: 35: volatile unsigned char PWMD01H @ 0x1E;
+"36
+[v _PWM01DT `Vuc ~T0 @X0 1 e@31 ]
+[; ;SC8f072.h: 36: volatile unsigned char PWM01DT @ 0x1F;
+"37
+[v _TMR0 `Vuc ~T0 @X0 1 e@129 ]
+[; ;SC8f072.h: 37: volatile unsigned char TMR0 @ 0x81;
+"38
+[v _TRISA `Vuc ~T0 @X0 1 e@133 ]
+[; ;SC8f072.h: 38: volatile unsigned char TRISA @ 0x85;
+"39
+[v _PORTA `Vuc ~T0 @X0 1 e@134 ]
+[; ;SC8f072.h: 39: volatile unsigned char PORTA @ 0x86;
+"40
+[v _WPDA `Vuc ~T0 @X0 1 e@135 ]
+[; ;SC8f072.h: 40: volatile unsigned char WPDA @ 0x87;
+"41
+[v _WPUA `Vuc ~T0 @X0 1 e@136 ]
+[; ;SC8f072.h: 41: volatile unsigned char WPUA @ 0x88;
+"42
+[v _IOCA `Vuc ~T0 @X0 1 e@137 ]
+[; ;SC8f072.h: 42: volatile unsigned char IOCA @ 0x89;
+"43
+[v _ODCONA `Vuc ~T0 @X0 1 e@140 ]
+[; ;SC8f072.h: 43: volatile unsigned char ODCONA @ 0x8C;
+"44
+[v _EECON1 `Vuc ~T0 @X0 1 e@141 ]
+[; ;SC8f072.h: 44: volatile unsigned char EECON1 @ 0x8D;
+"45
+[v _EECON2 `Vuc ~T0 @X0 1 e@142 ]
+[; ;SC8f072.h: 45: volatile unsigned char EECON2 @ 0x8E;
+"46
+[v _EEDAT `Vuc ~T0 @X0 1 e@143 ]
+[; ;SC8f072.h: 46: volatile unsigned char EEDAT @ 0x8F;
+"47
+[v _EEDATH `Vuc ~T0 @X0 1 e@144 ]
+[; ;SC8f072.h: 47: volatile unsigned char EEDATH @ 0x90;
+"48
+[v _EEADR `Vuc ~T0 @X0 1 e@145 ]
+[; ;SC8f072.h: 48: volatile unsigned char EEADR @ 0x91;
+"49
+[v _EEADRH `Vuc ~T0 @X0 1 e@146 ]
+[; ;SC8f072.h: 49: volatile unsigned char EEADRH @ 0x92;
+"50
+[v _ANSEL0 `Vuc ~T0 @X0 1 e@147 ]
+[; ;SC8f072.h: 50: volatile unsigned char ANSEL0 @ 0x93;
+"51
+[v _ANSEL1 `Vuc ~T0 @X0 1 e@148 ]
+[; ;SC8f072.h: 51: volatile unsigned char ANSEL1 @ 0x94;
+"52
+[v _ADCON0 `Vuc ~T0 @X0 1 e@149 ]
+[; ;SC8f072.h: 52: volatile unsigned char ADCON0 @ 0x95;
+"53
+[v _ADCON1 `Vuc ~T0 @X0 1 e@150 ]
+[; ;SC8f072.h: 53: volatile unsigned char ADCON1 @ 0x96;
+"54
+[v _ADRESL `Vuc ~T0 @X0 1 e@152 ]
+[; ;SC8f072.h: 54: volatile unsigned char ADRESL @ 0x98;
+"55
+[v _ADRESH `Vuc ~T0 @X0 1 e@153 ]
+[; ;SC8f072.h: 55: volatile unsigned char ADRESH @ 0x99;
+"56
+[v _PWMD2L `Vuc ~T0 @X0 1 e@155 ]
+[; ;SC8f072.h: 56: volatile unsigned char PWMD2L @ 0x9B;
+"57
+[v _PWMD3L `Vuc ~T0 @X0 1 e@156 ]
+[; ;SC8f072.h: 57: volatile unsigned char PWMD3L @ 0x9C;
+"58
+[v _PWM23DT `Vuc ~T0 @X0 1 e@157 ]
+[; ;SC8f072.h: 58: volatile unsigned char PWM23DT @ 0x9D;
+"59
+[v _PWMD23H `Vuc ~T0 @X0 1 e@158 ]
+[; ;SC8f072.h: 59: volatile unsigned char PWMD23H @ 0x9E;
+"61
+[v _T0LSE_EN `Vb ~T0 @X0 1 e@15 ]
+[; ;SC8f072.h: 61: volatile bit T0LSE_EN @ ((unsigned)&OPTION_REG*8)+7;
+"62
+[v _INTEDG `Vb ~T0 @X0 1 e@14 ]
+[; ;SC8f072.h: 62: volatile bit INTEDG @ ((unsigned)&OPTION_REG*8)+6;
+"63
+[v _T0CS `Vb ~T0 @X0 1 e@13 ]
+[; ;SC8f072.h: 63: volatile bit T0CS @ ((unsigned)&OPTION_REG*8)+5;
+"64
+[v _T0SE `Vb ~T0 @X0 1 e@12 ]
+[; ;SC8f072.h: 64: volatile bit T0SE @ ((unsigned)&OPTION_REG*8)+4;
+"65
+[v _PSA `Vb ~T0 @X0 1 e@11 ]
+[; ;SC8f072.h: 65: volatile bit PSA @ ((unsigned)&OPTION_REG*8)+3;
+"66
+[v _PS2 `Vb ~T0 @X0 1 e@10 ]
+[; ;SC8f072.h: 66: volatile bit PS2 @ ((unsigned)&OPTION_REG*8)+2;
+"67
+[v _PS1 `Vb ~T0 @X0 1 e@9 ]
+[; ;SC8f072.h: 67: volatile bit PS1 @ ((unsigned)&OPTION_REG*8)+1;
+"68
+[v _PS0 `Vb ~T0 @X0 1 e@8 ]
+[; ;SC8f072.h: 68: volatile bit PS0 @ ((unsigned)&OPTION_REG*8)+0;
+"71
+[v _IRP `Vb ~T0 @X0 1 e@31 ]
+[; ;SC8f072.h: 71: volatile bit IRP @ ((unsigned)&STATUS*8)+7;
+"72
+[v _RP1 `Vb ~T0 @X0 1 e@30 ]
+[; ;SC8f072.h: 72: volatile bit RP1 @ ((unsigned)&STATUS*8)+6;
+"73
+[v _RP0 `Vb ~T0 @X0 1 e@29 ]
+[; ;SC8f072.h: 73: volatile bit RP0 @ ((unsigned)&STATUS*8)+5;
+"74
+[v _TO `Vb ~T0 @X0 1 e@28 ]
+[; ;SC8f072.h: 74: volatile bit TO @ ((unsigned)&STATUS*8)+4;
+"75
+[v _PD `Vb ~T0 @X0 1 e@27 ]
+[; ;SC8f072.h: 75: volatile bit PD @ ((unsigned)&STATUS*8)+3;
+"76
+[v _Z `Vb ~T0 @X0 1 e@26 ]
+[; ;SC8f072.h: 76: volatile bit Z @ ((unsigned)&STATUS*8)+2;
+"77
+[v _DC `Vb ~T0 @X0 1 e@25 ]
+[; ;SC8f072.h: 77: volatile bit DC @ ((unsigned)&STATUS*8)+1;
+"78
+[v _C `Vb ~T0 @X0 1 e@24 ]
+[; ;SC8f072.h: 78: volatile bit C @ ((unsigned)&STATUS*8)+0;
+"81
+[v _TRISB7 `Vb ~T0 @X0 1 e@47 ]
+[; ;SC8f072.h: 81: volatile bit TRISB7 @ ((unsigned)&TRISB*8)+7;
+"82
+[v _TRISB6 `Vb ~T0 @X0 1 e@46 ]
+[; ;SC8f072.h: 82: volatile bit TRISB6 @ ((unsigned)&TRISB*8)+6;
+"83
+[v _TRISB5 `Vb ~T0 @X0 1 e@45 ]
+[; ;SC8f072.h: 83: volatile bit TRISB5 @ ((unsigned)&TRISB*8)+5;
+"84
+[v _TRISB4 `Vb ~T0 @X0 1 e@44 ]
+[; ;SC8f072.h: 84: volatile bit TRISB4 @ ((unsigned)&TRISB*8)+4;
+"85
+[v _TRISB3 `Vb ~T0 @X0 1 e@43 ]
+[; ;SC8f072.h: 85: volatile bit TRISB3 @ ((unsigned)&TRISB*8)+3;
+"86
+[v _TRISB2 `Vb ~T0 @X0 1 e@42 ]
+[; ;SC8f072.h: 86: volatile bit TRISB2 @ ((unsigned)&TRISB*8)+2;
+"87
+[v _TRISB1 `Vb ~T0 @X0 1 e@41 ]
+[; ;SC8f072.h: 87: volatile bit TRISB1 @ ((unsigned)&TRISB*8)+1;
+"88
+[v _TRISB0 `Vb ~T0 @X0 1 e@40 ]
+[; ;SC8f072.h: 88: volatile bit TRISB0 @ ((unsigned)&TRISB*8)+0;
+"91
+[v _RB7 `Vb ~T0 @X0 1 e@55 ]
+[; ;SC8f072.h: 91: volatile bit RB7 @ ((unsigned)&PORTB*8)+7;
+"92
+[v _RB6 `Vb ~T0 @X0 1 e@54 ]
+[; ;SC8f072.h: 92: volatile bit RB6 @ ((unsigned)&PORTB*8)+6;
+"93
+[v _RB5 `Vb ~T0 @X0 1 e@53 ]
+[; ;SC8f072.h: 93: volatile bit RB5 @ ((unsigned)&PORTB*8)+5;
+"94
+[v _RB4 `Vb ~T0 @X0 1 e@52 ]
+[; ;SC8f072.h: 94: volatile bit RB4 @ ((unsigned)&PORTB*8)+4;
+"95
+[v _RB3 `Vb ~T0 @X0 1 e@51 ]
+[; ;SC8f072.h: 95: volatile bit RB3 @ ((unsigned)&PORTB*8)+3;
+"96
+[v _RB2 `Vb ~T0 @X0 1 e@50 ]
+[; ;SC8f072.h: 96: volatile bit RB2 @ ((unsigned)&PORTB*8)+2;
+"97
+[v _RB1 `Vb ~T0 @X0 1 e@49 ]
+[; ;SC8f072.h: 97: volatile bit RB1 @ ((unsigned)&PORTB*8)+1;
+"98
+[v _RB0 `Vb ~T0 @X0 1 e@48 ]
+[; ;SC8f072.h: 98: volatile bit RB0 @ ((unsigned)&PORTB*8)+0;
+"101
+[v _WPDB7 `Vb ~T0 @X0 1 e@63 ]
+[; ;SC8f072.h: 101: volatile bit WPDB7 @ ((unsigned)&WPDB*8)+7;
+"102
+[v _WPDB6 `Vb ~T0 @X0 1 e@62 ]
+[; ;SC8f072.h: 102: volatile bit WPDB6 @ ((unsigned)&WPDB*8)+6;
+"103
+[v _WPDB5 `Vb ~T0 @X0 1 e@61 ]
+[; ;SC8f072.h: 103: volatile bit WPDB5 @ ((unsigned)&WPDB*8)+5;
+"104
+[v _WPDB4 `Vb ~T0 @X0 1 e@60 ]
+[; ;SC8f072.h: 104: volatile bit WPDB4 @ ((unsigned)&WPDB*8)+4;
+"105
+[v _WPDB2 `Vb ~T0 @X0 1 e@58 ]
+[; ;SC8f072.h: 105: volatile bit WPDB2 @ ((unsigned)&WPDB*8)+2;
+"106
+[v _WPDB1 `Vb ~T0 @X0 1 e@57 ]
+[; ;SC8f072.h: 106: volatile bit WPDB1 @ ((unsigned)&WPDB*8)+1;
+"107
+[v _WPDB0 `Vb ~T0 @X0 1 e@56 ]
+[; ;SC8f072.h: 107: volatile bit WPDB0 @ ((unsigned)&WPDB*8)+0;
+"110
+[v _WPUB7 `Vb ~T0 @X0 1 e@71 ]
+[; ;SC8f072.h: 110: volatile bit WPUB7 @ ((unsigned)&WPUB*8)+7;
+"111
+[v _WPUB6 `Vb ~T0 @X0 1 e@70 ]
+[; ;SC8f072.h: 111: volatile bit WPUB6 @ ((unsigned)&WPUB*8)+6;
+"112
+[v _WPUB5 `Vb ~T0 @X0 1 e@69 ]
+[; ;SC8f072.h: 112: volatile bit WPUB5 @ ((unsigned)&WPUB*8)+5;
+"113
+[v _WPUB4 `Vb ~T0 @X0 1 e@68 ]
+[; ;SC8f072.h: 113: volatile bit WPUB4 @ ((unsigned)&WPUB*8)+4;
+"114
+[v _WPUB3 `Vb ~T0 @X0 1 e@67 ]
+[; ;SC8f072.h: 114: volatile bit WPUB3 @ ((unsigned)&WPUB*8)+3;
+"115
+[v _WPUB2 `Vb ~T0 @X0 1 e@66 ]
+[; ;SC8f072.h: 115: volatile bit WPUB2 @ ((unsigned)&WPUB*8)+2;
+"116
+[v _WPUB1 `Vb ~T0 @X0 1 e@65 ]
+[; ;SC8f072.h: 116: volatile bit WPUB1 @ ((unsigned)&WPUB*8)+1;
+"117
+[v _WPUB0 `Vb ~T0 @X0 1 e@64 ]
+[; ;SC8f072.h: 117: volatile bit WPUB0 @ ((unsigned)&WPUB*8)+0;
+"120
+[v _IOCB7 `Vb ~T0 @X0 1 e@79 ]
+[; ;SC8f072.h: 120: volatile bit IOCB7 @ ((unsigned)&IOCB*8)+7;
+"121
+[v _IOCB6 `Vb ~T0 @X0 1 e@78 ]
+[; ;SC8f072.h: 121: volatile bit IOCB6 @ ((unsigned)&IOCB*8)+6;
+"122
+[v _IOCB5 `Vb ~T0 @X0 1 e@77 ]
+[; ;SC8f072.h: 122: volatile bit IOCB5 @ ((unsigned)&IOCB*8)+5;
+"123
+[v _IOCB4 `Vb ~T0 @X0 1 e@76 ]
+[; ;SC8f072.h: 123: volatile bit IOCB4 @ ((unsigned)&IOCB*8)+4;
+"124
+[v _IOCB3 `Vb ~T0 @X0 1 e@75 ]
+[; ;SC8f072.h: 124: volatile bit IOCB3 @ ((unsigned)&IOCB*8)+3;
+"125
+[v _IOCB2 `Vb ~T0 @X0 1 e@74 ]
+[; ;SC8f072.h: 125: volatile bit IOCB2 @ ((unsigned)&IOCB*8)+2;
+"126
+[v _IOCB1 `Vb ~T0 @X0 1 e@73 ]
+[; ;SC8f072.h: 126: volatile bit IOCB1 @ ((unsigned)&IOCB*8)+1;
+"127
+[v _IOCB0 `Vb ~T0 @X0 1 e@72 ]
+[; ;SC8f072.h: 127: volatile bit IOCB0 @ ((unsigned)&IOCB*8)+0;
+"130
+[v _GIE `Vb ~T0 @X0 1 e@95 ]
+[; ;SC8f072.h: 130: volatile bit GIE @ ((unsigned)&INTCON*8)+7;
+"131
+[v _PEIE `Vb ~T0 @X0 1 e@94 ]
+[; ;SC8f072.h: 131: volatile bit PEIE @ ((unsigned)&INTCON*8)+6;
+"132
+[v _T0IE `Vb ~T0 @X0 1 e@93 ]
+[; ;SC8f072.h: 132: volatile bit T0IE @ ((unsigned)&INTCON*8)+5;
+"133
+[v _INTE `Vb ~T0 @X0 1 e@92 ]
+[; ;SC8f072.h: 133: volatile bit INTE @ ((unsigned)&INTCON*8)+4;
+"134
+[v _RBIE `Vb ~T0 @X0 1 e@91 ]
+[; ;SC8f072.h: 134: volatile bit RBIE @ ((unsigned)&INTCON*8)+3;
+"135
+[v _T0IF `Vb ~T0 @X0 1 e@90 ]
+[; ;SC8f072.h: 135: volatile bit T0IF @ ((unsigned)&INTCON*8)+2;
+"136
+[v _INTF `Vb ~T0 @X0 1 e@89 ]
+[; ;SC8f072.h: 136: volatile bit INTF @ ((unsigned)&INTCON*8)+1;
+"137
+[v _RBIF `Vb ~T0 @X0 1 e@88 ]
+[; ;SC8f072.h: 137: volatile bit RBIF @ ((unsigned)&INTCON*8)+0;
+"140
+[v _ODCONB7 `Vb ~T0 @X0 1 e@103 ]
+[; ;SC8f072.h: 140: volatile bit ODCONB7 @ ((unsigned)&ODCONB*8)+7;
+"141
+[v _ODCONB6 `Vb ~T0 @X0 1 e@102 ]
+[; ;SC8f072.h: 141: volatile bit ODCONB6 @ ((unsigned)&ODCONB*8)+6;
+"142
+[v _ODCONB5 `Vb ~T0 @X0 1 e@101 ]
+[; ;SC8f072.h: 142: volatile bit ODCONB5 @ ((unsigned)&ODCONB*8)+5;
+"143
+[v _ODCONB4 `Vb ~T0 @X0 1 e@100 ]
+[; ;SC8f072.h: 143: volatile bit ODCONB4 @ ((unsigned)&ODCONB*8)+4;
+"144
+[v _ODCONB3 `Vb ~T0 @X0 1 e@99 ]
+[; ;SC8f072.h: 144: volatile bit ODCONB3 @ ((unsigned)&ODCONB*8)+3;
+"145
+[v _ODCONB2 `Vb ~T0 @X0 1 e@98 ]
+[; ;SC8f072.h: 145: volatile bit ODCONB2 @ ((unsigned)&ODCONB*8)+2;
+"146
+[v _ODCONB1 `Vb ~T0 @X0 1 e@97 ]
+[; ;SC8f072.h: 146: volatile bit ODCONB1 @ ((unsigned)&ODCONB*8)+1;
+"147
+[v _ODCONB0 `Vb ~T0 @X0 1 e@96 ]
+[; ;SC8f072.h: 147: volatile bit ODCONB0 @ ((unsigned)&ODCONB*8)+0;
+"150
+[v _CMPIF `Vb ~T0 @X0 1 e@109 ]
+[; ;SC8f072.h: 150: volatile bit CMPIF @ ((unsigned)&PIR1*8)+5;
+"151
+[v _PWMIF `Vb ~T0 @X0 1 e@108 ]
+[; ;SC8f072.h: 151: volatile bit PWMIF @ ((unsigned)&PIR1*8)+4;
+"152
+[v _RAIF `Vb ~T0 @X0 1 e@107 ]
+[; ;SC8f072.h: 152: volatile bit RAIF @ ((unsigned)&PIR1*8)+3;
+"153
+[v _TMR2IF `Vb ~T0 @X0 1 e@105 ]
+[; ;SC8f072.h: 153: volatile bit TMR2IF @ ((unsigned)&PIR1*8)+1;
+"154
+[v _ADIF `Vb ~T0 @X0 1 e@104 ]
+[; ;SC8f072.h: 154: volatile bit ADIF @ ((unsigned)&PIR1*8)+0;
+"157
+[v _CMPIE `Vb ~T0 @X0 1 e@117 ]
+[; ;SC8f072.h: 157: volatile bit CMPIE @ ((unsigned)&PIE1*8)+5;
+"158
+[v _PWMIE `Vb ~T0 @X0 1 e@116 ]
+[; ;SC8f072.h: 158: volatile bit PWMIE @ ((unsigned)&PIE1*8)+4;
+"159
+[v _RAIE `Vb ~T0 @X0 1 e@115 ]
+[; ;SC8f072.h: 159: volatile bit RAIE @ ((unsigned)&PIE1*8)+3;
+"160
+[v _TMR2IE `Vb ~T0 @X0 1 e@113 ]
+[; ;SC8f072.h: 160: volatile bit TMR2IE @ ((unsigned)&PIE1*8)+1;
+"161
+[v _ADIE `Vb ~T0 @X0 1 e@112 ]
+[; ;SC8f072.h: 161: volatile bit ADIE @ ((unsigned)&PIE1*8)+0;
+"164
+[v _CMPEN `Vb ~T0 @X0 1 e@127 ]
+[; ;SC8f072.h: 164: volatile bit CMPEN @ ((unsigned)&CMPCON0*8)+7;
+"165
+[v _CMPPS `Vb ~T0 @X0 1 e@126 ]
+[; ;SC8f072.h: 165: volatile bit CMPPS @ ((unsigned)&CMPCON0*8)+6;
+"166
+[v _CMPNS2 `Vb ~T0 @X0 1 e@125 ]
+[; ;SC8f072.h: 166: volatile bit CMPNS2 @ ((unsigned)&CMPCON0*8)+5;
+"167
+[v _CMPNS1 `Vb ~T0 @X0 1 e@124 ]
+[; ;SC8f072.h: 167: volatile bit CMPNS1 @ ((unsigned)&CMPCON0*8)+4;
+"168
+[v _CMPNS0 `Vb ~T0 @X0 1 e@123 ]
+[; ;SC8f072.h: 168: volatile bit CMPNS0 @ ((unsigned)&CMPCON0*8)+3;
+"169
+[v _CMPNV `Vb ~T0 @X0 1 e@122 ]
+[; ;SC8f072.h: 169: volatile bit CMPNV @ ((unsigned)&CMPCON0*8)+2;
+"170
+[v _CMPOUT `Vb ~T0 @X0 1 e@121 ]
+[; ;SC8f072.h: 170: volatile bit CMPOUT @ ((unsigned)&CMPCON0*8)+1;
+"171
+[v _CMPOEN `Vb ~T0 @X0 1 e@120 ]
+[; ;SC8f072.h: 171: volatile bit CMPOEN @ ((unsigned)&CMPCON0*8)+0;
+"174
+[v _CMPIM `Vb ~T0 @X0 1 e@135 ]
+[; ;SC8f072.h: 174: volatile bit CMPIM @ ((unsigned)&CMPCON1*8)+7;
+"175
+[v _AN_EN `Vb ~T0 @X0 1 e@134 ]
+[; ;SC8f072.h: 175: volatile bit AN_EN @ ((unsigned)&CMPCON1*8)+6;
+"176
+[v _RBIAS_H `Vb ~T0 @X0 1 e@133 ]
+[; ;SC8f072.h: 176: volatile bit RBIAS_H @ ((unsigned)&CMPCON1*8)+5;
+"177
+[v _RBIAS_L `Vb ~T0 @X0 1 e@132 ]
+[; ;SC8f072.h: 177: volatile bit RBIAS_L @ ((unsigned)&CMPCON1*8)+4;
+"178
+[v _LVDS3 `Vb ~T0 @X0 1 e@131 ]
+[; ;SC8f072.h: 178: volatile bit LVDS3 @ ((unsigned)&CMPCON1*8)+3;
+"179
+[v _LVDS2 `Vb ~T0 @X0 1 e@130 ]
+[; ;SC8f072.h: 179: volatile bit LVDS2 @ ((unsigned)&CMPCON1*8)+2;
+"180
+[v _LVDS1 `Vb ~T0 @X0 1 e@129 ]
+[; ;SC8f072.h: 180: volatile bit LVDS1 @ ((unsigned)&CMPCON1*8)+1;
+"181
+[v _LVDS0 `Vb ~T0 @X0 1 e@128 ]
+[; ;SC8f072.h: 181: volatile bit LVDS0 @ ((unsigned)&CMPCON1*8)+0;
+"184
+[v _CLK_SEL `Vb ~T0 @X0 1 e@159 ]
+[; ;SC8f072.h: 184: volatile bit CLK_SEL @ ((unsigned)&T2CON*8)+7;
+"185
+[v _TOUTPS3 `Vb ~T0 @X0 1 e@158 ]
+[; ;SC8f072.h: 185: volatile bit TOUTPS3 @ ((unsigned)&T2CON*8)+6;
+"186
+[v _TOUTPS2 `Vb ~T0 @X0 1 e@157 ]
+[; ;SC8f072.h: 186: volatile bit TOUTPS2 @ ((unsigned)&T2CON*8)+5;
+"187
+[v _TOUTPS1 `Vb ~T0 @X0 1 e@156 ]
+[; ;SC8f072.h: 187: volatile bit TOUTPS1 @ ((unsigned)&T2CON*8)+4;
+"188
+[v _TOUTPS0 `Vb ~T0 @X0 1 e@155 ]
+[; ;SC8f072.h: 188: volatile bit TOUTPS0 @ ((unsigned)&T2CON*8)+3;
+"189
+[v _TMR2ON `Vb ~T0 @X0 1 e@154 ]
+[; ;SC8f072.h: 189: volatile bit TMR2ON @ ((unsigned)&T2CON*8)+2;
+"190
+[v _T2CKPS1 `Vb ~T0 @X0 1 e@153 ]
+[; ;SC8f072.h: 190: volatile bit T2CKPS1 @ ((unsigned)&T2CON*8)+1;
+"191
+[v _T2CKPS0 `Vb ~T0 @X0 1 e@152 ]
+[; ;SC8f072.h: 191: volatile bit T2CKPS0 @ ((unsigned)&T2CON*8)+0;
+"194
+[v _IRCF2 `Vb ~T0 @X0 1 e@166 ]
+[; ;SC8f072.h: 194: volatile bit IRCF2 @ ((unsigned)&OSCCON*8)+6;
+"195
+[v _IRCF1 `Vb ~T0 @X0 1 e@165 ]
+[; ;SC8f072.h: 195: volatile bit IRCF1 @ ((unsigned)&OSCCON*8)+5;
+"196
+[v _IRCF0 `Vb ~T0 @X0 1 e@164 ]
+[; ;SC8f072.h: 196: volatile bit IRCF0 @ ((unsigned)&OSCCON*8)+4;
+"197
+[v _SWDTEN `Vb ~T0 @X0 1 e@161 ]
+[; ;SC8f072.h: 197: volatile bit SWDTEN @ ((unsigned)&OSCCON*8)+1;
+"200
+[v _CLKDIV2 `Vb ~T0 @X0 1 e@175 ]
+[; ;SC8f072.h: 200: volatile bit CLKDIV2 @ ((unsigned)&PWMCON0*8)+7;
+"201
+[v _CLKDIV1 `Vb ~T0 @X0 1 e@174 ]
+[; ;SC8f072.h: 201: volatile bit CLKDIV1 @ ((unsigned)&PWMCON0*8)+6;
+"202
+[v _CLKDIV0 `Vb ~T0 @X0 1 e@173 ]
+[; ;SC8f072.h: 202: volatile bit CLKDIV0 @ ((unsigned)&PWMCON0*8)+5;
+"203
+[v _PWM4EN `Vb ~T0 @X0 1 e@172 ]
+[; ;SC8f072.h: 203: volatile bit PWM4EN @ ((unsigned)&PWMCON0*8)+4;
+"204
+[v _PWM3EN `Vb ~T0 @X0 1 e@171 ]
+[; ;SC8f072.h: 204: volatile bit PWM3EN @ ((unsigned)&PWMCON0*8)+3;
+"205
+[v _PWM2EN `Vb ~T0 @X0 1 e@170 ]
+[; ;SC8f072.h: 205: volatile bit PWM2EN @ ((unsigned)&PWMCON0*8)+2;
+"206
+[v _PWM1EN `Vb ~T0 @X0 1 e@169 ]
+[; ;SC8f072.h: 206: volatile bit PWM1EN @ ((unsigned)&PWMCON0*8)+1;
+"207
+[v _PWM0EN `Vb ~T0 @X0 1 e@168 ]
+[; ;SC8f072.h: 207: volatile bit PWM0EN @ ((unsigned)&PWMCON0*8)+0;
+"210
+[v _PWMIO_SEL1 `Vb ~T0 @X0 1 e@183 ]
+[; ;SC8f072.h: 210: volatile bit PWMIO_SEL1 @ ((unsigned)&PWMCON1*8)+7;
+"211
+[v _PWMIO_SEL0 `Vb ~T0 @X0 1 e@182 ]
+[; ;SC8f072.h: 211: volatile bit PWMIO_SEL0 @ ((unsigned)&PWMCON1*8)+6;
+"212
+[v _PWM2DTEN `Vb ~T0 @X0 1 e@181 ]
+[; ;SC8f072.h: 212: volatile bit PWM2DTEN @ ((unsigned)&PWMCON1*8)+5;
+"213
+[v _PWM0DTEN `Vb ~T0 @X0 1 e@180 ]
+[; ;SC8f072.h: 213: volatile bit PWM0DTEN @ ((unsigned)&PWMCON1*8)+4;
+"214
+[v _DT_DIV1 `Vb ~T0 @X0 1 e@177 ]
+[; ;SC8f072.h: 214: volatile bit DT_DIV1 @ ((unsigned)&PWMCON1*8)+1;
+"215
+[v _DT_DIV0 `Vb ~T0 @X0 1 e@176 ]
+[; ;SC8f072.h: 215: volatile bit DT_DIV0 @ ((unsigned)&PWMCON1*8)+0;
+"218
+[v _PWM4D9 `Vb ~T0 @X0 1 e@197 ]
+[; ;SC8f072.h: 218: volatile bit PWM4D9 @ ((unsigned)&PWMTH*8)+5;
+"219
+[v _PWM4D8 `Vb ~T0 @X0 1 e@196 ]
+[; ;SC8f072.h: 219: volatile bit PWM4D8 @ ((unsigned)&PWMTH*8)+4;
+"220
+[v _PWM4T9 `Vb ~T0 @X0 1 e@195 ]
+[; ;SC8f072.h: 220: volatile bit PWM4T9 @ ((unsigned)&PWMTH*8)+3;
+"221
+[v _PWM4T8 `Vb ~T0 @X0 1 e@194 ]
+[; ;SC8f072.h: 221: volatile bit PWM4T8 @ ((unsigned)&PWMTH*8)+2;
+"222
+[v _PWMT9 `Vb ~T0 @X0 1 e@193 ]
+[; ;SC8f072.h: 222: volatile bit PWMT9 @ ((unsigned)&PWMTH*8)+1;
+"223
+[v _PWMT8 `Vb ~T0 @X0 1 e@192 ]
+[; ;SC8f072.h: 223: volatile bit PWMT8 @ ((unsigned)&PWMTH*8)+0;
+"226
+[v _PWM4DIR `Vb ~T0 @X0 1 e@236 ]
+[; ;SC8f072.h: 226: volatile bit PWM4DIR @ ((unsigned)&PWMCON2*8)+4;
+"227
+[v _PWM3DIR `Vb ~T0 @X0 1 e@235 ]
+[; ;SC8f072.h: 227: volatile bit PWM3DIR @ ((unsigned)&PWMCON2*8)+3;
+"228
+[v _PWM2DIR `Vb ~T0 @X0 1 e@234 ]
+[; ;SC8f072.h: 228: volatile bit PWM2DIR @ ((unsigned)&PWMCON2*8)+2;
+"229
+[v _PWM1DIR `Vb ~T0 @X0 1 e@233 ]
+[; ;SC8f072.h: 229: volatile bit PWM1DIR @ ((unsigned)&PWMCON2*8)+1;
+"230
+[v _PWM0DIR `Vb ~T0 @X0 1 e@232 ]
+[; ;SC8f072.h: 230: volatile bit PWM0DIR @ ((unsigned)&PWMCON2*8)+0;
+"233
+[v _PWMD19 `Vb ~T0 @X0 1 e@245 ]
+[; ;SC8f072.h: 233: volatile bit PWMD19 @ ((unsigned)&PWMD01H*8)+5;
+"234
+[v _PWMD18 `Vb ~T0 @X0 1 e@244 ]
+[; ;SC8f072.h: 234: volatile bit PWMD18 @ ((unsigned)&PWMD01H*8)+4;
+"235
+[v _PWMD09 `Vb ~T0 @X0 1 e@241 ]
+[; ;SC8f072.h: 235: volatile bit PWMD09 @ ((unsigned)&PWMD01H*8)+1;
+"236
+[v _PWMD08 `Vb ~T0 @X0 1 e@240 ]
+[; ;SC8f072.h: 236: volatile bit PWMD08 @ ((unsigned)&PWMD01H*8)+0;
+"239
+[v _PWM01DT5 `Vb ~T0 @X0 1 e@253 ]
+[; ;SC8f072.h: 239: volatile bit PWM01DT5 @ ((unsigned)&PWM01DT*8)+5;
+"240
+[v _PWM01DT4 `Vb ~T0 @X0 1 e@252 ]
+[; ;SC8f072.h: 240: volatile bit PWM01DT4 @ ((unsigned)&PWM01DT*8)+4;
+"241
+[v _PWM01DT3 `Vb ~T0 @X0 1 e@251 ]
+[; ;SC8f072.h: 241: volatile bit PWM01DT3 @ ((unsigned)&PWM01DT*8)+3;
+"242
+[v _PWM01DT2 `Vb ~T0 @X0 1 e@250 ]
+[; ;SC8f072.h: 242: volatile bit PWM01DT2 @ ((unsigned)&PWM01DT*8)+2;
+"243
+[v _PWM01DT1 `Vb ~T0 @X0 1 e@249 ]
+[; ;SC8f072.h: 243: volatile bit PWM01DT1 @ ((unsigned)&PWM01DT*8)+1;
+"244
+[v _PWM01DT0 `Vb ~T0 @X0 1 e@248 ]
+[; ;SC8f072.h: 244: volatile bit PWM01DT0 @ ((unsigned)&PWM01DT*8)+0;
+"247
+[v _TRISA5 `Vb ~T0 @X0 1 e@1069 ]
+[; ;SC8f072.h: 247: volatile bit TRISA5 @ ((unsigned)&TRISA*8)+5;
+"248
+[v _TRISA4 `Vb ~T0 @X0 1 e@1068 ]
+[; ;SC8f072.h: 248: volatile bit TRISA4 @ ((unsigned)&TRISA*8)+4;
+"249
+[v _TRISA3 `Vb ~T0 @X0 1 e@1067 ]
+[; ;SC8f072.h: 249: volatile bit TRISA3 @ ((unsigned)&TRISA*8)+3;
+"250
+[v _TRISA2 `Vb ~T0 @X0 1 e@1066 ]
+[; ;SC8f072.h: 250: volatile bit TRISA2 @ ((unsigned)&TRISA*8)+2;
+"251
+[v _TRISA1 `Vb ~T0 @X0 1 e@1065 ]
+[; ;SC8f072.h: 251: volatile bit TRISA1 @ ((unsigned)&TRISA*8)+1;
+"252
+[v _TRISA0 `Vb ~T0 @X0 1 e@1064 ]
+[; ;SC8f072.h: 252: volatile bit TRISA0 @ ((unsigned)&TRISA*8)+0;
+"255
+[v _RA5 `Vb ~T0 @X0 1 e@1077 ]
+[; ;SC8f072.h: 255: volatile bit RA5 @ ((unsigned)&PORTA*8)+5;
+"256
+[v _RA4 `Vb ~T0 @X0 1 e@1076 ]
+[; ;SC8f072.h: 256: volatile bit RA4 @ ((unsigned)&PORTA*8)+4;
+"257
+[v _RA3 `Vb ~T0 @X0 1 e@1075 ]
+[; ;SC8f072.h: 257: volatile bit RA3 @ ((unsigned)&PORTA*8)+3;
+"258
+[v _RA2 `Vb ~T0 @X0 1 e@1074 ]
+[; ;SC8f072.h: 258: volatile bit RA2 @ ((unsigned)&PORTA*8)+2;
+"259
+[v _RA1 `Vb ~T0 @X0 1 e@1073 ]
+[; ;SC8f072.h: 259: volatile bit RA1 @ ((unsigned)&PORTA*8)+1;
+"260
+[v _RA0 `Vb ~T0 @X0 1 e@1072 ]
+[; ;SC8f072.h: 260: volatile bit RA0 @ ((unsigned)&PORTA*8)+0;
+"263
+[v _WPDA5 `Vb ~T0 @X0 1 e@1085 ]
+[; ;SC8f072.h: 263: volatile bit WPDA5 @ ((unsigned)&WPDA*8)+5;
+"264
+[v _WPDA4 `Vb ~T0 @X0 1 e@1084 ]
+[; ;SC8f072.h: 264: volatile bit WPDA4 @ ((unsigned)&WPDA*8)+4;
+"265
+[v _WPDA3 `Vb ~T0 @X0 1 e@1083 ]
+[; ;SC8f072.h: 265: volatile bit WPDA3 @ ((unsigned)&WPDA*8)+3;
+"266
+[v _WPDA2 `Vb ~T0 @X0 1 e@1082 ]
+[; ;SC8f072.h: 266: volatile bit WPDA2 @ ((unsigned)&WPDA*8)+2;
+"267
+[v _WPDA1 `Vb ~T0 @X0 1 e@1081 ]
+[; ;SC8f072.h: 267: volatile bit WPDA1 @ ((unsigned)&WPDA*8)+1;
+"268
+[v _WPDA0 `Vb ~T0 @X0 1 e@1080 ]
+[; ;SC8f072.h: 268: volatile bit WPDA0 @ ((unsigned)&WPDA*8)+0;
+"271
+[v _WPUA5 `Vb ~T0 @X0 1 e@1093 ]
+[; ;SC8f072.h: 271: volatile bit WPUA5 @ ((unsigned)&WPUA*8)+5;
+"272
+[v _WPUA4 `Vb ~T0 @X0 1 e@1092 ]
+[; ;SC8f072.h: 272: volatile bit WPUA4 @ ((unsigned)&WPUA*8)+4;
+"273
+[v _WPUA3 `Vb ~T0 @X0 1 e@1091 ]
+[; ;SC8f072.h: 273: volatile bit WPUA3 @ ((unsigned)&WPUA*8)+3;
+"274
+[v _WPUA2 `Vb ~T0 @X0 1 e@1090 ]
+[; ;SC8f072.h: 274: volatile bit WPUA2 @ ((unsigned)&WPUA*8)+2;
+"275
+[v _WPUA1 `Vb ~T0 @X0 1 e@1089 ]
+[; ;SC8f072.h: 275: volatile bit WPUA1 @ ((unsigned)&WPUA*8)+1;
+"276
+[v _WPUA0 `Vb ~T0 @X0 1 e@1088 ]
+[; ;SC8f072.h: 276: volatile bit WPUA0 @ ((unsigned)&WPUA*8)+0;
+"279
+[v _IOCA5 `Vb ~T0 @X0 1 e@1101 ]
+[; ;SC8f072.h: 279: volatile bit IOCA5 @ ((unsigned)&IOCA*8)+5;
+"280
+[v _IOCA4 `Vb ~T0 @X0 1 e@1100 ]
+[; ;SC8f072.h: 280: volatile bit IOCA4 @ ((unsigned)&IOCA*8)+4;
+"281
+[v _IOCA3 `Vb ~T0 @X0 1 e@1099 ]
+[; ;SC8f072.h: 281: volatile bit IOCA3 @ ((unsigned)&IOCA*8)+3;
+"282
+[v _IOCA2 `Vb ~T0 @X0 1 e@1098 ]
+[; ;SC8f072.h: 282: volatile bit IOCA2 @ ((unsigned)&IOCA*8)+2;
+"283
+[v _IOCA1 `Vb ~T0 @X0 1 e@1097 ]
+[; ;SC8f072.h: 283: volatile bit IOCA1 @ ((unsigned)&IOCA*8)+1;
+"284
+[v _IOCA0 `Vb ~T0 @X0 1 e@1096 ]
+[; ;SC8f072.h: 284: volatile bit IOCA0 @ ((unsigned)&IOCA*8)+0;
+"287
+[v _ODCONA5 `Vb ~T0 @X0 1 e@1125 ]
+[; ;SC8f072.h: 287: volatile bit ODCONA5 @ ((unsigned)&ODCONA*8)+5;
+"288
+[v _ODCONA4 `Vb ~T0 @X0 1 e@1124 ]
+[; ;SC8f072.h: 288: volatile bit ODCONA4 @ ((unsigned)&ODCONA*8)+4;
+"289
+[v _ODCONA3 `Vb ~T0 @X0 1 e@1123 ]
+[; ;SC8f072.h: 289: volatile bit ODCONA3 @ ((unsigned)&ODCONA*8)+3;
+"290
+[v _ODCONA2 `Vb ~T0 @X0 1 e@1122 ]
+[; ;SC8f072.h: 290: volatile bit ODCONA2 @ ((unsigned)&ODCONA*8)+2;
+"291
+[v _ODCONA1 `Vb ~T0 @X0 1 e@1121 ]
+[; ;SC8f072.h: 291: volatile bit ODCONA1 @ ((unsigned)&ODCONA*8)+1;
+"292
+[v _ODCONA0 `Vb ~T0 @X0 1 e@1120 ]
+[; ;SC8f072.h: 292: volatile bit ODCONA0 @ ((unsigned)&ODCONA*8)+0;
+"295
+[v _EEPGD `Vb ~T0 @X0 1 e@1135 ]
+[; ;SC8f072.h: 295: volatile bit EEPGD @ ((unsigned)&EECON1*8)+7;
+"296
+[v _WRERR `Vb ~T0 @X0 1 e@1131 ]
+[; ;SC8f072.h: 296: volatile bit WRERR @ ((unsigned)&EECON1*8)+3;
+"297
+[v _WREN `Vb ~T0 @X0 1 e@1130 ]
+[; ;SC8f072.h: 297: volatile bit WREN @ ((unsigned)&EECON1*8)+2;
+"298
+[v _WR `Vb ~T0 @X0 1 e@1129 ]
+[; ;SC8f072.h: 298: volatile bit WR @ ((unsigned)&EECON1*8)+1;
+"299
+[v _RD `Vb ~T0 @X0 1 e@1128 ]
+[; ;SC8f072.h: 299: volatile bit RD @ ((unsigned)&EECON1*8)+0;
+"302
+[v _EEDAT7 `Vb ~T0 @X0 1 e@1151 ]
+[; ;SC8f072.h: 302: volatile bit EEDAT7 @ ((unsigned)&EEDAT*8)+7;
+"303
+[v _EEDAT6 `Vb ~T0 @X0 1 e@1150 ]
+[; ;SC8f072.h: 303: volatile bit EEDAT6 @ ((unsigned)&EEDAT*8)+6;
+"304
+[v _EEDAT5 `Vb ~T0 @X0 1 e@1149 ]
+[; ;SC8f072.h: 304: volatile bit EEDAT5 @ ((unsigned)&EEDAT*8)+5;
+"305
+[v _EEDAT4 `Vb ~T0 @X0 1 e@1148 ]
+[; ;SC8f072.h: 305: volatile bit EEDAT4 @ ((unsigned)&EEDAT*8)+4;
+"306
+[v _EEDAT3 `Vb ~T0 @X0 1 e@1147 ]
+[; ;SC8f072.h: 306: volatile bit EEDAT3 @ ((unsigned)&EEDAT*8)+3;
+"307
+[v _EEDAT2 `Vb ~T0 @X0 1 e@1146 ]
+[; ;SC8f072.h: 307: volatile bit EEDAT2 @ ((unsigned)&EEDAT*8)+2;
+"308
+[v _EEDAT1 `Vb ~T0 @X0 1 e@1145 ]
+[; ;SC8f072.h: 308: volatile bit EEDAT1 @ ((unsigned)&EEDAT*8)+1;
+"309
+[v _EEDAT0 `Vb ~T0 @X0 1 e@1144 ]
+[; ;SC8f072.h: 309: volatile bit EEDAT0 @ ((unsigned)&EEDAT*8)+0;
+"312
+[v _EEDATH7 `Vb ~T0 @X0 1 e@1159 ]
+[; ;SC8f072.h: 312: volatile bit EEDATH7 @ ((unsigned)&EEDATH*8)+7;
+"313
+[v _EEDATH6 `Vb ~T0 @X0 1 e@1158 ]
+[; ;SC8f072.h: 313: volatile bit EEDATH6 @ ((unsigned)&EEDATH*8)+6;
+"314
+[v _EEDATH5 `Vb ~T0 @X0 1 e@1157 ]
+[; ;SC8f072.h: 314: volatile bit EEDATH5 @ ((unsigned)&EEDATH*8)+5;
+"315
+[v _EEDATH4 `Vb ~T0 @X0 1 e@1156 ]
+[; ;SC8f072.h: 315: volatile bit EEDATH4 @ ((unsigned)&EEDATH*8)+4;
+"316
+[v _EEDATH3 `Vb ~T0 @X0 1 e@1155 ]
+[; ;SC8f072.h: 316: volatile bit EEDATH3 @ ((unsigned)&EEDATH*8)+3;
+"317
+[v _EEDATH2 `Vb ~T0 @X0 1 e@1154 ]
+[; ;SC8f072.h: 317: volatile bit EEDATH2 @ ((unsigned)&EEDATH*8)+2;
+"318
+[v _EEDATH1 `Vb ~T0 @X0 1 e@1153 ]
+[; ;SC8f072.h: 318: volatile bit EEDATH1 @ ((unsigned)&EEDATH*8)+1;
+"319
+[v _EEDATH0 `Vb ~T0 @X0 1 e@1152 ]
+[; ;SC8f072.h: 319: volatile bit EEDATH0 @ ((unsigned)&EEDATH*8)+0;
+"322
+[v _EEADR7 `Vb ~T0 @X0 1 e@1167 ]
+[; ;SC8f072.h: 322: volatile bit EEADR7 @ ((unsigned)&EEADR*8)+7;
+"323
+[v _EEADR6 `Vb ~T0 @X0 1 e@1166 ]
+[; ;SC8f072.h: 323: volatile bit EEADR6 @ ((unsigned)&EEADR*8)+6;
+"324
+[v _EEADR5 `Vb ~T0 @X0 1 e@1165 ]
+[; ;SC8f072.h: 324: volatile bit EEADR5 @ ((unsigned)&EEADR*8)+5;
+"325
+[v _EEADR4 `Vb ~T0 @X0 1 e@1164 ]
+[; ;SC8f072.h: 325: volatile bit EEADR4 @ ((unsigned)&EEADR*8)+4;
+"326
+[v _EEADR3 `Vb ~T0 @X0 1 e@1163 ]
+[; ;SC8f072.h: 326: volatile bit EEADR3 @ ((unsigned)&EEADR*8)+3;
+"327
+[v _EEADR2 `Vb ~T0 @X0 1 e@1162 ]
+[; ;SC8f072.h: 327: volatile bit EEADR2 @ ((unsigned)&EEADR*8)+2;
+"328
+[v _EEADR1 `Vb ~T0 @X0 1 e@1161 ]
+[; ;SC8f072.h: 328: volatile bit EEADR1 @ ((unsigned)&EEADR*8)+1;
+"329
+[v _EEADR0 `Vb ~T0 @X0 1 e@1160 ]
+[; ;SC8f072.h: 329: volatile bit EEADR0 @ ((unsigned)&EEADR*8)+0;
+"332
+[v _EEADRH2 `Vb ~T0 @X0 1 e@1170 ]
+[; ;SC8f072.h: 332: volatile bit EEADRH2 @ ((unsigned)&EEADRH*8)+2;
+"333
+[v _EEADRH1 `Vb ~T0 @X0 1 e@1169 ]
+[; ;SC8f072.h: 333: volatile bit EEADRH1 @ ((unsigned)&EEADRH*8)+1;
+"334
+[v _EEADRH0 `Vb ~T0 @X0 1 e@1168 ]
+[; ;SC8f072.h: 334: volatile bit EEADRH0 @ ((unsigned)&EEADRH*8)+0;
+"337
+[v _ANS5 `Vb ~T0 @X0 1 e@1181 ]
+[; ;SC8f072.h: 337: volatile bit ANS5 @ ((unsigned)&ANSEL0*8)+5;
+"338
+[v _ANS4 `Vb ~T0 @X0 1 e@1180 ]
+[; ;SC8f072.h: 338: volatile bit ANS4 @ ((unsigned)&ANSEL0*8)+4;
+"339
+[v _ANS3 `Vb ~T0 @X0 1 e@1179 ]
+[; ;SC8f072.h: 339: volatile bit ANS3 @ ((unsigned)&ANSEL0*8)+3;
+"340
+[v _ANS2 `Vb ~T0 @X0 1 e@1178 ]
+[; ;SC8f072.h: 340: volatile bit ANS2 @ ((unsigned)&ANSEL0*8)+2;
+"341
+[v _ANS1 `Vb ~T0 @X0 1 e@1177 ]
+[; ;SC8f072.h: 341: volatile bit ANS1 @ ((unsigned)&ANSEL0*8)+1;
+"342
+[v _ANS0 `Vb ~T0 @X0 1 e@1176 ]
+[; ;SC8f072.h: 342: volatile bit ANS0 @ ((unsigned)&ANSEL0*8)+0;
+"345
+[v _ANS15 `Vb ~T0 @X0 1 e@1191 ]
+[; ;SC8f072.h: 345: volatile bit ANS15 @ ((unsigned)&ANSEL1*8)+7;
+"346
+[v _ANS14 `Vb ~T0 @X0 1 e@1190 ]
+[; ;SC8f072.h: 346: volatile bit ANS14 @ ((unsigned)&ANSEL1*8)+6;
+"347
+[v _ANS13 `Vb ~T0 @X0 1 e@1189 ]
+[; ;SC8f072.h: 347: volatile bit ANS13 @ ((unsigned)&ANSEL1*8)+5;
+"348
+[v _ANS12 `Vb ~T0 @X0 1 e@1188 ]
+[; ;SC8f072.h: 348: volatile bit ANS12 @ ((unsigned)&ANSEL1*8)+4;
+"349
+[v _ANS11 `Vb ~T0 @X0 1 e@1187 ]
+[; ;SC8f072.h: 349: volatile bit ANS11 @ ((unsigned)&ANSEL1*8)+3;
+"350
+[v _ANS10 `Vb ~T0 @X0 1 e@1186 ]
+[; ;SC8f072.h: 350: volatile bit ANS10 @ ((unsigned)&ANSEL1*8)+2;
+"351
+[v _ANS9 `Vb ~T0 @X0 1 e@1185 ]
+[; ;SC8f072.h: 351: volatile bit ANS9 @ ((unsigned)&ANSEL1*8)+1;
+"352
+[v _ANS8 `Vb ~T0 @X0 1 e@1184 ]
+[; ;SC8f072.h: 352: volatile bit ANS8 @ ((unsigned)&ANSEL1*8)+0;
+"355
+[v _ADCS1 `Vb ~T0 @X0 1 e@1199 ]
+[; ;SC8f072.h: 355: volatile bit ADCS1 @ ((unsigned)&ADCON0*8)+7;
+"356
+[v _ADCS0 `Vb ~T0 @X0 1 e@1198 ]
+[; ;SC8f072.h: 356: volatile bit ADCS0 @ ((unsigned)&ADCON0*8)+6;
+"357
+[v _CHS3 `Vb ~T0 @X0 1 e@1197 ]
+[; ;SC8f072.h: 357: volatile bit CHS3 @ ((unsigned)&ADCON0*8)+5;
+"358
+[v _CHS2 `Vb ~T0 @X0 1 e@1196 ]
+[; ;SC8f072.h: 358: volatile bit CHS2 @ ((unsigned)&ADCON0*8)+4;
+"359
+[v _CHS1 `Vb ~T0 @X0 1 e@1195 ]
+[; ;SC8f072.h: 359: volatile bit CHS1 @ ((unsigned)&ADCON0*8)+3;
+"360
+[v _CHS0 `Vb ~T0 @X0 1 e@1194 ]
+[; ;SC8f072.h: 360: volatile bit CHS0 @ ((unsigned)&ADCON0*8)+2;
+"361
+[v _GODONE `Vb ~T0 @X0 1 e@1193 ]
+[; ;SC8f072.h: 361: volatile bit GODONE @ ((unsigned)&ADCON0*8)+1;
+"362
+[v _ADON `Vb ~T0 @X0 1 e@1192 ]
+[; ;SC8f072.h: 362: volatile bit ADON @ ((unsigned)&ADCON0*8)+0;
+"365
+[v _ADFM `Vb ~T0 @X0 1 e@1207 ]
+[; ;SC8f072.h: 365: volatile bit ADFM @ ((unsigned)&ADCON1*8)+7;
+"366
+[v _CHS4 `Vb ~T0 @X0 1 e@1206 ]
+[; ;SC8f072.h: 366: volatile bit CHS4 @ ((unsigned)&ADCON1*8)+6;
+"367
+[v _LDO_EN `Vb ~T0 @X0 1 e@1202 ]
+[; ;SC8f072.h: 367: volatile bit LDO_EN @ ((unsigned)&ADCON1*8)+2;
+"368
+[v _LDO_SEL1 `Vb ~T0 @X0 1 e@1201 ]
+[; ;SC8f072.h: 368: volatile bit LDO_SEL1 @ ((unsigned)&ADCON1*8)+1;
+"369
+[v _LDO_SEL0 `Vb ~T0 @X0 1 e@1200 ]
+[; ;SC8f072.h: 369: volatile bit LDO_SEL0 @ ((unsigned)&ADCON1*8)+0;
+"372
+[v _PWMD39 `Vb ~T0 @X0 1 e@1269 ]
+[; ;SC8f072.h: 372: volatile bit PWMD39 @ ((unsigned)&PWMD23H*8)+5;
+"373
+[v _PWMD38 `Vb ~T0 @X0 1 e@1268 ]
+[; ;SC8f072.h: 373: volatile bit PWMD38 @ ((unsigned)&PWMD23H*8)+4;
+"374
+[v _PWMD29 `Vb ~T0 @X0 1 e@1265 ]
+[; ;SC8f072.h: 374: volatile bit PWMD29 @ ((unsigned)&PWMD23H*8)+1;
+"375
+[v _PWMD28 `Vb ~T0 @X0 1 e@1264 ]
+[; ;SC8f072.h: 375: volatile bit PWMD28 @ ((unsigned)&PWMD23H*8)+0;
+[; ;sc.h: 28: extern void __nop(void);
+[; ;sc.h: 76: extern unsigned int flash_read(unsigned short addr);
+[; ;sc.h: 150: extern __nonreentrant void _delay(unsigned long);
+[; ;sc.h: 184: extern unsigned char __resetbits;
+[; ;sc.h: 185: extern __bit __powerdown;
+[; ;sc.h: 186: extern __bit __timeout;
+[; ;stdbool.h: 12: typedef unsigned char bool;
+[; ;LED_188.h: 41: void Led_Gpio_Init(void);
+[; ;LED_188.h: 42: void Charge_num(void);
+[; ;LED_188.h: 43: void Uncharge_num(void);
+[; ;LED_188.h: 44: void Motor_num(void);
+[; ;LED_188.h: 45: void Set_AllPin_INPUT(void);
+[; ;LED_188.h: 46: void Display(void);
+"5 C:\Users\86135\Desktop\项目实践\project\SC8F072_Pwm_Demo\SC8F072_Pwm_Demo.c
+[p n 752 ]
+"6
+[p n 373 ]
+"20
+[v _adresult `Vui ~T0 @X0 1 e ]
+[; ;SC8F072_Pwm_Demo.c: 20: volatile unsigned int adresult;
+"21
+[v _test_adc `Vuc ~T0 @X0 1 e ]
+[; ;SC8F072_Pwm_Demo.c: 21: volatile unsigned char test_adc;
+"22
+[v _power_ad `Vui ~T0 @X0 1 e ]
+[; ;SC8F072_Pwm_Demo.c: 22: volatile unsigned int power_ad;
+"23
+[v _power_percent `Vuc ~T0 @X0 1 e ]
+[; ;SC8F072_Pwm_Demo.c: 23: volatile unsigned char power_percent;
+"24
+[v _ADC_Flag `Vuc ~T0 @X0 1 e ]
+[i _ADC_Flag
+-> -> 0 `i `uc
+]
+[; ;SC8F072_Pwm_Demo.c: 24: volatile bool ADC_Flag=0;
+"25
+[v _ADC_delay `Vui ~T0 @X0 1 e ]
+[i _ADC_delay
+-> -> 0 `i `ui
+]
+[; ;SC8F072_Pwm_Demo.c: 25: volatile unsigned int ADC_delay=0;
+"26
+[v _adc_last `ui ~T0 @X0 1 s ]
+[i _adc_last
+-> -> 0 `i `ui
+]
+[; ;SC8F072_Pwm_Demo.c: 26: static unsigned int adc_last = 0;
+"28
+[v _pwm_duty `Vuc ~T0 @X0 1 e ]
+[i _pwm_duty
+-> -> 0 `i `uc
+]
+[; ;SC8F072_Pwm_Demo.c: 28: volatile unsigned char pwm_duty = 0;
+"30
+[v _debounce_counter `Vuc ~T0 @X0 1 e ]
+[i _debounce_counter
+-> -> 0 `i `uc
+]
+[; ;SC8F072_Pwm_Demo.c: 30: volatile unsigned char debounce_counter = 0;
+"31
+[v _long_press_counter `Vui ~T0 @X0 1 e ]
+[i _long_press_counter
+-> -> 0 `i `ui
+]
+[; ;SC8F072_Pwm_Demo.c: 31: volatile unsigned int long_press_counter = 0;
+"32
+[v _Time_delay `Vui ~T0 @X0 1 e ]
+[i _Time_delay
+-> -> 0 `i `ui
+]
+[; ;SC8F072_Pwm_Demo.c: 32: volatile unsigned int Time_delay = 0;
+"33
+[v _button_sflag `Vuc ~T0 @X0 1 e ]
+[i _button_sflag
+-> -> 0 `i `uc
+]
+[; ;SC8F072_Pwm_Demo.c: 33: volatile bool button_sflag = 0;
+"34
+[v _button_lflag `Vuc ~T0 @X0 1 e ]
+[i _button_lflag
+-> -> 0 `i `uc
+]
+[; ;SC8F072_Pwm_Demo.c: 34: volatile bool button_lflag = 0;
+"35
+[v _duty_steps `Cuc ~T0 @X0 -> 6 `i e ]
+[i _duty_steps
+:U ..
+-> -> 66 `i `uc
+-> -> 73 `i `uc
+-> -> 85 `i `uc
+-> -> 91 `i `uc
+-> -> 95 `i `uc
+-> -> 0 `i `uc
+..
+]
+[; ;SC8F072_Pwm_Demo.c: 35: const unsigned char duty_steps[6] = {66, 73, 85, 91, 95,0};
+"37
+[v _T_flag `Vuc ~T0 @X0 1 e ]
+[i _T_flag
+-> -> 0 `i `uc
+]
+[; ;SC8F072_Pwm_Demo.c: 37: volatile bool T_flag = 0;
+"38
+[v _hundreds `Vuc ~T0 @X0 1 e ]
+[i _hundreds
+-> -> 4 `i `uc
+]
+[; ;SC8F072_Pwm_Demo.c: 38: volatile unsigned char hundreds = 4;
+"39
+[v _tens `Vuc ~T0 @X0 1 e ]
+[i _tens
+-> -> 4 `i `uc
+]
+[; ;SC8F072_Pwm_Demo.c: 39: volatile unsigned char tens = 4;
+"40
+[v _unit `Vuc ~T0 @X0 1 e ]
+[i _unit
+-> -> 2 `i `uc
+]
+[; ;SC8F072_Pwm_Demo.c: 40: volatile unsigned char unit = 2;
+[; ;SC8F072_Pwm_Demo.c: 44: void Init_System();
+[; ;SC8F072_Pwm_Demo.c: 45: void PWM_Init();
+[; ;SC8F072_Pwm_Demo.c: 46: void Set_PWM(unsigned char channel, unsigned char duty);
+[; ;SC8F072_Pwm_Demo.c: 47: void Button_response() ;
+[; ;SC8F072_Pwm_Demo.c: 48: unsigned char ADC_Sample(unsigned char adch, unsigned char adldo);
+[; ;SC8F072_Pwm_Demo.c: 49: void ADC_read();
+[v $root$_main `(v ~T0 @X0 0 e ]
+"52
+[v _main `(v ~T0 @X0 1 ef ]
+"53
+{
+[; ;SC8F072_Pwm_Demo.c: 52: void main(void)
+[; ;SC8F072_Pwm_Demo.c: 53: {
+[e :U _main ]
+[f ]
+[; ;SC8F072_Pwm_Demo.c: 56: Init_System();
+"56
+[e ( _Init_System ..  ]
+[; ;SC8F072_Pwm_Demo.c: 57: Led_Gpio_Init();
+"57
+[e ( _Led_Gpio_Init ..  ]
+[; ;SC8F072_Pwm_Demo.c: 58: PWM_Init();
+"58
+[e ( _PWM_Init ..  ]
+[; ;SC8F072_Pwm_Demo.c: 59: while(1)
+"59
+[e :U 3 ]
+[; ;SC8F072_Pwm_Demo.c: 60: {
+"60
+{
+[; ;SC8F072_Pwm_Demo.c: 61: asm("clrwdt");
+"61
+[; <" clrwdt ;# ">
+[; ;SC8F072_Pwm_Demo.c: 62: Button_response();
+"62
+[e ( _Button_response ..  ]
+[; ;SC8F072_Pwm_Demo.c: 63: if(ADC_Flag)
+"63
+[e $ ! != -> _ADC_Flag `i -> -> -> 0 `i `Vuc `i 5  ]
+[; ;SC8F072_Pwm_Demo.c: 64: {
+"64
+{
+[; ;SC8F072_Pwm_Demo.c: 65: ADC_read();
+"65
+[e ( _ADC_read ..  ]
+"66
+}
+[e :U 5 ]
+[; ;SC8F072_Pwm_Demo.c: 66: }
+[; ;SC8F072_Pwm_Demo.c: 67: asm("clrwdt");
+"67
+[; <" clrwdt ;# ">
+"68
+}
+[e :U 2 ]
+"59
+[e $U 3  ]
+[e :U 4 ]
+[; ;SC8F072_Pwm_Demo.c: 68: }
+[; ;SC8F072_Pwm_Demo.c: 69: }
+"69
+[e :UE 1 ]
+}
+"79
+[v _Init_System `(v ~T0 @X0 1 ef ]
+"80
+{
+[; ;SC8F072_Pwm_Demo.c: 79: void Init_System()
+[; ;SC8F072_Pwm_Demo.c: 80: {
+[e :U _Init_System ]
+[f ]
+[; ;SC8F072_Pwm_Demo.c: 81: asm("nop");
+"81
+[; <" nop ;# ">
+[; ;SC8F072_Pwm_Demo.c: 82: asm("clrwdt");
+"82
+[; <" clrwdt ;# ">
+[; ;SC8F072_Pwm_Demo.c: 83: INTCON = 0;
+"83
+[e = _INTCON -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 84: OSCCON = 0X72;
+"84
+[e = _OSCCON -> -> 114 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 85: OPTION_REG = 0B00000100;
+"85
+[e = _OPTION_REG -> -> 4 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 86: asm("clrwdt");
+"86
+[; <" clrwdt ;# ">
+[; ;SC8F072_Pwm_Demo.c: 88: WPUA = 0B00000000;
+"88
+[e = _WPUA -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 89: WPUB = 0B00000000;
+"89
+[e = _WPUB -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 90: WPDA = 0B00000000;
+"90
+[e = _WPDA -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 91: WPDB = 0B00000000;
+"91
+[e = _WPDB -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 92: TRISA = 0B00000000;
+"92
+[e = _TRISA -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 93: TRISB = 0B00000000;
+"93
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 94: PORTA = 0B00000000;
+"94
+[e = _PORTA -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 95: PORTB = 0B00000000;
+"95
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 97: TMR0 = 6;
+"97
+[e = _TMR0 -> -> 6 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 98: T0IF = 0;
+"98
+[e = _T0IF -> -> 0 `i `b ]
+[; ;SC8F072_Pwm_Demo.c: 99: T0IE = 1;
+"99
+[e = _T0IE -> -> 1 `i `b ]
+[; ;SC8F072_Pwm_Demo.c: 100: GIE = 1;
+"100
+[e = _GIE -> -> 1 `i `b ]
+[; ;SC8F072_Pwm_Demo.c: 103: PR2 = 249;
+"103
+[e = _PR2 -> -> 249 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 104: TMR2IF = 0;
+"104
+[e = _TMR2IF -> -> 0 `i `b ]
+[; ;SC8F072_Pwm_Demo.c: 105: TMR2IE = 1;
+"105
+[e = _TMR2IE -> -> 1 `i `b ]
+[; ;SC8F072_Pwm_Demo.c: 106: T2CON = 0B00000111;
+"106
+[e = _T2CON -> -> 7 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 110: WPUB = 0B00100000;
+"110
+[e = _WPUB -> -> 32 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 111: TRISB= 0B00100000;
+"111
+[e = _TRISB -> -> 32 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 112: IOCB = 0B00100000;
+"112
+[e = _IOCB -> -> 32 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 113: RBIE = 1;
+"113
+[e = _RBIE -> -> 1 `i `b ]
+[; ;SC8F072_Pwm_Demo.c: 115: PORTB;
+"115
+[e _PORTB ]
+[; ;SC8F072_Pwm_Demo.c: 118: WPUA = 0B00100000;
+"118
+[e = _WPUA -> -> 32 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 119: TRISA= 0B00100000;
+"119
+[e = _TRISA -> -> 32 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 120: IOCA = 0B00100000;
+"120
+[e = _IOCA -> -> 32 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 121: RAIE = 1;
+"121
+[e = _RAIE -> -> 1 `i `b ]
+[; ;SC8F072_Pwm_Demo.c: 123: RAIF = 0;
+"123
+[e = _RAIF -> -> 0 `i `b ]
+[; ;SC8F072_Pwm_Demo.c: 124: PORTA;
+"124
+[e _PORTA ]
+[; ;SC8F072_Pwm_Demo.c: 125: INTCON = 0xE8;
+"125
+[e = _INTCON -> -> 232 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 127: }
+"127
+[e :UE 6 ]
+}
+"129
+[v _PWM_Init `(v ~T0 @X0 1 ef ]
+"130
+{
+[; ;SC8F072_Pwm_Demo.c: 129: void PWM_Init()
+[; ;SC8F072_Pwm_Demo.c: 130: {
+[e :U _PWM_Init ]
+[f ]
+[; ;SC8F072_Pwm_Demo.c: 131: PWMCON1 = 0B11000000;
+"131
+[e = _PWMCON1 -> -> 192 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 132: TRISA = 0B00111111;
+"132
+[e = _TRISA -> -> 63 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 133: PWMTL = 0XFF;
+"133
+[e = _PWMTL -> -> 255 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 134: PWMT4L = 0XFF;
+"134
+[e = _PWMT4L -> -> 255 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 135: PWMTH = 0X00;
+"135
+[e = _PWMTH -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 140: PWMD0L = 0X00;
+"140
+[e = _PWMD0L -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 143: PWMD1L = 0X00;
+"143
+[e = _PWMD1L -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 144: PWMD01H = 0X00;
+"144
+[e = _PWMD01H -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 147: PWMD2L = 0X00;
+"147
+[e = _PWMD2L -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 149: PWMD23H = 0X00;
+"149
+[e = _PWMD23H -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 151: PWMD4L = 0X00;
+"151
+[e = _PWMD4L -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 167: PWMCON0 = 0X17;
+"167
+[e = _PWMCON0 -> -> 23 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 168: PWMCON2 =0X00;
+"168
+[e = _PWMCON2 -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 170: }
+"170
+[e :UE 7 ]
+}
+"180
+[v _Set_PWM `(v ~T0 @X0 1 ef2`uc`uc ]
+"181
+{
+[; ;SC8F072_Pwm_Demo.c: 180: void Set_PWM(unsigned char channel, unsigned char duty)
+[; ;SC8F072_Pwm_Demo.c: 181: {
+[e :U _Set_PWM ]
+"180
+[v _channel `uc ~T0 @X0 1 r1 ]
+[v _duty `uc ~T0 @X0 1 r2 ]
+"181
+[f ]
+"182
+[v _pulse_width `uc ~T0 @X0 1 a ]
+[; ;SC8F072_Pwm_Demo.c: 182: unsigned char pulse_width = (unsigned char)((duty * 255) / 100);
+[e = _pulse_width -> / * -> _duty `i -> 255 `i -> 100 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 183: switch (channel)
+"183
+[e $U 10  ]
+[; ;SC8F072_Pwm_Demo.c: 184: {
+"184
+{
+[; ;SC8F072_Pwm_Demo.c: 185: case 0:
+"185
+[e :U 11 ]
+[; ;SC8F072_Pwm_Demo.c: 186: PWMD0L = pulse_width & 0xFF;
+"186
+[e = _PWMD0L -> & -> _pulse_width `i -> 255 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 188: break;
+"188
+[e $U 9  ]
+[; ;SC8F072_Pwm_Demo.c: 189: case 1:
+"189
+[e :U 12 ]
+[; ;SC8F072_Pwm_Demo.c: 190: PWMD1L = pulse_width & 0xFF;
+"190
+[e = _PWMD1L -> & -> _pulse_width `i -> 255 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 192: break;
+"192
+[e $U 9  ]
+[; ;SC8F072_Pwm_Demo.c: 193: case 2:
+"193
+[e :U 13 ]
+[; ;SC8F072_Pwm_Demo.c: 194: PWMD2L = pulse_width & 0xFF;
+"194
+[e = _PWMD2L -> & -> _pulse_width `i -> 255 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 196: break;
+"196
+[e $U 9  ]
+[; ;SC8F072_Pwm_Demo.c: 197: case 3:
+"197
+[e :U 14 ]
+[; ;SC8F072_Pwm_Demo.c: 198: PWMD3L = pulse_width & 0xFF;
+"198
+[e = _PWMD3L -> & -> _pulse_width `i -> 255 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 200: break;
+"200
+[e $U 9  ]
+[; ;SC8F072_Pwm_Demo.c: 201: case 4:
+"201
+[e :U 15 ]
+[; ;SC8F072_Pwm_Demo.c: 202: PWMD4L = pulse_width & 0xFF;
+"202
+[e = _PWMD4L -> & -> _pulse_width `i -> 255 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 204: break;
+"204
+[e $U 9  ]
+[; ;SC8F072_Pwm_Demo.c: 205: default:
+"205
+[e :U 16 ]
+[; ;SC8F072_Pwm_Demo.c: 206: break;
+"206
+[e $U 9  ]
+"207
+}
+[; ;SC8F072_Pwm_Demo.c: 207: }
+[e $U 9  ]
+"183
+[e :U 10 ]
+[e [\ _channel , $ -> -> 0 `i `uc 11
+ , $ -> -> 1 `i `uc 12
+ , $ -> -> 2 `i `uc 13
+ , $ -> -> 3 `i `uc 14
+ , $ -> -> 4 `i `uc 15
+ 16 ]
+"207
+[e :U 9 ]
+[; ;SC8F072_Pwm_Demo.c: 208: }
+"208
+[e :UE 8 ]
+}
+"228
+[v _ADC_Sample `(uc ~T0 @X0 1 ef2`uc`uc ]
+"229
+{
+[; ;SC8F072_Pwm_Demo.c: 228: unsigned char ADC_Sample(unsigned char adch, unsigned char adldo)
+[; ;SC8F072_Pwm_Demo.c: 229: {
+[e :U _ADC_Sample ]
+"228
+[v _adch `uc ~T0 @X0 1 r1 ]
+[v _adldo `uc ~T0 @X0 1 r2 ]
+"229
+[f ]
+"231
+[v _adsum `Vul ~T0 @X0 1 a ]
+[; ;SC8F072_Pwm_Demo.c: 231: volatile unsigned long adsum = 0;
+[e = _adsum -> -> -> 0 `i `l `ul ]
+"232
+[v _admin `Vui ~T0 @X0 1 a ]
+[; ;SC8F072_Pwm_Demo.c: 232: volatile unsigned int admin = 0, admax = 0;
+[e = _admin -> -> 0 `i `ui ]
+[v _admax `Vui ~T0 @X0 1 a ]
+[e = _admax -> -> 0 `i `ui ]
+"233
+[v _ad_temp `Vui ~T0 @X0 1 a ]
+[; ;SC8F072_Pwm_Demo.c: 233: volatile unsigned int ad_temp = 0;
+[e = _ad_temp -> -> 0 `i `ui ]
+[; ;SC8F072_Pwm_Demo.c: 235: if ((!LDO_EN) && (adldo & 0x04) )
+"235
+[e $ ! && ! _LDO_EN != & -> _adldo `i -> 4 `i -> 0 `i 18  ]
+[; ;SC8F072_Pwm_Demo.c: 236: {
+"236
+{
+[; ;SC8F072_Pwm_Demo.c: 238: ADCON1 = adldo;
+"238
+[e = _ADCON1 _adldo ]
+[; ;SC8F072_Pwm_Demo.c: 239: _delay((unsigned long)((100)*(16000000/4000000.0)));
+"239
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"240
+}
+[; ;SC8F072_Pwm_Demo.c: 240: }
+[e $U 19  ]
+"241
+[e :U 18 ]
+[; ;SC8F072_Pwm_Demo.c: 241: else
+[; ;SC8F072_Pwm_Demo.c: 242: ADCON1 = adldo;
+"242
+[e = _ADCON1 _adldo ]
+[e :U 19 ]
+[; ;SC8F072_Pwm_Demo.c: 243: if(adch & 0x10)
+"243
+[e $ ! != & -> _adch `i -> 16 `i -> 0 `i 20  ]
+[; ;SC8F072_Pwm_Demo.c: 244: {
+"244
+{
+[; ;SC8F072_Pwm_Demo.c: 245: CHS4 = 1;
+"245
+[e = _CHS4 -> -> 1 `i `b ]
+[; ;SC8F072_Pwm_Demo.c: 246: adch &= 0x0f;
+"246
+[e =& _adch -> -> 15 `i `uc ]
+"247
+}
+[e :U 20 ]
+"248
+[v _i `uc ~T0 @X0 1 a ]
+[; ;SC8F072_Pwm_Demo.c: 247: }
+[; ;SC8F072_Pwm_Demo.c: 248: unsigned char i = 0;
+[e = _i -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 249: for (i = 0; i < 10; i++)
+"249
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 10 `i 21  ]
+[e $U 22  ]
+"250
+[e :U 21 ]
+[; ;SC8F072_Pwm_Demo.c: 250: {
+{
+[; ;SC8F072_Pwm_Demo.c: 251: ADCON0 = (unsigned char)(0X41 | (adch << 2));
+"251
+[e = _ADCON0 -> | -> 65 `i << -> _adch `i -> 2 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 252: asm("nop");
+"252
+[; <" nop ;# ">
+[; ;SC8F072_Pwm_Demo.c: 253: asm("nop");
+"253
+[; <" nop ;# ">
+[; ;SC8F072_Pwm_Demo.c: 254: asm("nop");
+"254
+[; <" nop ;# ">
+[; ;SC8F072_Pwm_Demo.c: 255: asm("nop");
+"255
+[; <" nop ;# ">
+[; ;SC8F072_Pwm_Demo.c: 256: GODONE = 1;
+"256
+[e = _GODONE -> -> 1 `i `b ]
+"257
+[v _j `uc ~T0 @X0 1 a ]
+[; ;SC8F072_Pwm_Demo.c: 257: unsigned char j = 0;
+[e = _j -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 258: while (GODONE)
+"258
+[e $U 24  ]
+[e :U 25 ]
+[; ;SC8F072_Pwm_Demo.c: 259: {
+"259
+{
+[; ;SC8F072_Pwm_Demo.c: 260: _delay((unsigned long)((2)*(16000000/4000000.0)));
+"260
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+[; ;SC8F072_Pwm_Demo.c: 261: if (0 == (--j))
+"261
+[e $ ! == -> 0 `i -> =- _j -> -> 1 `i `uc `i 27  ]
+[; ;SC8F072_Pwm_Demo.c: 262: return 0;
+"262
+[e ) -> -> 0 `i `uc ]
+[e $UE 17  ]
+[e :U 27 ]
+"263
+}
+[e :U 24 ]
+"258
+[e $ _GODONE 25  ]
+[e :U 26 ]
+[; ;SC8F072_Pwm_Demo.c: 263: }
+[; ;SC8F072_Pwm_Demo.c: 265: ad_temp = (unsigned int)((ADRESH << 4) + (ADRESL >> 4));
+"265
+[e = _ad_temp -> + << -> _ADRESH `i -> 4 `i >> -> _ADRESL `i -> 4 `i `ui ]
+[; ;SC8F072_Pwm_Demo.c: 267: if (0 == admax)
+"267
+[e $ ! == -> -> 0 `i `ui _admax 28  ]
+[; ;SC8F072_Pwm_Demo.c: 268: {
+"268
+{
+[; ;SC8F072_Pwm_Demo.c: 269: admax = ad_temp;
+"269
+[e = _admax _ad_temp ]
+[; ;SC8F072_Pwm_Demo.c: 270: admin = ad_temp;
+"270
+[e = _admin _ad_temp ]
+"271
+}
+[; ;SC8F072_Pwm_Demo.c: 271: }
+[e $U 29  ]
+"272
+[e :U 28 ]
+[; ;SC8F072_Pwm_Demo.c: 272: else if (ad_temp > admax)admax = ad_temp;
+[e $ ! > _ad_temp _admax 30  ]
+[e = _admax _ad_temp ]
+[e $U 31  ]
+"274
+[e :U 30 ]
+[; ;SC8F072_Pwm_Demo.c: 274: else if (ad_temp < admin)admin = ad_temp;
+[e $ ! < _ad_temp _admin 32  ]
+[e = _admin _ad_temp ]
+[e :U 32 ]
+"275
+[e :U 31 ]
+[e :U 29 ]
+[; ;SC8F072_Pwm_Demo.c: 275: adsum += ad_temp;
+[e =+ _adsum -> _ad_temp `ul ]
+"276
+}
+"249
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 10 `i 21  ]
+[e :U 22 ]
+"276
+}
+[; ;SC8F072_Pwm_Demo.c: 276: }
+[; ;SC8F072_Pwm_Demo.c: 277: adsum -= admax;
+"277
+[e =- _adsum -> _admax `ul ]
+[; ;SC8F072_Pwm_Demo.c: 278: if (adsum >= admin)
+"278
+[e $ ! >= _adsum -> _admin `ul 33  ]
+[; ;SC8F072_Pwm_Demo.c: 279: adsum -= admin;
+"279
+[e =- _adsum -> _admin `ul ]
+[e $U 34  ]
+"280
+[e :U 33 ]
+[; ;SC8F072_Pwm_Demo.c: 280: else
+[; ;SC8F072_Pwm_Demo.c: 281: adsum = 0;
+"281
+[e = _adsum -> -> -> 0 `i `l `ul ]
+[e :U 34 ]
+[; ;SC8F072_Pwm_Demo.c: 283: if (adc_last)
+"283
+[e $ ! != _adc_last -> -> 0 `i `ui 35  ]
+[; ;SC8F072_Pwm_Demo.c: 284: {
+"284
+{
+[; ;SC8F072_Pwm_Demo.c: 285: adresult = adsum>>3;
+"285
+[e = _adresult -> >> _adsum -> 3 `i `ui ]
+[; ;SC8F072_Pwm_Demo.c: 286: adresult = (int)(0.3*adresult + 0.7*adc_last);
+"286
+[e = _adresult -> -> + * .0.3 -> _adresult `d * .0.7 -> _adc_last `d `i `ui ]
+[; ;SC8F072_Pwm_Demo.c: 287: adc_last = adresult;
+"287
+[e = _adc_last _adresult ]
+"288
+}
+[; ;SC8F072_Pwm_Demo.c: 288: } else
+[e $U 36  ]
+[e :U 35 ]
+[; ;SC8F072_Pwm_Demo.c: 289: {
+"289
+{
+[; ;SC8F072_Pwm_Demo.c: 290: adresult = adsum>>3;
+"290
+[e = _adresult -> >> _adsum -> 3 `i `ui ]
+[; ;SC8F072_Pwm_Demo.c: 291: adc_last = adresult;
+"291
+[e = _adc_last _adresult ]
+"292
+}
+[e :U 36 ]
+[; ;SC8F072_Pwm_Demo.c: 292: }
+[; ;SC8F072_Pwm_Demo.c: 293: adsum = 0;
+"293
+[e = _adsum -> -> -> 0 `i `l `ul ]
+[; ;SC8F072_Pwm_Demo.c: 294: admin = 0;
+"294
+[e = _admin -> -> 0 `i `ui ]
+[; ;SC8F072_Pwm_Demo.c: 295: admax = 0;
+"295
+[e = _admax -> -> 0 `i `ui ]
+[; ;SC8F072_Pwm_Demo.c: 296: return 0xA5;
+"296
+[e ) -> -> 165 `i `uc ]
+[e $UE 17  ]
+[; ;SC8F072_Pwm_Demo.c: 297: }
+"297
+[e :UE 17 ]
+}
+"299
+[v _ADC_read `(v ~T0 @X0 1 ef ]
+"300
+{
+[; ;SC8F072_Pwm_Demo.c: 299: void ADC_read()
+[; ;SC8F072_Pwm_Demo.c: 300: {
+[e :U _ADC_read ]
+[f ]
+[; ;SC8F072_Pwm_Demo.c: 301: test_adc = ADC_Sample(31, 0);
+"301
+[e = _test_adc ( _ADC_Sample (2 , -> -> 31 `i `uc -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 302: if (0xA5 == test_adc)
+"302
+[e $ ! == -> 165 `i -> _test_adc `i 38  ]
+[; ;SC8F072_Pwm_Demo.c: 303: {
+"303
+{
+"304
+[v _power_temp `Vul ~T0 @X0 1 a ]
+[; ;SC8F072_Pwm_Demo.c: 304: volatile unsigned long power_temp;
+[; ;SC8F072_Pwm_Demo.c: 305: power_temp = (unsigned long)(((4096UL*1.2*1000))/adresult);
+"305
+[e = _power_temp -> / * * -> -> 4096 `ul `d .1.2 -> -> 1000 `i `d -> _adresult `d `ul ]
+[; ;SC8F072_Pwm_Demo.c: 306: power_ad = (unsigned int)(power_temp);
+"306
+[e = _power_ad -> _power_temp `ui ]
+[; ;SC8F072_Pwm_Demo.c: 307: power_percent = (unsigned char)((power_ad-(1000UL*2.8))/(10UL*1.4));
+"307
+[e = _power_percent -> / - -> _power_ad `d * -> -> 1000 `ul `d .2.8 * -> -> 10 `ul `d .1.4 `uc ]
+"308
+}
+[; ;SC8F072_Pwm_Demo.c: 308: }
+[e $U 39  ]
+"309
+[e :U 38 ]
+[; ;SC8F072_Pwm_Demo.c: 309: else
+[; ;SC8F072_Pwm_Demo.c: 310: {
+"310
+{
+[; ;SC8F072_Pwm_Demo.c: 311: ADCON0 = 0;
+"311
+[e = _ADCON0 -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 312: ADCON1 = 0;
+"312
+[e = _ADCON1 -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 313: _delay((unsigned long)((100)*(16000000/4000000.0)));
+"313
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"314
+}
+[e :U 39 ]
+[; ;SC8F072_Pwm_Demo.c: 314: }
+[; ;SC8F072_Pwm_Demo.c: 315: ADC_Flag=0;
+"315
+[e = _ADC_Flag -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 316: }
+"316
+[e :UE 37 ]
+}
+"317
+[v _Button_response `(v ~T0 @X0 1 ef ]
+"318
+{
+[; ;SC8F072_Pwm_Demo.c: 317: void Button_response()
+[; ;SC8F072_Pwm_Demo.c: 318: {
+[e :U _Button_response ]
+[f ]
+[; ;SC8F072_Pwm_Demo.c: 319: if (button_sflag)
+"319
+[e $ ! != -> _button_sflag `i -> -> -> 0 `i `Vuc `i 41  ]
+[; ;SC8F072_Pwm_Demo.c: 320: {
+"320
+{
+[; ;SC8F072_Pwm_Demo.c: 321: TRISA = 0B00101000;
+"321
+[e = _TRISA -> -> 40 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 322: _delay((unsigned long)((100)*(16000000/4000000.0)));
+"322
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+[; ;SC8F072_Pwm_Demo.c: 323: button_sflag = 0;
+"323
+[e = _button_sflag -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 324: switch (pwm_duty)
+"324
+[e $U 43  ]
+[; ;SC8F072_Pwm_Demo.c: 325: {
+"325
+{
+[; ;SC8F072_Pwm_Demo.c: 326: case 0:
+"326
+[e :U 44 ]
+[; ;SC8F072_Pwm_Demo.c: 327: Set_PWM(0, duty_steps[pwm_duty]);
+"327
+[e ( _Set_PWM (2 , -> -> 0 `i `uc *U + &U _duty_steps * -> _pwm_duty `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 328: Set_PWM(1, duty_steps[5]);
+"328
+[e ( _Set_PWM (2 , -> -> 1 `i `uc *U + &U _duty_steps * -> -> -> 5 `i `ui `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 329: Set_PWM(2, duty_steps[5]);
+"329
+[e ( _Set_PWM (2 , -> -> 2 `i `uc *U + &U _duty_steps * -> -> -> 5 `i `ui `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 330: Set_PWM(4, duty_steps[pwm_duty]);
+"330
+[e ( _Set_PWM (2 , -> -> 4 `i `uc *U + &U _duty_steps * -> _pwm_duty `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 331: break;
+"331
+[e $U 42  ]
+[; ;SC8F072_Pwm_Demo.c: 332: case 1:
+"332
+[e :U 45 ]
+[; ;SC8F072_Pwm_Demo.c: 333: Set_PWM(0, duty_steps[pwm_duty]);
+"333
+[e ( _Set_PWM (2 , -> -> 0 `i `uc *U + &U _duty_steps * -> _pwm_duty `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 334: Set_PWM(1, duty_steps[pwm_duty]);
+"334
+[e ( _Set_PWM (2 , -> -> 1 `i `uc *U + &U _duty_steps * -> _pwm_duty `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 335: Set_PWM(2, duty_steps[5]);
+"335
+[e ( _Set_PWM (2 , -> -> 2 `i `uc *U + &U _duty_steps * -> -> -> 5 `i `ui `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 336: Set_PWM(4, duty_steps[pwm_duty]);
+"336
+[e ( _Set_PWM (2 , -> -> 4 `i `uc *U + &U _duty_steps * -> _pwm_duty `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 337: break;
+"337
+[e $U 42  ]
+[; ;SC8F072_Pwm_Demo.c: 338: case 2:
+"338
+[e :U 46 ]
+[; ;SC8F072_Pwm_Demo.c: 339: Set_PWM(0, duty_steps[pwm_duty]);
+"339
+[e ( _Set_PWM (2 , -> -> 0 `i `uc *U + &U _duty_steps * -> _pwm_duty `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 340: Set_PWM(1, duty_steps[5]);
+"340
+[e ( _Set_PWM (2 , -> -> 1 `i `uc *U + &U _duty_steps * -> -> -> 5 `i `ui `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 341: Set_PWM(2, duty_steps[pwm_duty]);
+"341
+[e ( _Set_PWM (2 , -> -> 2 `i `uc *U + &U _duty_steps * -> _pwm_duty `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 342: Set_PWM(4, duty_steps[pwm_duty]);
+"342
+[e ( _Set_PWM (2 , -> -> 4 `i `uc *U + &U _duty_steps * -> _pwm_duty `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 343: break;
+"343
+[e $U 42  ]
+[; ;SC8F072_Pwm_Demo.c: 344: case 3:
+"344
+[e :U 47 ]
+[; ;SC8F072_Pwm_Demo.c: 345: Set_PWM(0, duty_steps[5]);
+"345
+[e ( _Set_PWM (2 , -> -> 0 `i `uc *U + &U _duty_steps * -> -> -> 5 `i `ui `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 346: Set_PWM(1, duty_steps[pwm_duty]);
+"346
+[e ( _Set_PWM (2 , -> -> 1 `i `uc *U + &U _duty_steps * -> _pwm_duty `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 347: Set_PWM(2, duty_steps[pwm_duty]);
+"347
+[e ( _Set_PWM (2 , -> -> 2 `i `uc *U + &U _duty_steps * -> _pwm_duty `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 348: Set_PWM(4, duty_steps[pwm_duty]);
+"348
+[e ( _Set_PWM (2 , -> -> 4 `i `uc *U + &U _duty_steps * -> _pwm_duty `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 349: break;
+"349
+[e $U 42  ]
+[; ;SC8F072_Pwm_Demo.c: 350: case 4:
+"350
+[e :U 48 ]
+[; ;SC8F072_Pwm_Demo.c: 351: Set_PWM(0, duty_steps[pwm_duty]);
+"351
+[e ( _Set_PWM (2 , -> -> 0 `i `uc *U + &U _duty_steps * -> _pwm_duty `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 352: Set_PWM(1, duty_steps[pwm_duty]);
+"352
+[e ( _Set_PWM (2 , -> -> 1 `i `uc *U + &U _duty_steps * -> _pwm_duty `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 353: Set_PWM(2, duty_steps[pwm_duty]);
+"353
+[e ( _Set_PWM (2 , -> -> 2 `i `uc *U + &U _duty_steps * -> _pwm_duty `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 354: Set_PWM(4, duty_steps[pwm_duty]);
+"354
+[e ( _Set_PWM (2 , -> -> 4 `i `uc *U + &U _duty_steps * -> _pwm_duty `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 360: break;
+"360
+[e $U 42  ]
+[; ;SC8F072_Pwm_Demo.c: 361: default:
+"361
+[e :U 49 ]
+[; ;SC8F072_Pwm_Demo.c: 362: break;
+"362
+[e $U 42  ]
+"363
+}
+[; ;SC8F072_Pwm_Demo.c: 363: }
+[e $U 42  ]
+"324
+[e :U 43 ]
+[e [\ _pwm_duty , $ -> -> 0 `i `uc 44
+ , $ -> -> 1 `i `uc 45
+ , $ -> -> 2 `i `uc 46
+ , $ -> -> 3 `i `uc 47
+ , $ -> -> 4 `i `uc 48
+ 49 ]
+"363
+[e :U 42 ]
+[; ;SC8F072_Pwm_Demo.c: 364: Time_delay=2500;
+"364
+[e = _Time_delay -> -> 2500 `i `ui ]
+[; ;SC8F072_Pwm_Demo.c: 365: Motor_num();
+"365
+[e ( _Motor_num ..  ]
+[; ;SC8F072_Pwm_Demo.c: 366: pwm_duty = (pwm_duty + 1) % 5;
+"366
+[e = _pwm_duty -> % + -> _pwm_duty `i -> 1 `i -> 5 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 367: T_flag=1;
+"367
+[e = _T_flag -> -> 1 `i `uc ]
+"369
+}
+[e :U 41 ]
+[; ;SC8F072_Pwm_Demo.c: 369: }
+[; ;SC8F072_Pwm_Demo.c: 370: if (button_lflag)
+"370
+[e $ ! != -> _button_lflag `i -> -> -> 0 `i `Vuc `i 50  ]
+[; ;SC8F072_Pwm_Demo.c: 371: {
+"371
+{
+[; ;SC8F072_Pwm_Demo.c: 372: button_lflag = 0;
+"372
+[e = _button_lflag -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 373: Set_PWM(0, duty_steps[5]);
+"373
+[e ( _Set_PWM (2 , -> -> 0 `i `uc *U + &U _duty_steps * -> -> -> 5 `i `ui `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 374: Set_PWM(1, duty_steps[5]);
+"374
+[e ( _Set_PWM (2 , -> -> 1 `i `uc *U + &U _duty_steps * -> -> -> 5 `i `ui `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 375: Set_PWM(2, duty_steps[5]);
+"375
+[e ( _Set_PWM (2 , -> -> 2 `i `uc *U + &U _duty_steps * -> -> -> 5 `i `ui `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 376: Set_PWM(4, duty_steps[5]);
+"376
+[e ( _Set_PWM (2 , -> -> 4 `i `uc *U + &U _duty_steps * -> -> -> 5 `i `ui `ux -> -> # *U &U _duty_steps `ui `ux ]
+[; ;SC8F072_Pwm_Demo.c: 377: pwm_duty =0;
+"377
+[e = _pwm_duty -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 378: TRISA = 0B00111111;
+"378
+[e = _TRISA -> -> 63 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 379: TRISB = 0B00111111;
+"379
+[e = _TRISB -> -> 63 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 380: T_flag=0;
+"380
+[e = _T_flag -> -> 0 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 382: asm("clrwdt");
+"382
+[; <" clrwdt ;# ">
+[; ;SC8F072_Pwm_Demo.c: 383: asm("stop");
+"383
+[; <" stop ;# ">
+[; ;SC8F072_Pwm_Demo.c: 384: asm("nop");
+"384
+[; <" nop ;# ">
+[; ;SC8F072_Pwm_Demo.c: 385: asm("nop");
+"385
+[; <" nop ;# ">
+"386
+}
+[e :U 50 ]
+[; ;SC8F072_Pwm_Demo.c: 386: }
+[; ;SC8F072_Pwm_Demo.c: 387: }
+"387
+[e :UE 40 ]
+}
+[v $root$_Isr_Timer `(v ~T0 @X0 0 e ]
+[v F624 `(v ~T0 @X0 1 tf ]
+"390
+[v _Isr_Timer `IF624 ~T0 @X0 1 e ]
+"391
+{
+[; ;SC8F072_Pwm_Demo.c: 390: void interrupt Isr_Timer()
+[; ;SC8F072_Pwm_Demo.c: 391: {
+[e :U _Isr_Timer ]
+[f ]
+[; ;SC8F072_Pwm_Demo.c: 392: if(RAIF)
+"392
+[e $ ! _RAIF 52  ]
+[; ;SC8F072_Pwm_Demo.c: 393: {
+"393
+{
+[; ;SC8F072_Pwm_Demo.c: 394: T_flag=1;
+"394
+[e = _T_flag -> -> 1 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 395: if (!(PORTA & 0x20))
+"395
+[e $ ! ! != & -> _PORTA `i -> 32 `i -> 0 `i 53  ]
+[; ;SC8F072_Pwm_Demo.c: 396: {
+"396
+{
+[; ;SC8F072_Pwm_Demo.c: 397: Charge_num();
+"397
+[e ( _Charge_num ..  ]
+"398
+}
+[; ;SC8F072_Pwm_Demo.c: 398: }
+[e $U 54  ]
+"399
+[e :U 53 ]
+[; ;SC8F072_Pwm_Demo.c: 399: else
+[; ;SC8F072_Pwm_Demo.c: 400: {
+"400
+{
+[; ;SC8F072_Pwm_Demo.c: 401: Uncharge_num();
+"401
+[e ( _Uncharge_num ..  ]
+"402
+}
+[e :U 54 ]
+[; ;SC8F072_Pwm_Demo.c: 402: }
+[; ;SC8F072_Pwm_Demo.c: 403: RAIF = 0;
+"403
+[e = _RAIF -> -> 0 `i `b ]
+"404
+}
+[e :U 52 ]
+[; ;SC8F072_Pwm_Demo.c: 404: }
+[; ;SC8F072_Pwm_Demo.c: 405: if(RBIF)
+"405
+[e $ ! _RBIF 55  ]
+[; ;SC8F072_Pwm_Demo.c: 406: {
+"406
+{
+[; ;SC8F072_Pwm_Demo.c: 411: if (PORTB & 0x20)
+"411
+[e $ ! != & -> _PORTB `i -> 32 `i -> 0 `i 56  ]
+[; ;SC8F072_Pwm_Demo.c: 412: {
+"412
+{
+[; ;SC8F072_Pwm_Demo.c: 413: if (long_press_counter >= 1000)
+"413
+[e $ ! >= _long_press_counter -> -> 1000 `i `ui 57  ]
+[; ;SC8F072_Pwm_Demo.c: 414: {
+"414
+{
+[; ;SC8F072_Pwm_Demo.c: 415: button_lflag = 1;
+"415
+[e = _button_lflag -> -> 1 `i `uc ]
+"416
+}
+[; ;SC8F072_Pwm_Demo.c: 416: }
+[e $U 58  ]
+"417
+[e :U 57 ]
+[; ;SC8F072_Pwm_Demo.c: 417: else if(long_press_counter<=1000 && long_press_counter>=50)
+[e $ ! && <= _long_press_counter -> -> 1000 `i `ui >= _long_press_counter -> -> 50 `i `ui 59  ]
+[; ;SC8F072_Pwm_Demo.c: 418: {
+"418
+{
+[; ;SC8F072_Pwm_Demo.c: 419: button_sflag = 1;
+"419
+[e = _button_sflag -> -> 1 `i `uc ]
+"420
+}
+[e :U 59 ]
+"421
+[e :U 58 ]
+[; ;SC8F072_Pwm_Demo.c: 420: }
+[; ;SC8F072_Pwm_Demo.c: 421: long_press_counter = 0;
+[e = _long_press_counter -> -> 0 `i `ui ]
+"422
+}
+[e :U 56 ]
+[; ;SC8F072_Pwm_Demo.c: 422: }
+[; ;SC8F072_Pwm_Demo.c: 423: RBIF = 0;
+"423
+[e = _RBIF -> -> 0 `i `b ]
+"424
+}
+[e :U 55 ]
+[; ;SC8F072_Pwm_Demo.c: 424: }
+[; ;SC8F072_Pwm_Demo.c: 425: if(T0IF)
+"425
+[e $ ! _T0IF 60  ]
+[; ;SC8F072_Pwm_Demo.c: 426: {
+"426
+{
+[; ;SC8F072_Pwm_Demo.c: 427: if(T_flag)
+"427
+[e $ ! != -> _T_flag `i -> -> -> 0 `i `Vuc `i 61  ]
+[; ;SC8F072_Pwm_Demo.c: 428: {
+"428
+{
+[; ;SC8F072_Pwm_Demo.c: 429: Display();
+"429
+[e ( _Display ..  ]
+"430
+}
+[e :U 61 ]
+[; ;SC8F072_Pwm_Demo.c: 430: }
+[; ;SC8F072_Pwm_Demo.c: 431: TMR0 += 6;
+"431
+[e =+ _TMR0 -> -> 6 `i `uc ]
+[; ;SC8F072_Pwm_Demo.c: 432: T0IF = 0;
+"432
+[e = _T0IF -> -> 0 `i `b ]
+[; ;SC8F072_Pwm_Demo.c: 434: if(ADC_delay > 0)
+"434
+[e $ ! > _ADC_delay -> -> 0 `i `ui 62  ]
+[; ;SC8F072_Pwm_Demo.c: 435: {
+"435
+{
+[; ;SC8F072_Pwm_Demo.c: 436: ADC_delay--;
+"436
+[e -- _ADC_delay -> -> 1 `i `ui ]
+"437
+}
+[; ;SC8F072_Pwm_Demo.c: 437: }
+[e $U 63  ]
+"438
+[e :U 62 ]
+[; ;SC8F072_Pwm_Demo.c: 438: else
+[; ;SC8F072_Pwm_Demo.c: 439: {
+"439
+{
+[; ;SC8F072_Pwm_Demo.c: 440: ADC_delay=1000;
+"440
+[e = _ADC_delay -> -> 1000 `i `ui ]
+[; ;SC8F072_Pwm_Demo.c: 441: ADC_Flag=1;
+"441
+[e = _ADC_Flag -> -> 1 `i `uc ]
+"442
+}
+[e :U 63 ]
+"443
+}
+[e :U 60 ]
+[; ;SC8F072_Pwm_Demo.c: 442: }
+[; ;SC8F072_Pwm_Demo.c: 443: }
+[; ;SC8F072_Pwm_Demo.c: 444: if(TMR2IF)
+"444
+[e $ ! _TMR2IF 64  ]
+[; ;SC8F072_Pwm_Demo.c: 445: {
+"445
+{
+[; ;SC8F072_Pwm_Demo.c: 446: TMR2IF = 0;
+"446
+[e = _TMR2IF -> -> 0 `i `b ]
+[; ;SC8F072_Pwm_Demo.c: 465: if (!(PORTB & 0x20))
+"465
+[e $ ! ! != & -> _PORTB `i -> 32 `i -> 0 `i 65  ]
+[; ;SC8F072_Pwm_Demo.c: 466: {
+"466
+{
+[; ;SC8F072_Pwm_Demo.c: 467: if (debounce_counter < 15) debounce_counter++;
+"467
+[e $ ! < -> _debounce_counter `i -> 15 `i 66  ]
+[e ++ _debounce_counter -> -> 1 `i `uc ]
+[e :U 66 ]
+[; ;SC8F072_Pwm_Demo.c: 468: if (debounce_counter == 15) long_press_counter++;
+"468
+[e $ ! == -> _debounce_counter `i -> 15 `i 67  ]
+[e ++ _long_press_counter -> -> 1 `i `ui ]
+[e :U 67 ]
+"469
+}
+[; ;SC8F072_Pwm_Demo.c: 469: }
+[e $U 68  ]
+"470
+[e :U 65 ]
+[; ;SC8F072_Pwm_Demo.c: 470: else
+[; ;SC8F072_Pwm_Demo.c: 471: {
+"471
+{
+[; ;SC8F072_Pwm_Demo.c: 472: debounce_counter = 0;
+"472
+[e = _debounce_counter -> -> 0 `i `uc ]
+"473
+}
+[e :U 68 ]
+[; ;SC8F072_Pwm_Demo.c: 473: }
+[; ;SC8F072_Pwm_Demo.c: 476: if(Time_delay > 0)
+"476
+[e $ ! > _Time_delay -> -> 0 `i `ui 69  ]
+[; ;SC8F072_Pwm_Demo.c: 477: {
+"477
+{
+[; ;SC8F072_Pwm_Demo.c: 478: Time_delay--;
+"478
+[e -- _Time_delay -> -> 1 `i `ui ]
+"479
+}
+[; ;SC8F072_Pwm_Demo.c: 479: }
+[e $U 70  ]
+"480
+[e :U 69 ]
+[; ;SC8F072_Pwm_Demo.c: 480: else
+[; ;SC8F072_Pwm_Demo.c: 481: {
+"481
+{
+[; ;SC8F072_Pwm_Demo.c: 482: if (!(PORTA & 0x20))
+"482
+[e $ ! ! != & -> _PORTA `i -> 32 `i -> 0 `i 71  ]
+[; ;SC8F072_Pwm_Demo.c: 483: {
+"483
+{
+[; ;SC8F072_Pwm_Demo.c: 484: Charge_num();
+"484
+[e ( _Charge_num ..  ]
+"485
+}
+[; ;SC8F072_Pwm_Demo.c: 485: }
+[e $U 72  ]
+"486
+[e :U 71 ]
+[; ;SC8F072_Pwm_Demo.c: 486: else
+[; ;SC8F072_Pwm_Demo.c: 487: {
+"487
+{
+[; ;SC8F072_Pwm_Demo.c: 488: Uncharge_num();
+"488
+[e ( _Uncharge_num ..  ]
+"489
+}
+[e :U 72 ]
+"490
+}
+[e :U 70 ]
+"491
+}
+[e :U 64 ]
+[; ;SC8F072_Pwm_Demo.c: 489: }
+[; ;SC8F072_Pwm_Demo.c: 490: }
+[; ;SC8F072_Pwm_Demo.c: 491: }
+[; ;SC8F072_Pwm_Demo.c: 492: }
+"492
+[e :UE 51 ]
+}

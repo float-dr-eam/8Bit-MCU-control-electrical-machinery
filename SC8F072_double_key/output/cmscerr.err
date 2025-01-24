@@ -1,0 +1,7 @@
+Warning[165]:	C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\include\sc_chip_select.h	第175行	#include filename "C:\Users\86135\Desktop\项目实践\SCMCU_IDE_V2.00.15\SCMCU_IDE_V2.00.15\data\include\SC8f072.h" does not match actual name (check upper/lower case)
+Advisory[1510]	non-reentrant function "_Set_PWM" appears in multiple call graphs and has been duplicated by the compiler
+Advisory[1510]	non-reentrant function "_Set_AllPin_INPUT" appears in multiple call graphs and has been duplicated by the compiler
+Advisory[1510]	non-reentrant function "___wmul" appears in multiple call graphs and has been duplicated by the compiler
+Advisory[1510]	non-reentrant function "___awdiv" appears in multiple call graphs and has been duplicated by the compiler
+Error[1347]:		第0行	can't find 0x5 words (0x5 withtotal) for psect "swtext4" in class "CONST" (largest unused contiguous range 0x4)
+(908) exit status = 1

@@ -1,0 +1,52 @@
+[p PRO_MODE GLOBOPT AUTOSTATIC PIC14 PICREGULAR PICMID SPACEOPT ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip SC8F072 ]
+[d frameptr 6 ]
+"62 H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Beta5\data\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Beta5\data\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"16 H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_Timer_C_TEST\SC8F072_Timer2_C.c
+[v _main main `(v  1 e 1 0 ]
+"33
+[v _Timer_Isr Timer_Isr `II(v  1 e 1 0 ]
+"49
+[v _Init_System Init_System `(v  1 e 1 0 ]
+"6 H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Beta5\data\include\sc8f072.h
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @1 ]
+"10
+[v _TRISB TRISB `VEuc  1 e 1 @5 ]
+"11
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"12
+[v _WPDB WPDB `VEuc  1 e 1 @7 ]
+"13
+[v _WPUB WPUB `VEuc  1 e 1 @8 ]
+"16
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+"22
+[v _PR2 PR2 `VEuc  1 e 1 @17 ]
+"24
+[v _T2CON T2CON `VEuc  1 e 1 @19 ]
+"25
+[v _OSCCON OSCCON `VEuc  1 e 1 @20 ]
+"153
+[v _TMR2IF TMR2IF `VEb  1 e 0 @105 ]
+"160
+[v _TMR2IE TMR2IE `VEb  1 e 0 @113 ]
+"16 H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_Timer_C_TEST\SC8F072_Timer2_C.c
+[v _main main `(v  1 e 1 0 ]
+{
+"23
+} 0
+"49
+[v _Init_System Init_System `(v  1 e 1 0 ]
+{
+"101
+} 0
+"33
+[v _Timer_Isr Timer_Isr `II(v  1 e 1 0 ]
+{
+"40
+} 0

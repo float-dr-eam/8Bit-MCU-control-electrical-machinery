@@ -1,0 +1,598 @@
+
+
+Microchip Technology PIC PRO Macro Assembler V1.45 build -152302408 
+                                                                                               Thu Sep 14 17:20:37 2023
+
+Microchip Technology Omniscient Code Generator v1.45 (PRO mode) build 201711160504
+     1                           	processor	SC8F072
+     2                           	opt	pw 120
+     3                           	opt	pm
+     4                           	psect	text0,local,class=CODE,merge=1,delta=2
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     7                           	psect	maintext,global,class=CODE,split=1,delta=2
+     8                           	psect	text1,local,class=CODE,merge=1,delta=2
+     9                           	psect	text2,local,class=CODE,merge=1,delta=2
+    10                           	psect	text3,local,class=CODE,merge=1,delta=2
+    11                           	psect	pa_nodes0,global,class=CODE,delta=2
+    12                           	dabs	1,0x7E,2
+    13  0000                     
+    14                           ; Version 1.45
+    15                           ; Generated 16/11/2017 GMT
+    16                           ; 
+    17                           ; Copyright 漏 2017, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    18                           ; All rights reserved.
+    19                           ; 
+    20                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    21                           ; 
+    22                           ; Redistribution and use in source and binary forms, with or without modification, are
+    23                           ; permitted provided that the following conditions are met:
+    24                           ; 
+    25                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    26                           ;        conditions and the following disclaimer.
+    27                           ; 
+    28                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    29                           ;        of conditions and the following disclaimer in the documentation and/or other
+    30                           ;        materials provided with the distribution.
+    31                           ; 
+    32                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    33                           ;        software without specific prior written permission.
+    34                           ; 
+    35                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    36                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    37                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    38                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    39                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    40                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    41                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    42                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    43                           ; 
+    44                           ; 
+    45                           ; Code-generator required, PIC16F887 Definitions
+    46                           ; 
+    47                           ; SFR Addresses
+    48  0000                     
+    49                           	psect	text0
+    50  0000                     __ptext0:	
+    51  0015                     _PWMCON0	set	21
+    52  0014                     _OSCCON	set	20
+    53  000B                     _INTCON	set	11
+    54  0009                     _IOCB	set	9
+    55  0008                     _WPUB	set	8
+    56  0006                     _PORTB	set	6
+    57  0005                     _TRISB	set	5
+    58  0001                     _OPTION_REG	set	1
+    59  0073                     _RAIE	set	115
+    60  006B                     _RAIF	set	107
+    61  0058                     _RBIF	set	88
+    62  005B                     _RBIE	set	91
+    63  005E                     _PEIE	set	94
+    64  005F                     _GIE	set	95
+    65  0036                     _RB6	set	54
+    66  0096                     _ADCON1	set	150
+    67  0095                     _ADCON0	set	149
+    68  0089                     _IOCA	set	137
+    69  0088                     _WPUA	set	136
+    70  0086                     _PORTA	set	134
+    71  0085                     _TRISA	set	133
+    72                           
+    73                           	psect	cinit
+    74  07FE                     start_initialization:	
+    75                           ; #config settings
+    76                           
+    77  07FE                     __initialization:	
+    78  07FE                     end_of_initialization:	
+    79                           ;End of C runtime variable initialization code
+    80                           
+    81  07FE                     __end_of__initialization:	
+    82  07FE  0183               	clrf	3
+    83  07FF  2FAB               	ljmp	_main	;jump to C main() function
+    84                           
+    85                           	psect	cstackCOMMON
+    86  0070                     __pcstackCOMMON:	
+    87  0070                     ?_Init_System:	
+    88  0070                     ??_Init_System:	
+    89                           ; 1 bytes @ 0x0
+    90                           
+    91  0070                     ?_Sleep_Mode:	
+    92                           ; 1 bytes @ 0x0
+    93                           
+    94  0070                     ??_Sleep_Mode:	
+    95                           ; 1 bytes @ 0x0
+    96                           
+    97  0070                     ?_DelayXms:	
+    98                           ; 1 bytes @ 0x0
+    99                           
+   100  0070                     ??_DelayXms:	
+   101                           ; 1 bytes @ 0x0
+   102                           
+   103  0070                     ?_main:	
+   104                           ; 1 bytes @ 0x0
+   105                           
+   106  0070                     DelayXms@x:	
+   107                           ; 1 bytes @ 0x0
+   108                           
+   109                           
+   110                           ; 1 bytes @ 0x0
+   111  0070                     	ds	1
+   112  0071                     DelayXms@i:	
+   113                           
+   114                           ; 1 bytes @ 0x1
+   115  0071                     	ds	1
+   116  0072                     DelayXms@j:	
+   117                           
+   118                           ; 1 bytes @ 0x2
+   119  0072                     	ds	1
+   120  0073                     ??_main:	
+   121                           
+   122                           	psect	maintext
+   123  07AB                     __pmaintext:	
+   124                           ; 1 bytes @ 0x3
+   125 ;;
+   126 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   127 ;;
+   128 ;; *************** function _main *****************
+   129 ;; Defined at:
+   130 ;;		line 37 in file "H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_Sleep_Demo\SC8F072_Sleep
+      +_Demo.c"
+   131 ;; Parameters:    Size  Location     Type
+   132 ;;		None
+   133 ;; Auto vars:     Size  Location     Type
+   134 ;;		None
+   135 ;; Return value:  Size  Location     Type
+   136 ;;                  1    wreg      void 
+   137 ;; Registers used:
+   138 ;;		wreg, status,2, status,0, pclath, cstack
+   139 ;; Tracked objects:
+   140 ;;		On entry : B00/0
+   141 ;;		On exit  : 100/0
+   142 ;;		Unchanged: 0/0
+   143 ;; Data sizes:     COMMON   BANK0   BANK1
+   144 ;;      Params:         0       0       0
+   145 ;;      Locals:         0       0       0
+   146 ;;      Temps:          0       0       0
+   147 ;;      Totals:         0       0       0
+   148 ;;Total ram usage:        0 bytes
+   149 ;; Hardware stack levels required when called:    2
+   150 ;; This function calls:
+   151 ;;		_DelayXms
+   152 ;;		_Init_System
+   153 ;;		_Sleep_Mode
+   154 ;; This function is called by:
+   155 ;;		Startup code after reset
+   156 ;; This function uses a non-reentrant model
+   157 ;;
+   158                           
+   159                           
+   160                           ;psect for function _main
+   161  07AB                     _main:	
+   162                           
+   163                           ;SC8F072_Sleep_Demo.c: 39: Init_System();
+   164                           
+   165                           ;incstack = 0
+   166                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   167  07AB  27B9               	fcall	_Init_System
+   168  07AC                     l1051:	
+   169                           
+   170                           ;SC8F072_Sleep_Demo.c: 41: {
+   171                           ;SC8F072_Sleep_Demo.c: 42: RB6=1;
+   172  07AC  1706               	bsf	6,6	;volatile
+   173                           
+   174                           ;SC8F072_Sleep_Demo.c: 43: DelayXms(100);
+   175  07AD  3064               	movlw	100
+   176  07AE  279F               	fcall	_DelayXms
+   177                           
+   178                           ;SC8F072_Sleep_Demo.c: 44: RB6 = 0;
+   179  07AF  1283               	bcf	3,5	;RP0=0, select bank0
+   180  07B0  1306               	bcf	6,6	;volatile
+   181                           
+   182                           ;SC8F072_Sleep_Demo.c: 45: DelayXms(100);
+   183  07B1  3064               	movlw	100
+   184  07B2  279F               	fcall	_DelayXms
+   185                           
+   186                           ;SC8F072_Sleep_Demo.c: 46: RB6=1;
+   187  07B3  1283               	bcf	3,5	;RP0=0, select bank0
+   188  07B4  1706               	bsf	6,6	;volatile
+   189                           
+   190                           ;SC8F072_Sleep_Demo.c: 47: DelayXms(100);
+   191  07B5  3064               	movlw	100
+   192  07B6  279F               	fcall	_DelayXms
+   193                           
+   194                           ;SC8F072_Sleep_Demo.c: 48: Sleep_Mode();
+   195  07B7  27CE               	fcall	_Sleep_Mode
+   196  07B8  2FAC               	goto	l1051
+   197  07B9                     __end_of_main:	
+   198                           
+   199                           	psect	text1
+   200  07CE                     __ptext1:	
+   201 ;; *************** function _Sleep_Mode *****************
+   202 ;; Defined at:
+   203 ;;		line 60 in file "H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_Sleep_Demo\SC8F072_Sleep
+      +_Demo.c"
+   204 ;; Parameters:    Size  Location     Type
+   205 ;;		None
+   206 ;; Auto vars:     Size  Location     Type
+   207 ;;		None
+   208 ;; Return value:  Size  Location     Type
+   209 ;;                  1    wreg      void 
+   210 ;; Registers used:
+   211 ;;		wreg, status,2, status,0, pclath, cstack
+   212 ;; Tracked objects:
+   213 ;;		On entry : 0/0
+   214 ;;		On exit  : 100/0
+   215 ;;		Unchanged: 0/0
+   216 ;; Data sizes:     COMMON   BANK0   BANK1
+   217 ;;      Params:         0       0       0
+   218 ;;      Locals:         0       0       0
+   219 ;;      Temps:          0       0       0
+   220 ;;      Totals:         0       0       0
+   221 ;;Total ram usage:        0 bytes
+   222 ;; Hardware stack levels used:    1
+   223 ;; Hardware stack levels required when called:    1
+   224 ;; This function calls:
+   225 ;;		_Init_System
+   226 ;; This function is called by:
+   227 ;;		_main
+   228 ;; This function uses a non-reentrant model
+   229 ;;
+   230                           
+   231                           
+   232                           ;psect for function _Sleep_Mode
+   233  07CE                     _Sleep_Mode:	
+   234                           
+   235                           ;SC8F072_Sleep_Demo.c: 62: INTCON = 0;
+   236                           
+   237                           ;incstack = 0
+   238                           ; Regs used in _Sleep_Mode: [wreg+status,2+status,0+pclath+cstack]
+   239  07CE  018B               	clrf	11	;volatile
+   240                           
+   241                           ;SC8F072_Sleep_Demo.c: 64: OPTION_REG = 0;
+   242  07CF  1283               	bcf	3,5	;RP0=0, select bank0
+   243  07D0  0181               	clrf	1	;volatile
+   244                           
+   245                           ;SC8F072_Sleep_Demo.c: 66: TRISA = 0B00000001;
+   246  07D1  3001               	movlw	1
+   247  07D2  1683               	bsf	3,5	;RP0=1, select bank1
+   248  07D3  0085               	movwf	5	;volatile
+   249                           
+   250                           ;SC8F072_Sleep_Demo.c: 67: WPUA = 0B00000001;
+   251  07D4  0088               	movwf	8	;volatile
+   252                           
+   253                           ;SC8F072_Sleep_Demo.c: 69: TRISB = 0B00001000;
+   254  07D5  3008               	movlw	8
+   255  07D6  1283               	bcf	3,5	;RP0=0, select bank0
+   256  07D7  0085               	movwf	5	;volatile
+   257                           
+   258                           ;SC8F072_Sleep_Demo.c: 70: PORTB = 0B00000000;
+   259  07D8  0186               	clrf	6	;volatile
+   260                           
+   261                           ;SC8F072_Sleep_Demo.c: 71: WPUB = 0B00001000;
+   262  07D9  0088               	movwf	8	;volatile
+   263                           
+   264                           ;SC8F072_Sleep_Demo.c: 73: ADCON0 = 0;
+   265  07DA  1683               	bsf	3,5	;RP0=1, select bank1
+   266  07DB  0195               	clrf	21	;volatile
+   267                           
+   268                           ;SC8F072_Sleep_Demo.c: 74: ADCON1 = 0;
+   269  07DC  0196               	clrf	22	;volatile
+   270                           
+   271                           ;SC8F072_Sleep_Demo.c: 76: PWMCON0 = 0;
+   272  07DD  1283               	bcf	3,5	;RP0=0, select bank0
+   273  07DE  0195               	clrf	21	;volatile
+   274                           
+   275                           ;SC8F072_Sleep_Demo.c: 78: OSCCON = 0X70;
+   276  07DF  3070               	movlw	112
+   277  07E0  0094               	movwf	20	;volatile
+   278                           
+   279                           ;SC8F072_Sleep_Demo.c: 80: IOCA = 0B00000001;
+   280  07E1  3001               	movlw	1
+   281  07E2  1683               	bsf	3,5	;RP0=1, select bank1
+   282  07E3  0089               	movwf	9	;volatile
+   283                           
+   284                           ;SC8F072_Sleep_Demo.c: 81: IOCB = 0B00001000;
+   285  07E4  3008               	movlw	8
+   286  07E5  1283               	bcf	3,5	;RP0=0, select bank0
+   287  07E6  0089               	movwf	9	;volatile
+   288                           
+   289                           ;SC8F072_Sleep_Demo.c: 83: RAIE = 1;
+   290  07E7  158E               	bsf	14,3	;volatile
+   291                           
+   292                           ;SC8F072_Sleep_Demo.c: 84: PEIE = 1;
+   293  07E8  170B               	bsf	11,6	;volatile
+   294                           
+   295                           ;SC8F072_Sleep_Demo.c: 85: RBIE = 1;
+   296  07E9  158B               	bsf	11,3	;volatile
+   297                           
+   298                           ;SC8F072_Sleep_Demo.c: 86: GIE = 0;
+   299  07EA  138B               	bcf	11,7	;volatile
+   300                           
+   301                           ;SC8F072_Sleep_Demo.c: 89: PORTA;
+   302  07EB  1683               	bsf	3,5	;RP0=1, select bank1
+   303  07EC  0806               	movf	6,w	;volatile
+   304                           
+   305                           ;SC8F072_Sleep_Demo.c: 90: RAIF = 0;
+   306  07ED  1283               	bcf	3,5	;RP0=0, select bank0
+   307  07EE  118D               	bcf	13,3	;volatile
+   308                           
+   309                           ;SC8F072_Sleep_Demo.c: 91: PORTB;
+   310  07EF  0806               	movf	6,w	;volatile
+   311                           
+   312                           ;SC8F072_Sleep_Demo.c: 92: RBIF = 0;
+   313  07F0  100B               	bcf	11,0	;volatile
+   314  07F1  0064               	clrwdt	;# 
+   315  07F2  0063               	sleep	;# 
+   316  07F3  0000               	nop	;# 
+   317  07F4  0064               	clrwdt	;# 
+   318                           
+   319                           ;SC8F072_Sleep_Demo.c: 99: if(RAIF) RAIF = 0;
+   320  07F5  1283               	bcf	3,5	;RP0=0, select bank0
+   321  07F6  198D               	btfsc	13,3	;volatile
+   322  07F7  118D               	bcf	13,3	;volatile
+   323                           
+   324                           ;SC8F072_Sleep_Demo.c: 100: if(RBIF) RBIF = 0;
+   325  07F8  180B               	btfsc	11,0	;volatile
+   326  07F9  100B               	bcf	11,0	;volatile
+   327                           
+   328                           ;SC8F072_Sleep_Demo.c: 101: PORTA ^= 0X08;
+   329  07FA  3008               	movlw	8
+   330  07FB  1683               	bsf	3,5	;RP0=1, select bank1
+   331  07FC  0686               	xorwf	6,f	;volatile
+   332                           
+   333                           ;SC8F072_Sleep_Demo.c: 102: Init_System();
+   334  07FD  2FB9               	ljmp	l971
+   335  07FE                     __end_of_Sleep_Mode:	
+   336                           
+   337                           	psect	text2
+   338  07B9                     __ptext2:	
+   339 ;; *************** function _Init_System *****************
+   340 ;; Defined at:
+   341 ;;		line 112 in file "H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_Sleep_Demo\SC8F072_Slee
+      +p_Demo.c"
+   342 ;; Parameters:    Size  Location     Type
+   343 ;;		None
+   344 ;; Auto vars:     Size  Location     Type
+   345 ;;		None
+   346 ;; Return value:  Size  Location     Type
+   347 ;;                  1    wreg      void 
+   348 ;; Registers used:
+   349 ;;		wreg, status,2
+   350 ;; Tracked objects:
+   351 ;;		On entry : 0/0
+   352 ;;		On exit  : 100/0
+   353 ;;		Unchanged: 0/0
+   354 ;; Data sizes:     COMMON   BANK0   BANK1
+   355 ;;      Params:         0       0       0
+   356 ;;      Locals:         0       0       0
+   357 ;;      Temps:          0       0       0
+   358 ;;      Totals:         0       0       0
+   359 ;;Total ram usage:        0 bytes
+   360 ;; Hardware stack levels used:    1
+   361 ;; This function calls:
+   362 ;;		Nothing
+   363 ;; This function is called by:
+   364 ;;		_main
+   365 ;;		_Sleep_Mode
+   366 ;; This function uses a non-reentrant model
+   367 ;;
+   368                           
+   369                           
+   370                           ;psect for function _Init_System
+   371  07B9                     _Init_System:	
+   372  07B9                     l971:	
+   373                           ;incstack = 0
+   374                           ; Regs used in _Init_System: [wreg+status,2]
+   375                           
+   376  07B9  0000               	nop	;# 
+   377  07BA  0064               	clrwdt	;# 
+   378                           
+   379                           ;SC8F072_Sleep_Demo.c: 116: INTCON = 0;
+   380  07BB  018B               	clrf	11	;volatile
+   381                           
+   382                           ;SC8F072_Sleep_Demo.c: 117: OSCCON = 0X72;
+   383  07BC  3072               	movlw	114
+   384  07BD  1283               	bcf	3,5	;RP0=0, select bank0
+   385  07BE  0094               	movwf	20	;volatile
+   386                           
+   387                           ;SC8F072_Sleep_Demo.c: 118: OPTION_REG = 0;
+   388  07BF  0181               	clrf	1	;volatile
+   389                           
+   390                           ;SC8F072_Sleep_Demo.c: 120: WPUA = 0B00000001;
+   391  07C0  3001               	movlw	1
+   392  07C1  1683               	bsf	3,5	;RP0=1, select bank1
+   393  07C2  0088               	movwf	8	;volatile
+   394                           
+   395                           ;SC8F072_Sleep_Demo.c: 121: WPUB = 0B00001000;
+   396  07C3  3008               	movlw	8
+   397  07C4  1283               	bcf	3,5	;RP0=0, select bank0
+   398  07C5  0088               	movwf	8	;volatile
+   399                           
+   400                           ;SC8F072_Sleep_Demo.c: 124: TRISA = 0B00000001;
+   401  07C6  3001               	movlw	1
+   402  07C7  1683               	bsf	3,5	;RP0=1, select bank1
+   403  07C8  0085               	movwf	5	;volatile
+   404                           
+   405                           ;SC8F072_Sleep_Demo.c: 125: TRISB = 0B00001000;
+   406  07C9  3008               	movlw	8
+   407  07CA  1283               	bcf	3,5	;RP0=0, select bank0
+   408  07CB  0085               	movwf	5	;volatile
+   409                           
+   410                           ;SC8F072_Sleep_Demo.c: 128: PORTB = 0B00000000;
+   411  07CC  0186               	clrf	6	;volatile
+   412  07CD  0008               	return
+   413  07CE                     __end_of_Init_System:	
+   414                           
+   415                           	psect	text3
+   416  079F                     __ptext3:	
+   417 ;; *************** function _DelayXms *****************
+   418 ;; Defined at:
+   419 ;;		line 25 in file "H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_Sleep_Demo\SC8F072_Sleep
+      +_Demo.c"
+   420 ;; Parameters:    Size  Location     Type
+   421 ;;  x               1    wreg     unsigned char 
+   422 ;; Auto vars:     Size  Location     Type
+   423 ;;  x               1    0[COMMON] unsigned char 
+   424 ;;  j               1    2[COMMON] unsigned char 
+   425 ;;  i               1    1[COMMON] unsigned char 
+   426 ;; Return value:  Size  Location     Type
+   427 ;;                  1    wreg      void 
+   428 ;; Registers used:
+   429 ;;		wreg, status,2, status,0
+   430 ;; Tracked objects:
+   431 ;;		On entry : 100/0
+   432 ;;		On exit  : 0/0
+   433 ;;		Unchanged: 0/0
+   434 ;; Data sizes:     COMMON   BANK0   BANK1
+   435 ;;      Params:         0       0       0
+   436 ;;      Locals:         3       0       0
+   437 ;;      Temps:          0       0       0
+   438 ;;      Totals:         3       0       0
+   439 ;;Total ram usage:        3 bytes
+   440 ;; Hardware stack levels used:    1
+   441 ;; This function calls:
+   442 ;;		Nothing
+   443 ;; This function is called by:
+   444 ;;		_main
+   445 ;; This function uses a non-reentrant model
+   446 ;;
+   447                           
+   448                           
+   449                           ;psect for function _DelayXms
+   450  079F                     _DelayXms:	
+   451                           
+   452                           ;incstack = 0
+   453                           ; Regs used in _DelayXms: [wreg+status,2+status,0]
+   454                           ;DelayXms@x stored from wreg
+   455  079F  00F0               	movwf	DelayXms@x
+   456                           
+   457                           ;SC8F072_Sleep_Demo.c: 27: unsigned char i,j;
+   458                           ;SC8F072_Sleep_Demo.c: 28: for(i=x;i>0;i--)
+   459  07A0  00F1               	movwf	DelayXms@i
+   460  07A1                     l983:	
+   461  07A1  0871               	movf	DelayXms@i,w
+   462  07A2  1903               	btfsc	3,2
+   463  07A3  0008               	return
+   464  07A4  0064               	clrwdt	;# 
+   465                           
+   466                           ;SC8F072_Sleep_Demo.c: 31: for(j=153;j>0;j--);
+   467  07A5  3099               	movlw	153
+   468  07A6  00F2               	movwf	DelayXms@j
+   469  07A7                     l993:	
+   470  07A7  0BF2               	decfsz	DelayXms@j,f
+   471  07A8  2FA7               	goto	l993
+   472  07A9  03F1               	decf	DelayXms@i,f
+   473  07AA  2FA1               	goto	l983
+   474  07AB                     __end_of_DelayXms:	
+   475  007E                     btemp	set	126	;btemp
+   476  007E                     wtemp0	set	126
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      3       3
+    BANK0            80      0       0
+    BANK1            80      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    _main->_DelayXms
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0      75
+                           _DelayXms
+                        _Init_System
+                         _Sleep_Mode
+ ---------------------------------------------------------------------------------
+ (1) _Sleep_Mode                                           0     0      0       0
+                        _Init_System
+ ---------------------------------------------------------------------------------
+ (2) _Init_System                                          0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _DelayXms                                             3     3      0      75
+                                              0 COMMON     3     3      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _DelayXms
+   _Init_System
+   _Sleep_Mode
+     _Init_System
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            E      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMMON               E      3       3       1       21.4%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BITBANK0            50      0       0       3        0.0%
+BANK0               50      0       0       4        0.0%
+BITBANK1            50      0       0       5        0.0%
+BANK1               50      0       0       6        0.0%
+ABS                  0      0       0       7        0.0%
+DATA                 0      0       0       8        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.45 build -152302408 
+Symbol Table                                                                                   Thu Sep 14 17:20:37 2023
+
+                    l971 07B9                      l983 07A1                      l993 07A7  
+                    _GIE 005F                      _RB6 0036                     l1051 07AC  
+                   _IOCA 0089                     _IOCB 0009                     _PEIE 005E  
+                   _RAIE 0073                     _RAIF 006B                     _RBIE 005B  
+                   _RBIF 0058                     _WPUA 0088                     _WPUB 0008  
+                   _main 07AB                     btemp 007E                     start 0000  
+          ??_Init_System 0070                    ?_main 0070                    _PORTA 0086  
+                  _PORTB 0006                    _TRISA 0085                    _TRISB 0005  
+                  status 0003                    wtemp0 007E         __end_of_DelayXms 07AB  
+        __initialization 07FE             __end_of_main 07B9                   ??_main 0073  
+    __end_of_Init_System 07CE                   _ADCON0 0095                   _ADCON1 0096  
+                 _INTCON 000B                   _OSCCON 0014               _Sleep_Mode 07CE  
+__end_of__initialization 07FE           __pcstackCOMMON 0070              _Init_System 07B9  
+              ?_DelayXms 0070              ?_Sleep_Mode 0070               __pmaintext 07AB  
+             ??_DelayXms 0070                  _PWMCON0 0015                  __ptext0 0000  
+                __ptext1 07CE                  __ptext2 07B9                  __ptext3 079F  
+    __size_of_Sleep_Mode 0030     end_of_initialization 07FE                DelayXms@i 0071  
+              DelayXms@j 0072                DelayXms@x 0070             ?_Init_System 0070  
+    start_initialization 07FE        __size_of_DelayXms 000C             ??_Sleep_Mode 0070  
+              ___latbits 0000       __end_of_Sleep_Mode 07FE     __size_of_Init_System 0015  
+               _DelayXms 079F            __size_of_main 000E               _OPTION_REG 0001  

@@ -1,0 +1,667 @@
+Microchip MPLAB XC8 Compiler V1.45 ()
+
+Linker command line:
+
+-W-9 \
+  --edf=H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\dat\en_msgs.txt \
+  -cs -h+SC8F072_ADC_Demo.sym --cmf=SC8F072_ADC_Demo.cmf -z -QSC8F072 \
+  -oC:\Users\ADMINI~1\AppData\Local\Temp\sap4.2 -MSC8F072_ADC_Demo.map -E1 \
+  -ver=XC8 -ASTACK=0A0h-0efh -pstack=STACK -ACODE=00h-07FFh \
+  -ASTRCODE=00h-07FFh -ASTRING=00h-0FFhx8 -ACONST=00h-0FFhx8 \
+  -AENTRY=00h-0FFhx8 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
+  -ARAM=020h-06Fh,0A0h-0EFh -AABS1=020h-07Fh,0A0h-0EFh -ASFR0=00h-01Fh \
+  -ASFR1=080h-09Fh -preset_vec=00h,intentry=04h,init,end_init \
+  -ppowerup=CODE -pcinit=CODE -pfunctab=ENTRY -ACONFIG=02007h-02008h \
+  -pconfig=CONFIG -DCONFIG=2 -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 \
+  -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k startup.obj \
+  SC8F072_ADC_Demo.obj 
+
+Object code version is 3.11
+
+Machine type is SC8F072
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+startup.obj     end_init                              A        A        1        8       0
+                reset_vec                             0        0        1        0       0
+SC8F072_ADC_Demo.obj
+                cinit                                 B        B        9        8       0
+                intentry                              4        4        6        8       0
+                text8                               273      273        A        8       0
+                text7                                14       14       E7        8       0
+                text6                               27D      27D        5        8       0
+                text5                               246      246       1D        8       0
+                text4                               205      205       41        8       0
+                text3                                FB       FB       66        8       0
+                text2                               161      161       5E        8       0
+                text1                               263      263       10        8       0
+                maintext                            1BF      1BF       46        8       0
+                cstackBANK0                          20       20       24       20       1
+                cstackCOMMON                         70       70        A       70       1
+                bssBANK0                             44       44        4       20       1
+                bssCOMMON                            7A       7A        2       70       1
+                nvBANK0                              48       48        1       20       1
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CODE           
+                end_init                              A        A        1         0
+                cinit                                 B        B        9         0
+                intentry                              4        4        6         0
+                reset_vec                             0        0        1         0
+                text8                               273      273        A         0
+                text7                                14       14       E7         0
+                text6                               27D      27D        5         0
+                text5                               246      246       1D         0
+                text4                               205      205       41         0
+                text3                                FB       FB       66         0
+                text2                               161      161       5E         0
+                text1                               263      263       10         0
+                maintext                            1BF      1BF       46         0
+
+        CLASS   STRCODE        
+
+        CLASS   STRING         
+
+        CLASS   CONST          
+
+        CLASS   ENTRY          
+
+        CLASS   COMMON         
+                cstackCOMMON                         70       70        A         1
+                bssCOMMON                            7A       7A        2         1
+
+        CLASS   BANK0          
+                cstackBANK0                          20       20       24         1
+                bssBANK0                             44       44        4         1
+                nvBANK0                              48       48        1         1
+
+        CLASS   BANK1          
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               7E       7E        2         1
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   CONFIG         
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000001  000001         0       0  CODE        2
+                intentry                       000004  00027E  000282         8       0  CODE        2
+                cstackBANK0                    000020  000029  000049        20       1  BANK0       1
+                cstackCOMMON                   000070  00000C  00007C        70       1  COMMON      1
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            049-06F            27           1
+        BANK1            0A0-0EF            50           1
+        CODE             001-003             3           2
+                         282-7FF           57E
+        COMMON           07C-07D             2           1
+        CONFIG           2007-2008             2           2
+        CONST            001-003             3           2
+                         282-7FF           100
+        ENTRY            001-003             3           2
+                         282-7FF           100
+        IDLOC            2000-2003             4           2
+        RAM              049-06F            27           1
+                         0A0-0EF            50
+        SFR0             000-01F            20           1
+        SFR1             080-09F            20           1
+        STACK            0A0-0EF            50           1
+        STRCODE          001-003             3           2
+                         282-7FF           57E
+        STRING           001-003             3           2
+                         282-7FF           100
+
+                                  Symbol Table
+
+?___ftdiv                cstackBANK0  023
+?___ftpack               cstackCOMMON 072
+?___fttol                cstackBANK0  032
+?___lwtoft               cstackBANK0  020
+ADC_Sample@ad_temp       cstackBANK0  02B
+ADC_Sample@adch          cstackBANK0  021
+ADC_Sample@adldo         cstackCOMMON 072
+ADC_Sample@admax         cstackBANK0  029
+ADC_Sample@admin         cstackBANK0  027
+ADC_Sample@adsum         cstackBANK0  023
+ADC_Sample@i             cstackBANK0  022
+ADC_Sample@j             cstackBANK0  020
+PL10                     text4        241
+PL12                     text7        0F6
+PL2                      text7        0DE
+PL4                      text7        0ED
+PL6                      text2        1B8
+PL8                      text3        15D
+_ADCON0                  (abs)        095
+_ADCON1                  (abs)        096
+_ADC_Sample              text7        014
+_ADRESH                  (abs)        099
+_ADRESL                  (abs)        098
+_AD_Init                 text6        27D
+_ANSEL1                  (abs)        094
+_CHS4                    (abs)        4B6
+_GODONE                  (abs)        4A9
+_INTCON                  (abs)        00B
+_Init_System             text5        246
+_Isr_Timer               text8        273
+_LDO_EN                  (abs)        4B2
+_OPTION_REG              (abs)        001
+_OSCCON                  (abs)        014
+_PORTA                   (abs)        086
+_PORTB                   (abs)        006
+_PR2                     (abs)        011
+_T2CON                   (abs)        013
+_TMR2IE                  (abs)        071
+_TMR2IF                  (abs)        069
+_TRISA                   (abs)        085
+_TRISB                   (abs)        005
+_TRISB7                  (abs)        02F
+_WPUA                    (abs)        088
+_WPUB                    (abs)        008
+__Habs1                  abs1         000
+__Hbank0                 bank0        000
+__Hbank1                 bank1        000
+__HbssBANK0              bssBANK0     000
+__HbssCOMMON             bssCOMMON    000
+__Hcinit                 cinit        014
+__Hclrtext               clrtext      000
+__Hcode                  code         000
+__Hcommon                common       000
+__Hconfig                config       000
+__HcstackBANK0           cstackBANK0  000
+__HcstackCOMMON          cstackCOMMON 000
+__Heeprom_data           eeprom_data  000
+__Hend_init              end_init     00B
+__Hfunctab               functab      000
+__Hidloc                 idloc        000
+__Hinit                  init         00A
+__Hintentry              intentry     00A
+__Hmaintext              maintext     000
+__HnvBANK0               nvBANK0      000
+__Hpa_nodes0             pa_nodes0    000
+__Hpowerup               powerup      000
+__Hram                   ram          000
+__Hreset_vec             reset_vec    001
+__Hsfr0                  sfr0         000
+__Hsfr1                  sfr1         000
+__Hspace_0               (abs)        282
+__Hspace_1               (abs)        07C
+__Hspace_2               (abs)        000
+__Hspace_3               (abs)        000
+__Hstack                 stack        000
+__Hstrings               strings      000
+__Htext                  text         000
+__Labs1                  abs1         000
+__Lbank0                 bank0        000
+__Lbank1                 bank1        000
+__LbssBANK0              bssBANK0     000
+__LbssCOMMON             bssCOMMON    000
+__Lcinit                 cinit        00B
+__Lclrtext               clrtext      000
+__Lcode                  code         000
+__Lcommon                common       000
+__Lconfig                config       000
+__LcstackBANK0           cstackBANK0  000
+__LcstackCOMMON          cstackCOMMON 000
+__Leeprom_data           eeprom_data  000
+__Lend_init              end_init     00A
+__Lfunctab               functab      000
+__Lidloc                 idloc        000
+__Linit                  init         00A
+__Lintentry              intentry     004
+__Lmaintext              maintext     000
+__LnvBANK0               nvBANK0      000
+__Lpa_nodes0             pa_nodes0    000
+__Lpowerup               powerup      000
+__Lram                   ram          000
+__Lreset_vec             reset_vec    000
+__Lsfr0                  sfr0         000
+__Lsfr1                  sfr1         000
+__Lspace_0               (abs)        000
+__Lspace_1               (abs)        000
+__Lspace_2               (abs)        000
+__Lspace_3               (abs)        000
+__Lstack                 stack        000
+__Lstrings               strings      000
+__Ltext                  text         000
+__S0                     (abs)        282
+__S1                     (abs)        07C
+__S2                     (abs)        000
+___ftdiv                 text3        0FB
+___ftdiv@cntr            cstackBANK0  02C
+___ftdiv@exp             cstackBANK0  030
+___ftdiv@f1              cstackBANK0  026
+___ftdiv@f2              cstackBANK0  023
+___ftdiv@f3              cstackBANK0  02D
+___ftdiv@sign            cstackBANK0  031
+___ftpack                text4        205
+___ftpack@arg            cstackCOMMON 072
+___ftpack@exp            cstackCOMMON 075
+___ftpack@sign           cstackCOMMON 076
+___fttol                 text2        161
+___fttol@exp1            cstackBANK0  03E
+___fttol@f1              cstackBANK0  032
+___fttol@lval            cstackBANK0  03A
+___fttol@sign1           cstackBANK0  039
+___int_sp                stack        000
+___latbits               (abs)        000
+___lwtoft                text1        263
+___lwtoft@c              cstackBANK0  020
+___sp                    stack        000
+__end_ofPL10             text4        246
+__end_ofPL12             text7        0FB
+__end_ofPL2              text7        0ED
+__end_ofPL4              text7        0F6
+__end_ofPL6              text2        1BF
+__end_ofPL8              text3        161
+__end_of_ADC_Sample      text7        0DE
+__end_of_AD_Init         text6        282
+__end_of_Init_System     text5        263
+__end_of_Isr_Timer       text8        27D
+__end_of___ftdiv         text3        15D
+__end_of___ftpack        text4        241
+__end_of___fttol         text2        1B8
+__end_of___lwtoft        text1        273
+__end_of__initialization cinit        012
+__end_of_main            maintext     205
+__initialization         cinit        00B
+__pbssBANK0              bssBANK0     044
+__pbssCOMMON             bssCOMMON    07A
+__pcstackBANK0           cstackBANK0  020
+__pcstackCOMMON          cstackCOMMON 070
+__pintentry              intentry     004
+__pmaintext              maintext     1BF
+__pnvBANK0               nvBANK0      048
+__ptext1                 text1        263
+__ptext2                 text2        161
+__ptext3                 text3        0FB
+__ptext4                 text4        205
+__ptext5                 text5        246
+__ptext6                 text6        27D
+__ptext7                 text7        014
+__ptext8                 text8        273
+__size_of_ADC_Sample     (abs)        000
+__size_of_AD_Init        (abs)        000
+__size_of_Init_System    (abs)        000
+__size_of_Isr_Timer      (abs)        000
+__size_of___ftdiv        (abs)        000
+__size_of___ftpack       (abs)        000
+__size_of___fttol        (abs)        000
+__size_of___lwtoft       (abs)        000
+__size_of_main           (abs)        000
+_adresult                bssBANK0     046
+_main                    maintext     1BF
+_power_ad                bssBANK0     044
+_result                  bssCOMMON    07A
+_test_adc                nvBANK0      048
+btemp                    (abs)        07E
+end_of_initialization    cinit        012
+interrupt_function       intentry     004
+intlevel0                functab      000
+intlevel1                functab      000
+intlevel2                functab      000
+intlevel3                functab      000
+intlevel4                functab      000
+intlevel5                functab      000
+main@power_temp          cstackBANK0  040
+reset_vec                reset_vec    000
+saved_w                  (abs)        07E
+stackhi                  (abs)        000
+stacklo                  (abs)        000
+start                    init         00A
+start_initialization     cinit        00B
+wtemp0                   (abs)        07E
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 118 in file "H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_ADC_Demo\SC8F072_ADC.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  power_temp      4   32[BANK0 ] volatile unsigned long 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       4       0
+      Temps:          0       1       0
+      Totals:         0       5       0
+Total ram usage:        5 bytes
+ Hardware stack levels required when called:    3
+ This function calls:
+		_ADC_Sample
+		_AD_Init
+		_Init_System
+		___ftdiv
+		___fttol
+		___lwtoft
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function ___lwtoft *****************
+ Defined at:
+		line 28 in file "H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\lwtoft.c"
+ Parameters:    Size  Location     Type
+  c               2    0[BANK0 ] unsigned int 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  3    0[BANK0 ] float 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       3       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       3       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		___ftpack
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function ___fttol *****************
+ Defined at:
+		line 44 in file "H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\fttol.c"
+ Parameters:    Size  Location     Type
+  f1              3   18[BANK0 ] float 
+ Auto vars:     Size  Location     Type
+  lval            4   26[BANK0 ] unsigned long 
+  exp1            1   30[BANK0 ] unsigned char 
+  sign1           1   25[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  4   18[BANK0 ] long 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       4       0
+      Locals:         0       6       0
+      Temps:          0       3       0
+      Totals:         0      13       0
+Total ram usage:       13 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function ___ftdiv *****************
+ Defined at:
+		line 56 in file "H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\ftdiv.c"
+ Parameters:    Size  Location     Type
+  f2              3    3[BANK0 ] float 
+  f1              3    6[BANK0 ] float 
+ Auto vars:     Size  Location     Type
+  f3              3   13[BANK0 ] float 
+  sign            1   17[BANK0 ] unsigned char 
+  exp             1   16[BANK0 ] unsigned char 
+  cntr            1   12[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  3    3[BANK0 ] float 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       6       0
+      Locals:         0       6       0
+      Temps:          0       3       0
+      Totals:         0      15       0
+Total ram usage:       15 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		___ftpack
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function ___ftpack *****************
+ Defined at:
+		line 62 in file "H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\float.c"
+ Parameters:    Size  Location     Type
+  arg             3    2[COMMON] unsigned um
+  exp             1    5[COMMON] unsigned char 
+  sign            1    6[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  3    2[COMMON] float 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         5       0       0
+      Locals:         0       0       0
+      Temps:          3       0       0
+      Totals:         8       0       0
+Total ram usage:        8 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		___ftdiv
+		___lwtoft
+ This function uses a non-reentrant model
+
+
+ *************** function _Init_System *****************
+ Defined at:
+		line 162 in file "H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_ADC_Demo\SC8F072_ADC.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _AD_Init *****************
+ Defined at:
+		line 217 in file "H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_ADC_Demo\SC8F072_ADC.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          0       0       0
+      Totals:         0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _ADC_Sample *****************
+ Defined at:
+		line 46 in file "H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_ADC_Demo\SC8F072_ADC.c"
+ Parameters:    Size  Location     Type
+  adch            1    wreg     unsigned char 
+  adldo           1    2[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  adch            1    1[BANK0 ] unsigned char 
+  j               1    0[BANK0 ] unsigned char 
+  adsum           4    3[BANK0 ] volatile unsigned long 
+  ad_temp         2   11[BANK0 ] volatile unsigned int 
+  admax           2    9[BANK0 ] volatile unsigned int 
+  admin           2    7[BANK0 ] volatile unsigned int 
+  i               1    2[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         1       0       0
+      Locals:         0      13       0
+      Temps:          4       0       0
+      Totals:         5      13       0
+Total ram usage:       18 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _Isr_Timer *****************
+ Defined at:
+		line 198 in file "H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_ADC_Demo\SC8F072_ADC.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1
+      Params:         0       0       0
+      Locals:         0       0       0
+      Temps:          2       0       0
+      Totals:         2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		Interrupt level 1
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\float.c
+		___ftpack      		CODE           	0205	0000	61
+
+H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\float.c estimated size: 61
+
+H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\ftdiv.c
+		___ftdiv       		CODE           	00FB	0000	99
+
+H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\ftdiv.c estimated size: 99
+
+H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_ADC_Demo\SC8F072_ADC.c
+		_main          		CODE           	01BF	0000	71
+		_AD_Init       		CODE           	027D	0000	6
+		_Init_System   		CODE           	0246	0000	30
+		_ADC_Sample    		CODE           	0014	0000	203
+		_Isr_Timer     		CODE           	0273	0000	11
+
+H:\MyDownloads\说明书&测试报告\开发包\SC8F072开发包\SC8F072_DEMO_C\SC8F072_ADC_Demo\SC8F072_ADC.c estimated size: 321
+
+H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\lwtoft.c
+		___lwtoft      		CODE           	0263	0000	17
+
+H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\lwtoft.c estimated size: 17
+
+H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\fttol.c
+		___fttol       		CODE           	0161	0000	88
+
+H:\MyDownloads\IDE_RAR\SCMCU_IDE_V2.00.15_Alpha1\data\sources\common\fttol.c estimated size: 88
+
+shared
+		PL12           		CODE           	00F6	0000	6
+		PL8            		CODE           	015D	0000	5
+		__initialization		CODE           	000B	0000	8
+		PL2            		CODE           	00DE	0000	16
+		PL10           		CODE           	0241	0000	6
+		PL4            		CODE           	00ED	0000	10
+		PL6            		CODE           	01B8	0000	8
+
+shared estimated size: 59
+
